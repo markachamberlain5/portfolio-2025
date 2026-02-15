@@ -1,0 +1,75 @@
+/* Custom CSS for Portfolio */
+
+:root {
+  --color-orange: #DB5D16;
+  --color-dark: #333333;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #eeeeee;
+  color: #333333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Animation for fade in up */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth scroll behavior for all browsers */
+html.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+/* Remove default button styling for custom buttons */
+button {
+  font-family: inherit;
+}
+
+/* Link hover effects */
+a {
+  text-decoration: none;
+}
+
+strong {
+  color: var(--color-orange);
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+h1.hero-title , p.hero-title-text {
+  color: var(--color-dark);
+  
+}
+
+button.hero-button {
+  background-color: var(--color-dark);
+  border-color: var(--color-dark);
+}

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI & Compliance Architecture | Mark Chamberlain</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="bg-white text-gray-900 antialiased" style="font-family: 'Montserrat', sans-serif;">
+    
+    <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-xs sm:max-w-md">
+        <div class="flex items-center justify-center px-6 py-3 mx-4 rounded-full bg-white/30 backdrop-blur-xl border border-gray-300 shadow-2xl">
+            <a href="../index.html" class="text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 px-3 py-1.5 rounded-full transition-all duration-200">Home</a>
+            <a href="../index.html#selected-work" class="text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 px-3 py-1.5 rounded-full transition-all duration-200">Work</a>
+            <a href="../about.html" class="text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 px-3 py-1.5 rounded-full transition-all duration-200">About</a>
+            <a href="mailto:mailto:markachamberlain5@gmail.com" class="text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 px-3 py-1.5 rounded-full transition-all duration-200">Contact</a>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-12 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+            
+            <div class="mb-8 space-y-4">
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Workflow Optimisation</span>
+                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">FinTech Compliance</span>
+                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Complex Systems</span>
+                </div>
+            </div>
+            
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 text-gray-900">File Review System Optimisation</h1>
+            <p class="text-xl text-gray-700 mb-16">Streamlining the compliance workflow for 160+ file reviewers to handle high-density question sets with precision.</p>
+
+            <div class="max-w-6xl mb-6">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">The Scale of the Problem</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    The system had to support <strong>160 advisors</strong> organised into teams of <strong>18 people</strong>. The existing process was buckling under the weight of massive datasets, where a single file review could contain up to <strong>83 specific compliance questions</strong>. We started by mapping the flow to identify bottlenecks.
+                </p>
+            </div>
+            <div class="bg-gray-100 rounded-lg flex items-center justify-center text-gray-500 mb-20 border border-gray-200 overflow-hidden shadow-sm">
+                <img src="../Images/FileReview/Questions.jpg" alt="Complex Flow Map of 83 Questions" class="w-full h-auto object-cover" />
+            </div>
+
+            <div class="max-w-6xl mb-6">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Visualising the Bottlenecks</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    To understand why the system was buckling, we first mapped the existing workflow (shown below). The diagram reveals a rigid, linear pipeline trying to support <strong>160 advisors</strong> and <strong>18-person review teams</strong>. We discovered that a single file could trigger up to <strong>83 unique compliance questions</strong>, creating massive "traffic jams" at every handoff point between the swimlanes.
+                </p>
+            </div>
+            <div class="bg-gray-100 rounded-lg flex items-center justify-center text-gray-500 mb-20 border border-gray-200 overflow-hidden shadow-sm">
+                <img id="zoom-img" src="../Images/FileReviewFlow.jpg" alt="Complex Flow Map of 83 Questions" class="w-full h-auto object-cover cursor-zoom-in" />
+            </div>
+
+            <div class="max-w-6xl mb-6">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Managing Cognitive Load</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    With over 1,000+ potential case combinations, reviewers were suffering from "scroll fatigue." I introduced a fixed <strong>Sidebar Navigation</strong> that split the "Three Main Screens" into manageable chunks. This allowed users to jump between the Fact Find, Remedial Actions, and Outcome sections without losing context.
+                </p>
+            </div>
+            <div class="bg-gray-100 rounded-lg flex items-center justify-center text-gray-500 mb-20 border border-gray-200 overflow-hidden shadow-sm">
+                <img src="../Images/FileReview/Filereviews-sidemenu.jpg" alt="Sidebar Navigation Architecture" class="w-full h-auto object-cover" />
+            </div>
+
+            <div class="max-w-6xl mb-6">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Team Workflows</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    For the 18-person teams, visibility was key. The dashboard needed to clearly separate "Allocated" reviews from the "To-Do" backlog. We used colour-coded status pills to allow Team Leads to spot 'At Risk' files instantly.
+                </p>
+            </div>
+            <div class="bg-gray-100 rounded-lg flex items-center justify-center text-gray-500 mb-20 border border-gray-200 overflow-hidden shadow-sm">
+                <img src="../Images/FileReview/Allocated todo.jpg" alt="Allocation Dashboard" class="w-full h-auto object-cover" />
+            </div>
+
+            <div class="max-w-6xl mb-6">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Defining the Outcome</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    The final step of the flow is the "Outcome" screen. We redesigned this to be binary and clear. Instead of ambiguous text fields, we implemented structured data inputs for Remedial Actions, ensuring that any failed review had a specific, trackable reason attached to it.
+                </p>
+            </div>
+            <div class="bg-gray-100 rounded-lg flex items-center justify-center text-gray-500 mb-20 border border-gray-200 overflow-hidden shadow-sm">
+                <img src="../Images/FileReview/Completed.jpg" alt="Outcome and Remedial Action Screen" class="w-full h-auto object-cover" />
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <p class="text-gray-600 text-sm mb-2">Scale</p>
+                    <p class="text-4xl font-bold text-orange-600 mb-1">160</p>
+                    <p class="text-gray-700 font-medium">Daily Reviewers</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <p class="text-gray-600 text-sm mb-2">Complexity</p>
+                    <p class="text-4xl font-bold text-gray-900 mb-1">83</p>
+                    <p class="text-gray-700 font-medium">Data Points per File</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <p class="text-gray-600 text-sm mb-2">Efficiency</p>
+                    <p class="text-4xl font-bold text-gray-900 mb-1">40%</p>
+                    <p class="text-gray-700 font-medium">Faster Turnaround</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="px-6 pb-20 bg-white">
+        <div class="max-w-4xl mx-auto space-y-12">
+            
+            <div>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">The Challenge</h2>
+                <p class="text-gray-700 text-lg leading-relaxed">
+                    Revolution is a document management platform serving 160+ advisors. As AI capabilities became more prevalent, we faced a critical challenge: how to leverage AI for improved efficiency while maintaining compliance standards and user trust. The existing system couldn't handle the nuanced requirements of AI-generated content validation.
+                </p>
+            </div>
+
+            <div>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Design Process</h2>
+                <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                    I led a comprehensive design process that involved:
+                </p>
+                <ul class="space-y-4 text-gray-700">
+                    <li class="flex gap-4">
+                        <span class="text-orange-600 font-bold flex-shrink-0">1</span>
+                        <span><strong>Research & Discovery:</strong> Conducted 20+ user interviews with advisors and compliance officers to understand pain points and requirements.</span>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="text-orange-600 font-bold flex-shrink-0">2</span>
+                        <span><strong>System Architecture:</strong> Designed a 'Static Snapshot' system that captures AI-generated content at a specific point in time for compliance verification.</span>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="text-orange-600 font-bold flex-shrink-0">3</span>
+                        <span><strong>UI/UX Design:</strong> Created intuitive interfaces for content review, approval workflows, and compliance reporting.</span>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="text-orange-600 font-bold flex-shrink-0">4</span>
+                        <span><strong>Testing & Iteration:</strong> Conducted extensive user testing and iterated on the design based on feedback.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Key Outcomes</h2>
+                <div class="space-y-4">
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                        <h3 class="text-gray-900 font-semibold mb-2 flex items-center gap-2">
+                            <span class="text-orange-600">✓</span> 40% Reduction in Review Time
+                        </h3>
+                        <p class="text-gray-700">By automating routine compliance checks and creating clearer workflows, advisors spend 40% less time on document review.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                        <h3 class="text-gray-900 font-semibold mb-2 flex items-center gap-2">
+                            <span class="text-orange-600">✓</span> 99.8% Compliance Rate
+                        </h3>
+                        <p class="text-gray-700">The system maintains near-perfect compliance through automated validation and expert review workflows.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                        <h3 class="text-gray-900 font-semibold mb-2 flex items-center gap-2">
+                            <span class="text-orange-600">✓</span> Improved User Trust
+                        </h3>
+                        <p class="text-gray-700">Users report significantly higher confidence in AI-assisted workflows due to transparent compliance systems.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Lessons Learned</h2>
+                <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                    This project reinforced several key principles for designing AI systems:
+                </p>
+                <ul class="space-y-3 text-gray-700">
+                    <li class="flex gap-3">
+                        <span class="text-orange-600 flex-shrink-0">→</span>
+                        <span><strong>Transparency is critical:</strong> Users need to understand how AI systems make decisions and how compliance is maintained.</span>
+                    </li>
+                    <li class="flex gap-3">
+                        <span class="text-orange-600 flex-shrink-0">→</span>
+                        <span><strong>Design for edge cases:</strong> The 0.2% of edge cases often reveal the most important design insights.</span>
+                    </li>
+                    <li class="flex gap-3">
+                        <span class="text-orange-600 flex-shrink-0">→</span>
+                        <span><strong>Involve stakeholders early:</strong> Compliance officers, legal teams, and end users all have valuable perspectives.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="pt-12 border-t border-gray-200">
+                <p class="text-gray-600 mb-6">Interested in discussing design systems, AI architecture, or compliance challenges?</p>
+                <a href="mailto:markachamberlain5@gmail.com" class="relative inline-block px-8 py-3 bg-gray-900 text-white font-semibold overflow-hidden group transition-all duration-300 ease-out hover:scale-105">
+                    <span class="relative z-10">Let's Connect</span>
+                    <div class="absolute inset-0 bg-orange-600 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
+<script>
+const img = document.getElementById('zoom-img');
+img.addEventListener('mouseenter', () => {
+    img.style.transform = 'scale(3)'; // Increased scale for better visibility
+    img.style.transition = 'transform 0.3s ease';
+    img.style.cursor = 'zoom-in';
+});
+img.addEventListener('mousemove', (e) => {
+    const rect = img.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const originX = (x / rect.width) * 100;
+    const originY = (y / rect.height) * 100;
+    img.style.transformOrigin = `${originX}% ${originY}%`;
+});
+img.addEventListener('mouseleave', () => {
+    img.style.transform = 'scale(1)';
+    img.style.transformOrigin = 'center center';
+    img.style.transition = 'transform 0.3s ease';
+});
+</script>
