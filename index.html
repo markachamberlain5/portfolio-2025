@@ -4,203 +4,191 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mark Chamberlain | Lead Product Designer</title>
-    <meta name="description" content="Portfolio showcasing minimalist design, editorial aesthetics, and impactful case studies for Lead Product Designer roles.">
+    <meta name="description" content="Portfolio of Mark Chamberlain, Lead Product Designer specializing in AI, FinTech, and Commercial Strategy.">
     
-    <!-- Montserrat Font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Custom Styles -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="bg-white text-gray-900 antialiased" style="font-family: 'Montserrat', sans-serif;">
-    
-    <!-- Navbar -->
-    <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-xs sm:max-w-md">
-        <div class="flex items-center justify-center px-6 py-3 mx-4 rounded-full bg-white/30 backdrop-blur-xl border border-gray-300 shadow-2xl">
-            <a href="#" class="text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 px-3 py-1.5 rounded-full transition-all duration-200">Home</a>
-            <a href="#selected-work" class="text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 px-3 py-1.5 rounded-full transition-all duration-200">Work</a>
-            <a href="about.html" class="text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 px-3 py-1.5 rounded-full transition-all duration-200">About</a>
-            <a href="mailto:markachamberlain5@gmail.com" class="text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 px-3 py-1.5 rounded-full transition-all duration-200">Contact</a>
+
+    <div id="loader" class="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center transition-opacity duration-500">
+        <p class="text-sm font-bold text-gray-900 tracking-[0.2em] animate-pulse">SYSTEMS LOADING</p>
+    </div>
+
+    <nav id="navbar" class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-xs sm:max-w-md opacity-0 transition-opacity duration-700 delay-300">
+        <div class="flex items-center justify-center px-6 py-3 mx-4 rounded-full bg-white/70 backdrop-blur-md border border-gray-200 shadow-xl">
+            <a href="#" class="text-sm font-bold text-gray-900 bg-gray-100 px-3 py-1.5 rounded-full transition-all duration-200">Home</a>
+            <a href="#selected-work" class="text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white/50 px-3 py-1.5 rounded-full transition-all duration-200">Work</a>
+            <a href="about.html" class="text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white/50 px-3 py-1.5 rounded-full transition-all duration-200">About</a>
+            <a href="mailto:markachamberlain5@gmail.com" class="text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white/50 px-3 py-1.5 rounded-full transition-all duration-200">Contact</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center overflow-hidden">
-        <!-- Background Image -->
-        <img src="Images/Mark-Hero.jpg" alt="Mark Chamberlain" class="absolute inset-0 w-full h-full object-cover">
-        
-        <!-- Overlay -->
-        <div class="absolute inset-0"></div>
+    <div id="site-content" class="opacity-0 translate-y-8 blur-md transition-all duration-700 ease-out">
 
-        <!-- Content -->
-        <div class="relative z-10 text-center text-white max-w-4xl px-6" style="animation: fadeInUp 0.8s ease-out;">
-            <h1 class="text-5xl md:text-7xl font-bold tracking-tight hero-title mb-6">Mark Chamberlain.</h1>
-            <p class="text-xl md:text-2xl mb-8 text-gray-100 hero-title-text">
-                Lead Product Designer bridging the gap between Legacy Stacks, AI, and Commercial Strategy.
-            </p>
-            <button onclick="document.getElementById('selected-work').scrollIntoView({behavior: 'smooth'})" class="hero-button relative px-8 py-3 border-2 border-white text-white font-medium overflow-hidden group transition-all duration-300 ease-out hover:scale-105">
-                <span class="relative z-10">View Case Studies</span>
-                <div class="absolute inset-0 bg-orange-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></div>
-            </button>
-        </div>
-    </section>
-
-    <!-- Selected Work Section -->
-    <section id="selected-work" class="px-6 py-20 bg-white">
-        <h2 class="text-4xl font-bold mb-12 text-center text-gray-900">Selected Work</h2>
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <section class="relative h-screen flex items-center justify-center overflow-hidden">
+            <img src="Images/Mark-Hero.jpg" alt="Mark Chamberlain" class="absolute inset-0 w-full h-full object-cover">
             
-            <!-- Project Card 1 -->
-            <a href="projects/FileReviews.html" class="group cursor-pointer">
-                <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-200">
-                    <div class="aspect-video bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center text-gray-500">
-                        <img src="Images/FileReview/AI-thumbnail.jpg" alt="File Reviews Project Thumbnail"></div>
-                    <div class="p-6 flex-1 flex flex-col">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">AI & Compliance Architecture</h3>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">AI Integration</span>
-                            <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Compliance</span>
-                            <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Complex Systems</span>
+            <div class="relative z-10 text-center max-w-4xl px-6 pt-20">
+                <h1 class="text-5xl md:text-7xl font-bold text-gray-900 tracking-tight mb-6">Mark Chamberlain.</h1>
+                <p class="text-xl md:text-2xl mb-8 text-gray-800 font-medium">
+                    Lead Product Designer bridging the gap between Legacy Stacks, AI, and Commercial Strategy.
+                </p>
+                
+                <button onclick="document.getElementById('selected-work').scrollIntoView({behavior: 'smooth'})" class="relative inline-block px-8 py-3 border-2 border-gray-900 text-gray-900 font-bold overflow-hidden group transition-all duration-300 ease-out hover:scale-105 hover:text-white hover:border-orange-600 bg-white/50 backdrop-blur-sm">
+                    <span class="relative z-10">View Case Studies</span>
+                    <div class="absolute inset-0 bg-orange-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></div>
+                </button>
+            </div>
+        </section>
+
+        <section id="selected-work" class="px-6 py-20 bg-white">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold mb-12 text-center text-gray-900">Selected Work</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                    <a href="projects/FileReviews.html" class="group cursor-pointer">
+                        <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-200">
+                            <div class="aspect-video bg-gray-200 overflow-hidden relative">
+                                <img src="Images/FileReview/AI-thumbnail.jpg" alt="File Reviews" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"></div>
+                            </div>
+                            <div class="p-6 flex-1 flex flex-col">
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">AI & Compliance Architecture</h3>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">AI Integration</span>
+                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Compliance</span>
+                                </div>
+                                <div class="mt-auto pt-4 border-t border-gray-100">
+                                    <p class="text-sm font-semibold text-gray-500">Impact</p>
+                                    <p class="text-lg text-orange-600 font-bold">40% Reduction in File Review Time</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="mt-auto">
-                            <p class="text-sm text-orange-600 font-semibold">40% Reduction in File Review Time</p>
+                    </a>
+
+                    <a href="projects/Protection.html" class="group cursor-pointer">
+                        <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-200">
+                            <div class="aspect-video bg-gray-200 overflow-hidden relative">
+                                <img src="Images/Protection/ProtectionThumnail.jpg" alt="Protection Workflows" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"></div>
+                            </div>
+                            <div class="p-6 flex-1 flex flex-col">
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">Modernising Protection Workflows</h3>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">FinTech</span>
+                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Underwriting Logic</span>
+                                </div>
+                                <div class="mt-auto pt-4 border-t border-gray-100">
+                                    <p class="text-sm font-semibold text-gray-500">Impact</p>
+                                    <p class="text-lg text-orange-600 font-bold">35% Faster App-to-Offer Time</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </a>
+                    </a>
 
-           <a href="projects/Protection.html" class="group cursor-pointer">
-                <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-200">
-                    <div class="aspect-video bg-gray-200 overflow-hidden relative">
-                         <img src="Images/Protection/ProtectionThumnail.jpg" 
-                             alt="Protection Sourcing UI" 
-                             class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" />
-                        
-                        <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"></div>
-                    </div>
-
-                    <div class="p-6 flex-1 flex flex-col">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
-                            Modernising Protection Workflows
-                        </h3>
-                        
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">FinTech</span>
-                            <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Underwriting Logic</span>
-                            <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Complex Systems</span>
+                    <a href="projects/RedLionPub.html" class="group cursor-pointer">
+                        <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-200">
+                            <div class="aspect-video bg-gray-200 overflow-hidden relative">
+                                <img src="Images/RedLion/Pub.jpg" alt="Red Lion" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"></div>
+                            </div>
+                            <div class="p-6 flex-1 flex flex-col">
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">The Red Lion: Brand & Digital</h3>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Brand Strategy</span>
+                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Web Design</span>
+                                </div>
+                                <div class="mt-auto pt-4 border-t border-gray-100">
+                                    <p class="text-sm font-semibold text-gray-500">Impact</p>
+                                    <p class="text-lg text-orange-600 font-bold">60% Increase in Online Bookings</p>
+                                </div>
+                            </div>
                         </div>
-                        
-                        <div class="mt-auto pt-4 border-t border-gray-100">
-                            <p class="text-sm font-semibold text-gray-500">Impact</p>
-                            <p class="text-lg text-orange-600 font-bold">35% Faster App-to-Offer Time</p>
+                    </a>
+
+                    <a href="projects/FuelCoffee.html" class="group cursor-pointer">
+                        <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-200">
+                            <div class="aspect-video bg-gray-200 overflow-hidden relative">
+                                <img src="Images/Fuel/Coffee.jpg" alt="Fuel Coffee" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"></div>
+                            </div>
+                            <div class="p-6 flex-1 flex flex-col">
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">Fuel Retail Transformation</h3>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">E-commerce</span>
+                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">UX Strategy</span>
+                                </div>
+                                <div class="mt-auto pt-4 border-t border-gray-100">
+                                    <p class="text-sm font-semibold text-gray-500">Impact</p>
+                                    <p class="text-lg text-orange-600 font-bold">45% Increase in Online Orders</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </a>
-<a href="projects/RedLionPub.html" class="group cursor-pointer">
-                <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-200">
-                    <div class="aspect-video bg-gray-200 overflow-hidden relative">
-                         <img src="Images/RedLion/Pub.jpg" 
-                             alt="Red Lion Brand Identity" 
-                             class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" />
-                        
-                        <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"></div>
-                    </div>
-
-                    <div class="p-6 flex-1 flex flex-col">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
-                            The Red Lion: Brand & Digital
-                        </h3>
-                        
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Brand Strategy</span>
-                            <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Visual Design</span>
-                            <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Web Design</span>
-                        </div>
-                        
-                        <div class="mt-auto pt-4 border-t border-gray-100">
-                            <p class="text-sm font-semibold text-gray-500">Impact</p>
-                            <p class="text-lg text-orange-600 font-bold">60% Increase in Online Bookings</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-          <a href="projects/FuelCoffee.html" class="group cursor-pointer">
-                <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-200">
-                    <div class="aspect-video bg-gray-200 overflow-hidden relative">
-                         <img src="Images/Fuel/Coffee.jpg" 
-                             alt="Fuel Brand Experience" 
-                             class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" />
-                        
-                        <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"></div>
-                    </div>
-
-                    <div class="p-6 flex-1 flex flex-col">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
-                            Fuel Retail Digital Transformation
-                        </h3>
-                        
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">E-commerce</span>
-                            <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Web Design</span>
-                            <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">UX Strategy</span>
-                        </div>
-                        
-                        <div class="mt-auto pt-4 border-t border-gray-100">
-                            <p class="text-sm font-semibold text-gray-500">Impact</p>
-                            <p class="text-lg text-orange-600 font-bold">45% Increase in Online Orders</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-
-
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="px-6 py-20 bg-gray-50">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <!-- Left Column - Photo -->
-            <div class="flex justify-center">
-                <div class="relative w-80 h-80 rounded-lg overflow-hidden">
-                    <img src="Images/Professional Photo.jpg" alt="Professional Photo" class="w-full h-full object-cover">
+                    </a>
                 </div>
             </div>
+        </section>
 
-            <!-- Right Column - Content -->
-            <div>
-                <h2 class="text-4xl font-bold mb-8 text-gray-900">About Me</h2>
-
-                <div class="space-y-6 mb-8">
-                    <div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Systems Thinking</h3>
-                        <p class="text-gray-700">Solving complex workflows for 160+ advisors.</p>
-                    </div>
-
-                    <div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Data-Driven</h3>
-                        <p class="text-gray-700">Designing 'Zero Touch' API triggers.</p>
-                    </div>
-
-                    <div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Cross-Functional</h3>
-                        <p class="text-gray-700">Architecting 'Static Snapshot' logic to solve AI compliance risks.</p>
+        <section class="px-6 py-20 bg-gray-50">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="flex justify-center">
+                    <div class="relative w-80 h-96 rounded-lg overflow-hidden shadow-xl">
+                        <img src="Images/Professional Photo.jpg" alt="Mark Chamberlain" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
                     </div>
                 </div>
 
+                <div>
+                    <h2 class="text-4xl font-bold mb-8 text-gray-900">About Me</h2>
+                    <div class="space-y-6 mb-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Systems Thinking</h3>
+                            <p class="text-gray-700">Solving complex workflows for 160+ advisors.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Data-Driven</h3>
+                            <p class="text-gray-700">Designing 'Zero Touch' API triggers.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Cross-Functional</h3>
+                            <p class="text-gray-700">Architecting 'Static Snapshot' logic to solve AI compliance risks.</p>
+                        </div>
+                    </div>
+                    
                     <a href="Images/Mark Chamberlain CV.pdf" download="MarkChamberlain_CV" class="relative inline-block px-6 py-3 bg-gray-900 text-white font-semibold overflow-hidden group transition-all duration-300 ease-out hover:scale-105 cursor-pointer">
                         <span class="relative z-10">Download CV</span>
                         <div class="absolute inset-0 bg-orange-600 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
                     </a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
+       
+    </div> <script>
+        window.addEventListener('load', function() {
+            const loader = document.getElementById('loader');
+            const content = document.getElementById('site-content');
+            const navbar = document.getElementById('navbar');
+            
+            // 1. Fade out loader
+            loader.style.opacity = '0';
+            
+            // 2. Reveal Content & Navbar
+            setTimeout(() => {
+                content.classList.remove('opacity-0', 'translate-y-8', 'blur-md');
+                content.classList.add('opacity-100', 'translate-y-0', 'blur-0');
+                
+                // Reveal Nav
+                navbar.classList.remove('opacity-0');
+            }, 100);
+
+            // 3. Cleanup Loader
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 300);
+        });
+    </script>
 </body>
 </html>
