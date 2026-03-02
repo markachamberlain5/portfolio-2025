@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fact Find UX Recovery | Mark Chamberlain</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Montserrat', sans-serif; }
+        .image-zoom-wrapper { overflow: hidden; cursor: crosshair; }
+        .image-zoom-wrapper img { transition: transform 0.3s ease-out; transform-origin: center; }
+        .metric-card { border-left: 4px solid #ea580c; }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900 antialiased">
+
+    <div id="loader" class="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center transition-opacity duration-500">
+        <p class="text-sm font-bold text-gray-900 tracking-[0.2em] animate-pulse">SYSTEMS LOADING</p>
+    </div>
+
+    <div id="site-content" class="opacity-0 translate-y-8 blur-md transition-all duration-700 ease-out">
+
+        <div id="nav-placeholder"></div>
+
+        <section class="pt-32 pb-12 px-6 bg-white">
+            <div class="max-w-4xl mx-auto">
+                
+                <div class="mb-8 space-y-4">
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-gray-100 text-gray-700 border border-gray-200 px-3 py-1 rounded-full">UX Recovery Mission</span>
+                        <span class="text-xs bg-gray-100 text-gray-700 border border-gray-200 px-3 py-1 rounded-full">FinTech Compliance</span>
+                        <span class="text-xs bg-gray-100 text-gray-700 border border-gray-200 px-3 py-1 rounded-full">Information Density</span>
+                    </div>
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 text-gray-900 leading-tight">Revolution Fact Find: <br><span class="text-orange-600">A UX Rescue Mission</span></h1>
+                <p class="text-xl text-gray-600 mb-16 max-w-2xl">Led the UX transformation of a mission-critical financial CRM for Stonebridge. Reconciling advisor speed with modern technology to protect the business while enabling the broker.</p>
+
+                <!-- SECTION 1: THE LEGACY LAYOUT -->
+                <div class="max-w-5xl mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">1. The Disjointed Legacy</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        The original Fact Find was compact and fast but visually dated. Crucially, Applicant 1 and Applicant 2 were separated across entirely different pages, forcing advisors to toggle back and forth to compare financial details—a significant friction point for dual-application cases.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
+                    <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden shadow-sm">
+                        <img src="../Images/Factfind/OldPersonal.jpg" alt="Legacy Personal Layout" class="w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+                        <p class="p-3 text-[10px] text-center font-bold text-gray-400 uppercase">Legacy Personal Detail</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden shadow-sm">
+                        <img src="../Images/Factfind/OldAddress.jpg" alt="Legacy Address Layout" class="w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+                        <p class="p-3 text-[10px] text-center font-bold text-gray-400 uppercase">Legacy Address Flow</p>
+                    </div>
+                </div>
+
+                <!-- SECTION 2: THE MODERN BLOAT (TESTED PHASE) -->
+                <div class="max-w-5xl mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">2. Iteration 1: The "Modern" Bloat</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        The initial platform upgrade modernized the UI but expanded the footprint. It relied heavily on excessive whitespace and accordion menus, which inadvertently bloated the 2-page flow into 4+ pages. We tested this version on users and discovered a 50% increase in click-depth without solving the core data-parity problem.
+                    </p>
+                </div>
+                <div class="bg-gray-900 rounded-2xl p-4 mb-20 relative group overflow-hidden border border-gray-800 shadow-2xl">
+                    <div class="absolute top-8 right-8 bg-orange-600 text-white text-[10px] font-black px-3 py-1 rounded-full z-20 shadow-lg animate-pulse uppercase tracking-widest">Hover to Audit v2</div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="image-zoom-wrapper rounded-xl border border-white/10 h-[500px]"> 
+                            <img src="../Images/Factfind/PersonalNewv1.jpg" alt="Bloated Personal Layout" class="zoom-target w-full h-full object-contain" />
+                        </div>
+                        <div class="image-zoom-wrapper rounded-xl border border-white/10 h-[500px]"> 
+                            <img src="../Images/Factfind/addressNewv2.jpg" alt="Bloated Address Layout" class="zoom-target w-full h-full object-contain" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION 3: HEATMAPS & DISCOVERY -->
+                <div class="max-w-5xl mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">3. Validating Friction via Heatmaps</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        To move beyond anecdotal complaints, I utilized heatmap analysis to observe how advisors interacted with the new UI. The data revealed intense clusters of <strong>"rage clicks"</strong> around collapsed accordions and complete <strong>dead zones</strong> where critical mortgage data was buried. This evidence was crucial in securing stakeholder buy-in for a full structural pivot.
+                    </p>
+                </div>
+                <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden shadow-sm mb-20">
+                    <img src="../Images/Factfind/heatmaps.png" alt="Heatmap Data Analysis" class="w-full h-auto object-cover" />
+                </div>
+
+                <!-- SECTION 4: THE NEW LAYOUT (INTELLIGENCE WORKSPACE) -->
+                <div class="max-w-5xl mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">4. The Intelligence Workspace (V3)</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        The final redesign transitioned from a "web form" to an <strong>Advisor Cockpit</strong>. We merged Personal and Address hubs into a unified, high-density workspace. By implementing a vertical financial stack, we successfully managed properties with 3+ mortgages while restoring the side-by-side parity advisors needed for speed.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-10 mb-20">
+                    <div class="bg-white rounded-xl border border-orange-200 overflow-hidden shadow-md">
+                        <img src="../Images/Factfind/Personalnewv3.jpg" alt="Final Personal Workspace" class="w-full h-auto object-cover" />
+                        <p class="p-3 text-[10px] text-center font-bold text-orange-600 uppercase tracking-widest bg-orange-50">Side-by-Side Personal Hub</p>
+                    </div>
+                    <div class="bg-white rounded-xl border border-orange-200 overflow-hidden shadow-md">
+                        <img src="../Images/Factfind/Adderssnewv3.jpg" alt="Final Address Hub" class="w-full h-auto object-cover" />
+                        <p class="p-3 text-[10px] text-center font-bold text-orange-600 uppercase tracking-widest bg-orange-50">Unified Property Matrix</p>
+                    </div>
+                </div>
+
+                <!-- STATS BAR -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20 border-y border-gray-100 py-10">
+                    <div>
+                        <p class="text-gray-500 text-[10px] font-black mb-1 uppercase tracking-[0.2em]">User Scale</p>
+                        <p class="text-3xl font-bold text-gray-900">1,300+ <span class="text-sm font-normal text-gray-400 tracking-normal">Advisors</span></p>
+                    </div>
+                    <div>
+                        <p class="text-gray-500 text-[10px] font-black mb-1 uppercase tracking-[0.2em]">Efficiency</p>
+                        <p class="text-3xl font-bold text-gray-900">60% <span class="text-sm font-normal text-gray-400 tracking-normal text-red-500">Less Clicks</span></p>
+                    </div>
+                    <div>
+                        <p class="text-gray-500 text-[10px] font-black mb-1 uppercase tracking-[0.2em]">Result</p>
+                        <p class="text-3xl font-bold text-orange-600">100% <span class="text-sm font-normal text-gray-400 tracking-normal">Data Parity</span></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section class="py-20 bg-slate-900 text-center">
+            <h2 class="text-3xl font-bold text-white mb-6 tracking-tight italic">Salvaging a complex rollout requires Workstream Intelligence.</h2>
+            <a href="mailto:markachamberlain5@gmail.com" class="relative inline-flex items-center gap-3 px-10 py-4 bg-orange-600 text-white font-bold rounded-xl overflow-hidden group transition-all duration-300 ease-out hover:scale-105">
+                <span class="relative z-10">Discuss Your Project</span>
+                <i data-lucide="arrow-right" class="relative z-10 w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+            </a>
+        </section>
+
+        <div id="footer-placeholder"></div>
+
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+
+        // Site content reveal logic
+        window.onload = () => {
+            const loader = document.getElementById('loader');
+            const content = document.getElementById('site-content');
+            loader.style.opacity = '0';
+            setTimeout(() => {
+                loader.style.display = 'none';
+                content.style.opacity = '1';
+                content.style.transform = 'translateY(0)';
+                content.style.filter = 'blur(0)';
+            }, 500);
+        };
+
+        // Multi-image Zoom Script
+        const zoomContainers = document.querySelectorAll('.image-zoom-wrapper');
+        
+        zoomContainers.forEach(container => {
+            const img = container.querySelector('img');
+            
+            container.addEventListener('mousemove', (e) => {
+                const rect = container.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const xPercent = (x / rect.width) * 100;
+                const yPercent = (y / rect.height) * 100;
+
+                img.style.transformOrigin = `${xPercent}% ${yPercent}%`;
+                img.style.transform = 'scale(2.5)';
+            });
+
+            container.addEventListener('mouseleave', () => {
+                img.style.transform = 'scale(1)';
+                img.style.transformOrigin = 'center center';
+            });
+        });
+    </script>
+</body>
+</html>

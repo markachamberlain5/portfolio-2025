@@ -11,20 +11,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-white text-gray-900 antialiased" style="font-family: 'Montserrat', sans-serif;">
+<body class="bg-white text-gray-900 antialiased">
 
     <div id="loader" class="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center transition-opacity duration-500">
         <p class="text-sm font-bold text-gray-900 tracking-[0.2em] animate-pulse">SYSTEMS LOADING</p>
     </div>
 
-    <nav id="navbar" class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-xs sm:max-w-md opacity-0 transition-opacity duration-700 delay-300">
-        <div class="flex items-center justify-center px-6 py-3 mx-4 rounded-full bg-white/70 backdrop-blur-md border border-gray-200 shadow-xl">
-            <a href="#" class="text-sm font-bold text-gray-900 bg-gray-100 px-3 py-1.5 rounded-full transition-all duration-200">Home</a>
-            <a href="#selected-work" class="text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white/50 px-3 py-1.5 rounded-full transition-all duration-200">Work</a>
-            <a href="about.html" class="text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white/50 px-3 py-1.5 rounded-full transition-all duration-200">About</a>
-            <a href="mailto:markachamberlain5@gmail.com" class="text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white/50 px-3 py-1.5 rounded-full transition-all duration-200">Contact</a>
-        </div>
-    </nav>
+    <div id="nav-placeholder"></div>
 
     <div id="site-content" class="opacity-0 translate-y-8 blur-md transition-all duration-700 ease-out">
 
@@ -177,6 +170,38 @@
         </div>
     </div>
 </a>
+<a href="projects/FactFindPortfolio.html" class="group cursor-pointer">
+    <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-200">
+        
+        <div class="aspect-video bg-gray-200 overflow-hidden relative">
+            <img src="Images/Factfind/FFthumbnail.jpg" 
+                 alt="Revolution Fact Find UX Recovery" 
+                 class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"></div>
+        </div>
+
+        <div class="p-6 flex-1 flex flex-col">
+            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
+                Revolution Fact Find: UX Recovery
+            </h3>
+            
+            <p class="text-sm text-gray-600 mb-4 line-clamp-2">
+                Rescuing advisor productivity by transforming a bloated platform rollout into a high-density Intelligence Workspace.
+            </p>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+                <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Fintech</span>
+                <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">UX Recovery</span>
+                <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Enterprise CRM</span>
+            </div>
+            
+            <div class="mt-auto pt-4 border-t border-gray-100">
+                <p class="text-sm font-semibold text-gray-500">Impact</p>
+                <p class="text-lg text-orange-600 font-bold">60% Reduction in Click-Depth</p>
+            </div>
+        </div>
+    </div>
+</a>
                 </div>
             </div>
         </section>
@@ -214,30 +239,10 @@
             </div>
         </section>
 
-       
-    </div> <script>
-        window.addEventListener('load', function() {
-            const loader = document.getElementById('loader');
-            const content = document.getElementById('site-content');
-            const navbar = document.getElementById('navbar');
-            
-            // 1. Fade out loader
-            loader.style.opacity = '0';
-            
-            // 2. Reveal Content & Navbar
-            setTimeout(() => {
-                content.classList.remove('opacity-0', 'translate-y-8', 'blur-md');
-                content.classList.add('opacity-100', 'translate-y-0', 'blur-0');
-                
-                // Reveal Nav
-                navbar.classList.remove('opacity-0');
-            }, 100);
+        <div id="footer-placeholder"></div>
 
-            // 3. Cleanup Loader
-            setTimeout(() => {
-                loader.style.display = 'none';
-            }, 300);
-        });
-    </script>
+    </div>
+
+    <script src="js/components.js"></script>
 </body>
 </html>
