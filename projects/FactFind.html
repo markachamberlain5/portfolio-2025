@@ -12,13 +12,25 @@
         .image-zoom-wrapper { overflow: hidden; cursor: crosshair; }
         .image-zoom-wrapper img { transition: transform 0.3s ease-out; transform-origin: center; }
         .metric-card { border-left: 4px solid #ea580c; }
+        
+        /* Loading Animation CSS */
+        .perspective-1000 { perspective: 1000px; }
+        .rotate-y-60 { transform: rotateY(60deg); }
+        .rotate-y-120 { transform: rotateY(120deg); }
+        @keyframes spin { 100% { transform: rotateX(360deg) rotateY(360deg); } }
+        .globe-spinner { animation: spin 4s linear infinite; }
     </style>
 </head>
 
 <body class="bg-white text-gray-900 antialiased">
 
-    <div id="loader" class="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center transition-opacity duration-500">
-        <p class="text-sm font-bold text-gray-900 tracking-[0.2em] animate-pulse">SYSTEMS LOADING</p>
+    <div id="loader" class="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center transition-opacity duration-700">
+        <div class="relative w-24 h-24 perspective-1000">
+            <div class="globe-spinner absolute inset-0 border-2 border-gray-200 rounded-full"></div>
+            <div class="globe-spinner absolute inset-0 border-2 border-orange-600 rounded-full rotate-y-60"></div>
+            <div class="globe-spinner absolute inset-0 border-2 border-gray-900 rounded-full rotate-y-120"></div>
+        </div>
+        <p class="mt-6 text-sm font-bold text-gray-900 tracking-[0.2em] animate-pulse">SYSTEMS LOADING</p>
     </div>
 
     <div id="site-content" class="opacity-0 translate-y-8 blur-md transition-all duration-700 ease-out">
@@ -44,14 +56,14 @@
                 </div>
                 
                 <h1 class="text-4xl md:text-6xl font-bold mb-6 text-gray-900 leading-tight">Fact Find UX: <br><span class="text-orange-600">From Guesswork to Data</span></h1>
-                <p class="text-xl text-gray-600 mb-16 max-w-2xl">Re-engineering a multi-page legacy system into a high-density intelligence workspace during a mission-critical tech stack migration.</p>
+                <p class="text-xl text-gray-600 mb-16 max-w-2xl">Turning a clunky, multi-page legacy system into a fast, high-density workspace—all while migrating the underlying tech stack.</p>
 
                 <div class="max-w-5xl mb-6">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">1. The Legacy Transition</h3>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">1. Designing in the Dark</h3>
                     <p class="text-gray-600 leading-relaxed mb-6">
-                        The original Fact Find was built on an aging <strong>VB stack</strong>. As we migrated to <strong>C# MVC</strong>, we seized the opportunity to build a new application that could support a partnership with <strong>Mortgage Brain</strong>. This required complex middleware to collect detailed data for API-driven quotes. 
+                        The original Fact Find tool was built on an aging VB stack. When the company decided to migrate to C#, we had to rebuild the UI to support a new API integration. 
                         <br><br>
-                        Initially, without user tracking or market research, we relied on "word of mouth" feedback from team leads—a process we realized was flawed as the project moved from XD to Figma amidst company restructuring and changing management.
+                        But at first, we didn't have any user tracking. We were relying purely on "word of mouth" feedback from managers to figure out what users wanted—which turned out to be a deeply flawed way to design a product.
                     </p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
@@ -68,7 +80,7 @@
                 <div class="max-w-5xl mb-6">
                     <h3 class="text-2xl font-bold text-gray-900 mb-3">2. Iteration 1: The "Modern" Bloat</h3>
                     <p class="text-gray-600 leading-relaxed mb-6">
-                        The first redesign expanded the footprint to allow for note-taking as users progressed. However, this phase was largely based on <strong>educated guesswork</strong>. It was only after a staged launch that I successfully integrated <strong>Microsoft Clarity</strong>, finally giving us the metrics to see exactly <em>how, when, where, and why</em> advisors were using the tool. We moved from guessing to observing.
+                        Our first redesign actually made things worse. We expanded the pages to give users more room for notes, but this was entirely based on educated guesses. I pushed to integrate <strong>Microsoft Clarity</strong> into the staged launch. Suddenly, we had the heatmaps and metrics to see exactly how, when, and where advisors were getting stuck. We finally stopped guessing and started observing.
                     </p>
                 </div>
                 <div class="bg-gray-900 rounded-2xl p-4 mb-20 relative group overflow-hidden border border-gray-800 shadow-2xl">
@@ -84,9 +96,9 @@
                 </div>
 
                 <div class="max-w-5xl mb-6">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">3. Heatmap Analysis & User Discovery</h3>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">3. Letting the Data Win</h3>
                     <p class="text-gray-600 leading-relaxed mb-6">
-                        We launched to a pilot company of <strong>200 consultants</strong>. The reception was mixed; advisors felt the fragmented pages slowed their workflow. By analyzing heatmaps, I could show stakeholders and the SLT that "knee-jerk" reactions were dangerous—instead, we needed to consolidate. We met with consultants to dig beneath their complaints and identify the true friction points.
+                        When we rolled out the pilot to 200 consultants, they were frustrated. The new fragmented pages were slowing them down. Using the heatmap data, I showed leadership that we needed to stop reacting to individual complaints and look at the actual user behavior. The data proved that separating the pages was a mistake—we needed to consolidate.
                     </p>
                 </div>
                 <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden shadow-sm mb-20">
@@ -94,9 +106,9 @@
                 </div>
 
                 <div class="max-w-5xl mb-6">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">4. The Intelligence Workspace (v3)</h3>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">4. The "Cockpit" Workspace (v3)</h3>
                     <p class="text-gray-600 leading-relaxed mb-6">
-                        Based on the data, we collapsed the "many pages" model back into high-density hubs. We introduced <strong>side-by-side data parity</strong> for dual applicants and refined the property section to handle multiple mortgages (1st, 2nd, and 3rd charges) without visual clutter. This "Cockpit" model is now being rolled out across other projects to standardize our understanding of user behavior.
+                        We ditched the "too many pages" approach and built a high-density hub. We put dual applicants side-by-side so advisors didn't have to keep clicking back and forth. We cleaned up the property section so tracking multiple mortgages didn't look like a mess. It worked so well that this "Cockpit" layout is now the standard model for our other internal tools.
                     </p>
                 </div>
                 
@@ -127,18 +139,18 @@
                 </div>
 
                 <div class="bg-gray-50 rounded-2xl p-8 md:p-12 border border-gray-100 mb-20">
-                    <h2 class="text-2xl font-bold text-gray-900 mb-8">Technical & Compliance Refinement</h2>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-8">Solving the Annoying Details</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div>
-                            <h4 class="font-bold text-gray-800 mb-2 italic">Consumer Duty Optimization</h4>
+                            <h4 class="font-bold text-gray-800 mb-2 italic">Forcing Compliance Without Pop-ups</h4>
                             <p class="text-sm text-gray-600 leading-relaxed">
-                                We strategically positioned <strong>Vulnerability Status</strong> between Budget and Notes. This ensures compliance with FCA standards by forcing a consideration of client health or financial resilience before the final audit note is recorded.
+                                We strategically placed the <strong>Vulnerability Status</strong> right before the final notes section. This forced advisors to pause and consider a client's health or financial resilience, keeping us completely compliant with strict FCA standards without resorting to annoying alert boxes.
                             </p>
                         </div>
                         <div>
-                            <h4 class="font-bold text-gray-800 mb-2 italic">"Portal Paste" Interaction</h4>
+                            <h4 class="font-bold text-gray-800 mb-2 italic">The "Portal Paste" Fix</h4>
                             <p class="text-sm text-gray-600 leading-relaxed">
-                                By replacing hyperlinked contact fields with <strong>one-click copy buttons</strong>, we solved a major advisor frustration. This prevented accidental redirects to email clients when advisors simply needed to paste data into lender portals.
+                                Advisors were constantly frustrated by clicking phone numbers or emails and accidentally opening their mail apps when all they wanted to do was copy the text. I swapped the hyperlinks for simple <strong>one-click copy buttons</strong>, saving them endless headaches when pasting client data into lender portals.
                             </p>
                         </div>
                     </div>
@@ -150,7 +162,7 @@
         <section class="py-20 bg-white border-t border-gray-100 text-center">
             <h2 class="text-3xl font-bold text-gray-900 mb-6">Salvaging complex systems requires data.</h2>
             <a href="mailto:markachamberlain5@gmail.com" class="relative inline-block px-10 py-4 bg-gray-900 text-white font-bold rounded-xl overflow-hidden group transition-all duration-300 ease-out hover:scale-105">
-                <span class="relative z-10">Request UX Audit</span>
+                <span class="relative z-10">Let's Discuss</span>
                 <div class="absolute inset-0 bg-orange-600 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
             </a>
         </section>
