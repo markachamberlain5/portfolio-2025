@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finzla — Personal Finance Aggregator | Mark Chamberlain</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Montserrat', sans-serif; }
+        .perspective-1000 { perspective: 1000px; }
+        .rotate-y-60 { transform: rotateY(60deg); }
+        .rotate-y-120 { transform: rotateY(120deg); }
+        @keyframes spin { 100% { transform: rotateX(360deg) rotateY(360deg); } }
+        .globe-spinner { animation: spin 4s linear infinite; }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900 antialiased">
+
+    <div id="loader" class="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center transition-opacity duration-700">
+        <div class="relative w-24 h-24 perspective-1000">
+            <div class="globe-spinner absolute inset-0 border-2 border-gray-200 rounded-full"></div>
+            <div class="globe-spinner absolute inset-0 border-2 border-orange-600 rounded-full rotate-y-60"></div>
+            <div class="globe-spinner absolute inset-0 border-2 border-gray-900 rounded-full rotate-y-120"></div>
+        </div>
+        <p class="mt-6 text-sm font-bold text-gray-900 tracking-[0.2em] animate-pulse">SYSTEMS LOADING</p>
+    </div>
+
+    <div id="site-content" class="opacity-0 translate-y-8 blur-md transition-all duration-700 ease-out">
+
+        <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-xs sm:max-w-md">
+            <div class="flex items-center justify-center px-6 py-3 mx-4 rounded-full bg-white/70 backdrop-blur-md border border-gray-200 shadow-xl">
+                <a href="../index.html" class="text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white/50 px-3 py-1.5 rounded-full transition-all duration-200">Home</a>
+                <a href="../index.html#selected-work" class="text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white/50 px-3 py-1.5 rounded-full transition-all duration-200">Work</a>
+                <a href="../about.html" class="text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white/50 px-3 py-1.5 rounded-full transition-all duration-200">About</a>
+                <a href="mailto:markachamberlain5@gmail.com" class="text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white/50 px-3 py-1.5 rounded-full transition-all duration-200">Contact</a>
+            </div>
+        </nav>
+
+        <section class="pt-32 pb-12 px-6 bg-white">
+            <div class="max-w-4xl mx-auto">
+
+                <div class="mb-8 space-y-4">
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-gray-100 text-gray-700 border border-gray-200 px-3 py-1 rounded-full">Mobile App Design</span>
+                        <span class="text-xs bg-gray-100 text-gray-700 border border-gray-200 px-3 py-1 rounded-full">FinTech</span>
+                        <span class="text-xs bg-gray-100 text-gray-700 border border-gray-200 px-3 py-1 rounded-full">Freelance</span>
+                        <span class="text-xs bg-gray-100 text-gray-700 border border-gray-200 px-3 py-1 rounded-full">Open Banking</span>
+                    </div>
+                </div>
+
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 text-gray-900 leading-tight">Finzla — <br><span class="text-orange-600">See All Your Money,<br>In One Place.</span></h1>
+                <p class="text-xl text-gray-600 mb-16 max-w-2xl">A personal finance aggregator designed for people who manage multiple bank accounts — built from the ground up as a freelance project, from research through to live prototype.</p>
+
+                <!-- The Problem -->
+                <div class="max-w-5xl mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">1. The Problem Nobody Talks About</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Most people don't have one bank account. They have two, three, sometimes ten. This is especially common in the Nigerian diaspora community — where having multiple accounts across different banks is just normal life. But every app assumes you bank in one place.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        The result? People stand at the checkout trying to work out which account has enough in it. They log into five different apps to get a picture of where they are. And all the while, hidden bank transfer charges are quietly eating into their balance — charges most people don't even know they're paying.
+                    </p>
+                </div>
+
+                <!-- Splash screen -->
+                <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden shadow-sm mb-20 flex justify-center py-8">
+                    <img src="../Images/Finzla/Open screen.jpg" alt="Finzla splash screen" class="w-64 rounded-2xl shadow-xl" />
+                </div>
+
+                <!-- The Insight -->
+                <div class="max-w-5xl mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">2. The Insight That Shaped the Design</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        The brief came from a client who ran a market stall and noticed the pattern firsthand. Customers would hold up the queue searching across accounts. The insight was simple: <strong>people don't need another banking app — they need one place that understands how they actually use money across all of them.</strong>
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Rather than connecting directly to banks, Finzla uses open banking APIs and aggregator partners who've already done the security and verification legwork — meaning we could move fast without building the compliance infrastructure from scratch.
+                    </p>
+                </div>
+
+                <!-- Onboarding screens side by side -->
+                <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden shadow-sm mb-20 flex flex-wrap justify-center gap-6 py-8 px-4">
+                    <img src="../Images/Finzla/Log in.jpg" alt="Finzla login screen" class="w-56 rounded-2xl shadow-xl" />
+                    <img src="../Images/Finzla/Sign up.jpg" alt="Finzla sign up screen" class="w-56 rounded-2xl shadow-xl" />
+                </div>
+
+                <!-- Onboarding copy -->
+                <div class="max-w-5xl mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">3. Onboarding — No Account, No App</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        The onboarding is deliberate. Connecting a bank account isn't optional — it's the entire point of the product. If a user tries to skip it, they loop back to the start. There's no value in the app without it, so we don't pretend otherwise.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Sign up is clean and minimal — name, email, phone with country dial code. The login screen supports social auth (Google, Facebook, Apple) to reduce friction for returning users. Both screens keep the hero balance card visible at the top as a constant reminder of what they're about to unlock.
+                    </p>
+                </div>
+
+                <!-- Adding account screens -->
+                <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden shadow-sm mb-20 flex flex-wrap justify-center gap-6 py-8 px-4">
+                    <img src="../Images/Finzla/Add Bank account.jpg" alt="Add bank account screen" class="w-56 rounded-2xl shadow-xl" />
+                    <img src="../Images/Finzla/Add Bank account-1.jpg" alt="Select account screen" class="w-56 rounded-2xl shadow-xl" />
+                </div>
+
+                <!-- Connecting banks -->
+                <div class="max-w-5xl mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">4. Connecting Banks — Designed for Trust</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        This is the moment that makes or breaks the product. Asking someone to connect their bank account is a significant ask — the design has to feel secure, familiar, and frictionless.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Users search for or select their bank, then choose which accounts within that bank to connect. Where a bank has multiple accounts — savings, current, business — we show each one clearly with its balance and account number. The user stays in control of exactly what they share.
+                    </p>
+                </div>
+
+                <!-- Dashboard -->
+                <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden shadow-sm mb-20 flex justify-center py-8">
+                    <img src="../Images/Finzla/Index.jpg" alt="Finzla dashboard" class="w-64 rounded-2xl shadow-xl" />
+                </div>
+
+                <!-- Dashboard copy -->
+                <div class="max-w-5xl mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">5. The Dashboard — Everything in One View</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        The dashboard is the core of the product. Total balance across all connected accounts sits at the top — masked by default for privacy, revealed on tap. Below it, each connected account is listed individually so users always know where each pound or naira sits.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        Recent spending is categorised automatically — Groceries, Eating Out, and critically, <strong>Bank Transfer Charges</strong> called out as a separate line. Most banking apps bury these. Finzla surfaces them deliberately, because that's one of the product's core promises.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        At the bottom, an AI-driven nudge card appears when the system detects a pattern — "You've spent more on Eating Out this week." Phase 1 is about awareness, not judgement.
+                    </p>
+                </div>
+
+                <!-- Settings -->
+                <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden shadow-sm mb-20 flex justify-center py-8">
+                    <img src="../Images/Finzla/Settings.jpg" alt="Finzla settings screen" class="w-64 rounded-2xl shadow-xl" />
+                </div>
+
+                <div class="max-w-5xl mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">6. Settings — Staying in Control</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Users can add or disconnect bank accounts at any time, and control notification preferences — mobile push alerts and USSD alerts independently. USSD matters here: for users in Nigeria where data access can be limited, SMS-based notifications aren't a fallback, they're a primary channel.
+                    </p>
+                </div>
+
+                <!-- Stats -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20 border-y border-gray-100 py-8">
+                    <div>
+                        <p class="text-gray-500 text-sm mb-1 uppercase tracking-wider font-semibold">Market</p>
+                        <p class="text-3xl font-bold text-gray-900">UK <span class="text-sm font-normal text-gray-500">& Nigeria</span></p>
+                    </div>
+                    <div>
+                        <p class="text-gray-500 text-sm mb-1 uppercase tracking-wider font-semibold">Type</p>
+                        <p class="text-3xl font-bold text-gray-900">Mobile <span class="text-sm font-normal text-gray-500">Consumer App</span></p>
+                    </div>
+                    <div>
+                        <p class="text-gray-500 text-sm mb-1 uppercase tracking-wider font-semibold">Status</p>
+                        <p class="text-3xl font-bold text-orange-600">Live <span class="text-sm font-normal text-gray-500">Prototype</span></p>
+                    </div>
+                </div>
+
+                <!-- Reflection -->
+                <div class="bg-gray-50 rounded-2xl p-8 md:p-12 border border-gray-100 mb-20">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">What Made This Different</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <p class="font-bold text-gray-900 mb-2">Designing for a real community</p>
+                            <p class="text-gray-600 text-sm leading-relaxed">The product came from lived experience — a client who saw the problem firsthand in their own business. That gave the brief a sharpness that most projects don't have. Every design decision was grounded in a real behaviour, not an assumed one.</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900 mb-2">Phased thinking from day one</p>
+                            <p class="text-gray-600 text-sm leading-relaxed">Phase 1 is deliberately narrow — understand your spending, see your hidden fees, connect your accounts. We resisted the urge to build budgeting tools, transfer flows, and savings goals into the first version. The constraint made the design cleaner.</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900 mb-2">Consumer design in a regulated space</p>
+                            <p class="text-gray-600 text-sm leading-relaxed">Open banking APIs, aggregator partners, data masking, security-first onboarding — this project sits at the same intersection of trust and usability I work with in B2B FinTech, just on the consumer side. Different constraints, same discipline.</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900 mb-2">USSD as a first-class channel</p>
+                            <p class="text-gray-600 text-sm leading-relaxed">Building for both UK and Nigerian markets meant designing notification systems that worked without reliable data access. That's not an edge case — for a significant portion of the target audience, it's the norm.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="py-20 bg-white border-t border-gray-100 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Want to see the live prototype?</h2>
+            <a href="mailto:markachamberlain5@gmail.com" class="relative inline-block px-8 py-3 bg-gray-900 text-white font-semibold overflow-hidden group transition-all duration-300 ease-out hover:scale-105 cursor-pointer">
+                <span class="relative z-10">Get In Touch</span>
+                <div class="absolute inset-0 bg-orange-600 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
+            </a>
+        </section>
+
+        <footer class="bg-gray-900 text-white py-12 border-t border-gray-800">
+            <div class="max-w-6xl mx-auto px-6 text-center">
+                <p class="text-2xl font-bold mb-4">Mark Chamberlain.</p>
+                <div class="flex justify-center gap-6 mb-8">
+                    <a href="mailto:markachamberlain5@gmail.com" class="text-gray-400 hover:text-white transition-colors">Email</a>
+                    <a href="https://linkedin.com/in/mark-chamberlain-a4b05b22" target="_blank" class="text-gray-400 hover:text-white transition-colors">LinkedIn</a>
+                </div>
+                <p class="text-gray-500 text-sm">&copy; 2026 Mark Chamberlain. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        window.addEventListener('load', function() {
+            const loader = document.getElementById('loader');
+            const content = document.getElementById('site-content');
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                    content.style.opacity = '1';
+                    content.style.transform = 'translateY(0)';
+                    content.style.filter = 'blur(0)';
+                }, 500);
+            }, 500);
+        });
+    </script>
+</body>
+</html>
