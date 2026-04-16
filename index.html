@@ -27,9 +27,11 @@
             <div class="relative z-10 text-center max-w-4xl px-6 pt-20">
                 <h1 class="text-5xl md:text-7xl font-bold text-gray-900 tracking-tight mb-6">Mark Chamberlain.</h1>
                 <p class="text-xl md:text-2xl mb-8 text-gray-800 font-medium">
-Hi, I'm Mark. I design for the complicated stuff regulated financial products, 
-legacy systems, and the workflows that keep businesses running. I make them work 
-better, for the people who use them every day.       </p>
+I've been in design since 2012. Came up through agencies covering everything from
+NHS campaigns to car advertising, taught myself to build for the web as it evolved,
+and ended up in product design for regulated financial services. I care about
+lateral thinking and fixing what's actually broken, not making things look polished.
+                </p>
 
                 <button onclick="document.getElementById('selected-work').scrollIntoView({behavior: 'smooth'})" class="relative inline-block px-8 py-3 border-2 border-gray-900 text-gray-900 font-bold overflow-hidden group transition-all duration-300 ease-out hover:scale-105 hover:text-white hover:border-orange-600 bg-white/50 backdrop-blur-sm">
                     <span class="relative z-10">View Case Studies</span>
@@ -43,14 +45,62 @@ better, for the people who use them every day.       </p>
                 <h2 class="text-4xl font-bold mb-12 text-center text-gray-900">Selected Work</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                    <!-- 1. Revolution Fact Find -->
+                    <a href="projects/FactFind.html" class="group cursor-pointer">
+                        <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-200">
+                            <div class="aspect-[4/3] bg-gray-200 overflow-hidden relative">
+                                <img src="Images/Factfind/FFthumbnail.jpg" alt="Revolution Fact Find UX Recovery" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"></div>
+                            </div>
+                            <div class="p-6 flex-1 flex flex-col">
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">Revolution Fact Find: UX Recovery</h3>
+                                <p class="text-sm text-gray-600 mb-4 line-clamp-2">Rescuing advisor productivity by transforming a bloated platform rollout into a high-density Intelligence Workspace.</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Fintech</span>
+                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">UX Recovery</span>
+                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Enterprise CRM</span>
+                                </div>
+                                <div class="mt-auto pt-4 border-t border-gray-100">
+                                    <p class="text-sm font-semibold text-gray-500">Impact</p>
+                                    <p class="text-lg text-orange-600 font-bold">60% Reduction in Click-Depth</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- 2. MI Reporting System -->
+                    <a href="projects/MiReporting.html" class="group cursor-pointer">
+                        <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-200">
+                            <div class="aspect-[4/3] bg-gray-200 overflow-hidden relative">
+                                <img src="Images/Reporting/reportingthumbnail.jpg" alt="MI Reporting System" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"></div>
+                            </div>
+                            <div class="p-6 flex-1 flex flex-col">
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">MI Reporting System</h3>
+                                <p class="text-sm text-gray-600 mb-4 line-clamp-2">Decoupling a legacy database to build a self-serve analytics platform for directors, eliminating developer bottlenecks.</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Data Visualization</span>
+                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Enterprise SaaS</span>
+                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Systems Architecture</span>
+                                </div>
+                                <div class="mt-auto pt-4 border-t border-gray-100">
+                                    <p class="text-sm font-semibold text-gray-500">Impact</p>
+                                    <p class="text-lg text-orange-600 font-bold">100% Self-Serve Reporting</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- 3. AI & Compliance Architecture -->
                     <a href="projects/FileReviews.html" class="group cursor-pointer">
                         <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-200">
-                            <div class="aspect-video bg-gray-200 overflow-hidden relative">
+                            <div class="aspect-[4/3] bg-gray-200 overflow-hidden relative">
                                 <img src="Images/FileReview/AI-thumbnail.jpg" alt="File Reviews" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
                                 <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"></div>
                             </div>
                             <div class="p-6 flex-1 flex flex-col">
                                 <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">AI & Compliance Architecture</h3>
+                                <p class="text-sm text-gray-600 mb-4 line-clamp-2">Designing an AI-assisted review tool to cut compliance bottlenecks in adviser file checking.</p>
                                 <div class="flex flex-wrap gap-2 mb-4">
                                     <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">AI Integration</span>
                                     <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Compliance</span>
@@ -63,14 +113,16 @@ better, for the people who use them every day.       </p>
                         </div>
                     </a>
 
+                    <!-- 4. Modernising Protection Workflows -->
                     <a href="projects/Protection.html" class="group cursor-pointer">
                         <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-200">
-                            <div class="aspect-video bg-gray-200 overflow-hidden relative">
+                            <div class="aspect-[4/3] bg-gray-200 overflow-hidden relative">
                                 <img src="Images/protection/ProtectionThumnail.jpg" alt="Protection Workflows" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
                                 <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"></div>
                             </div>
                             <div class="p-6 flex-1 flex flex-col">
                                 <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">Modernising Protection Workflows</h3>
+                                <p class="text-sm text-gray-600 mb-4 line-clamp-2">Untangling a legacy insurance sourcing flow to get advisers from application to offer faster.</p>
                                 <div class="flex flex-wrap gap-2 mb-4">
                                     <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">FinTech</span>
                                     <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Underwriting Logic</span>
@@ -83,9 +135,77 @@ better, for the people who use them every day.       </p>
                         </div>
                     </a>
 
+                    <!-- 5. Financial Promotion System -->
+                    <a href="projects/Financialpromotion.html" class="group cursor-pointer">
+                        <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-200">
+                            <div class="aspect-[4/3] bg-gray-200 overflow-hidden relative">
+                                <img src="Images/FP/FP-thumbnail.jpg" alt="Financial Promotion Audit Engine" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"></div>
+                            </div>
+                            <div class="p-6 flex-1 flex flex-col">
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">Financial Promotion System</h3>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Regulatory Triage</span>
+                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Workflow Scaling</span>
+                                </div>
+                                <p class="text-sm text-gray-600 mb-4 line-clamp-2">Optimising compliance workflows to handle a 196% surge in monthly promotion uploads.</p>
+                                <div class="mt-auto pt-4 border-t border-gray-100">
+                                    <p class="text-sm font-semibold text-gray-500">Impact</p>
+                                    <p class="text-lg text-orange-600 font-bold">36% Reduction in Duplicates</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- 6. Estate Agent Referral Portal -->
+                    <a href="projects/IntroductorPortal.html" class="group cursor-pointer">
+                        <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-200">
+                            <div class="aspect-[4/3] bg-gray-200 overflow-hidden relative">
+                                <img src="Images/IP/IntorductorThumnail.jpg" alt="Estate Agent Referral Dashboard" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"></div>
+                            </div>
+                            <div class="p-6 flex-1 flex flex-col">
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">Estate Agent Referral Portal</h3>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">B2B SaaS</span>
+                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">PropTech</span>
+                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Automation</span>
+                                </div>
+                                <div class="mt-auto pt-4 border-t border-gray-100">
+                                    <p class="text-sm font-semibold text-gray-500">Impact</p>
+                                    <p class="text-lg text-orange-600 font-bold">Lead Conversion Increased by 45%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- 7. Finzla Personal Finance Aggregator -->
+                    <a href="projects/FinzlaBudgetApp.html" class="group cursor-pointer">
+                        <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-200">
+                            <div class="aspect-[4/3] bg-gray-200 overflow-hidden relative">
+                                <img src="Images/Finzla/BudgetThumnail.jpg" alt="Finzla personal finance app" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"></div>
+                            </div>
+                            <div class="p-6 flex-1 flex flex-col">
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">Finzla — Personal Finance Aggregator</h3>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Mobile App</span>
+                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">FinTech</span>
+                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Freelance</span>
+                                </div>
+                                <p class="text-sm text-gray-600 mb-4 line-clamp-2">Designing a multi-bank aggregator app for people juggling multiple accounts across UK and Nigerian banks.</p>
+                                <div class="mt-auto pt-4 border-t border-gray-100">
+                                    <p class="text-sm font-semibold text-gray-500">Status</p>
+                                    <p class="text-lg text-orange-600 font-bold">Live Prototype</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- 8. The Red Lion -->
                     <a href="projects/RedLionPub.html" class="group cursor-pointer">
                         <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-200">
-                            <div class="aspect-video bg-gray-200 overflow-hidden relative">
+                            <div class="aspect-[4/3] bg-gray-200 overflow-hidden relative">
                                 <img src="Images/RedLion/Pub.jpg" alt="Red Lion" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
                                 <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"></div>
                             </div>
@@ -103,9 +223,10 @@ better, for the people who use them every day.       </p>
                         </div>
                     </a>
 
+                    <!-- 9. Fuel Retail Transformation -->
                     <a href="projects/FuelCoffee.html" class="group cursor-pointer">
                         <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-200">
-                            <div class="aspect-video bg-gray-200 overflow-hidden relative">
+                            <div class="aspect-[4/3] bg-gray-200 overflow-hidden relative">
                                 <img src="Images/Fuel/Coffee.jpg" alt="Fuel Coffee" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
                                 <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"></div>
                             </div>
@@ -122,140 +243,6 @@ better, for the people who use them every day.       </p>
                             </div>
                         </div>
                     </a>
-
-<a href="projects/Financialpromotion.html" class="group cursor-pointer">
-    <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-200">
-        <div class="aspect-video bg-gray-200 overflow-hidden relative">
-            <img src="Images/FP/FP thumneail.jpg" alt="Financial Promotion Audit Engine" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
-            <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"></div>
-        </div>
-        <div class="p-6 flex-1 flex flex-col">
-            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">Financial Promotion System</h3>
-            <div class="flex flex-wrap gap-2 mb-4">
-                <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Regulatory Triage</span>
-                <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Workflow Scaling</span>
-            </div>
-            <p class="text-sm text-gray-600 mb-4 line-clamp-2">Optimising compliance workflows to handle a 196% surge in monthly promotion uploads.</p>
-            <div class="mt-auto pt-4 border-t border-gray-100">
-                <p class="text-sm font-semibold text-gray-500">Impact</p>
-                <p class="text-lg text-orange-600 font-bold">36% Reduction in Duplicates</p>
-            </div>
-        </div>
-    </div>
-</a>
-                    <a href="projects/IntroductorPortal.html" class="group cursor-pointer">
-    <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-200">
-        
-        <div class="aspect-video bg-gray-200 overflow-hidden relative">
-            <img src="Images/IP/IntorductorThumnail.jpg" 
-                 alt="Estate Agent Referral Dashboard" 
-                 class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
-            <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"></div>
-        </div>
-
-        <div class="p-6 flex-1 flex flex-col">
-            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
-                Estate Agent Referral Portal
-            </h3>
-            
-            <div class="flex flex-wrap gap-2 mb-4">
-                <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">B2B SaaS</span>
-                <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">PropTech</span>
-                <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Automation</span>
-            </div>
-            
-            <div class="mt-auto pt-4 border-t border-gray-100">
-                <p class="text-sm font-semibold text-gray-500">Impact</p>
-                <p class="text-lg text-orange-600 font-bold">Lead Conversion Increased by 45%</p>
-            </div>
-        </div>
-    </div>
-</a>
-<a href="projects/FactFind.html" class="group cursor-pointer">
-    <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-200">
-        
-        <div class="aspect-video bg-gray-200 overflow-hidden relative">
-            <img src="Images/Factfind/FFthumbnail.jpg" 
-                 alt="Revolution Fact Find UX Recovery" 
-                 class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
-            <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"></div>
-        </div>
-
-        <div class="p-6 flex-1 flex flex-col">
-            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
-                Revolution Fact Find: UX Recovery
-            </h3>
-            
-            <p class="text-sm text-gray-600 mb-4 line-clamp-2">
-                Rescuing advisor productivity by transforming a bloated platform rollout into a high-density Intelligence Workspace.
-            </p>
-            
-            <div class="flex flex-wrap gap-2 mb-4">
-                <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Fintech</span>
-                <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">UX Recovery</span>
-                <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Enterprise CRM</span>
-            </div>
-            
-            <div class="mt-auto pt-4 border-t border-gray-100">
-                <p class="text-sm font-semibold text-gray-500">Impact</p>
-                <p class="text-lg text-orange-600 font-bold">60% Reduction in Click-Depth</p>
-            </div>
-        </div>
-    </div>
-</a>
-<a href="projects/MiReporting.html" class="group cursor-pointer">
-    <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-200">
-        
-        <div class="aspect-video bg-gray-200 overflow-hidden relative">
-            <img src="Images/Reporting/reportingthumbnail.jpg" 
-                 alt="MI Reporting System" 
-                 class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
-            <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"></div>
-        </div>
-
-        <div class="p-6 flex-1 flex flex-col">
-            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
-                MI Reporting System
-            </h3>
-            
-            <p class="text-sm text-gray-600 mb-4 line-clamp-2">
-                Decoupling a legacy database to build a self-serve analytics platform for directors, eliminating developer bottlenecks.
-            </p>
-            
-            <div class="flex flex-wrap gap-2 mb-4">
-                <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Data Visualization</span>
-                <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Enterprise SaaS</span>
-                <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Systems Architecture</span>
-            </div>
-            
-            <div class="mt-auto pt-4 border-t border-gray-100">
-                <p class="text-sm font-semibold text-gray-500">Impact</p>
-                <p class="text-lg text-orange-600 font-bold">100% Self-Serve Reporting</p>
-            </div>
-        </div>
-    </div>
-</a>
-<a href="projects/FinzlaBudgetApp.html" class="group cursor-pointer">
-    <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-200">
-        <div class="aspect-video bg-gray-200 overflow-hidden relative">
-            <img src="Images/Finzla/BudgetThumnail.jpg" alt="Finzla personal finance app" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
-            <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"></div>
-        </div>
-        <div class="p-6 flex-1 flex flex-col">
-            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">Finzla — Personal Finance Aggregator</h3>
-            <div class="flex flex-wrap gap-2 mb-4">
-                <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Mobile App</span>
-                <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">FinTech</span>
-                <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Freelance</span>
-            </div>
-            <p class="text-sm text-gray-600 mb-4 line-clamp-2">Designing a multi-bank aggregator app for people juggling multiple accounts across UK and Nigerian banks.</p>
-            <div class="mt-auto pt-4 border-t border-gray-100">
-                <p class="text-sm font-semibold text-gray-500">Status</p>
-                <p class="text-lg text-orange-600 font-bold">Live Prototype</p>
-            </div>
-        </div>
-    </div>
-</a>
                 </div>
             </div>
         </section>
@@ -271,17 +258,23 @@ better, for the people who use them every day.       </p>
                 <div>
                     <h2 class="text-4xl font-bold mb-8 text-gray-900">About Me</h2>
                     <div class="space-y-6 mb-8 text-gray-700">
-                       <p>Most designers want a clean brief and a greenfield project. I tend to get handed 
-the opposite — a system that's grown too fast, a workflow nobody's questioned in 
-five years, or a product that's technically live but quietly broken.</p>
+                        <p>I grew up in a small village and got into art early, the way a lot of people do.
+What shifted things was foundation year, when I found David Carson's work and
+realised design was about thinking, not decorating. I went to De Montfort University,
+came out into agencies, and spent years working across very different problems:
+charity campaigns, NHS communications, automotive advertising. I learned the craft
+and I learned how to think about things I hadn't encountered before.</p>
 
-<p>I've spent my career in regulated financial services, which means I understand 
-the constraints before anyone has to explain them. FCA compliance, advisor 
-workflows, legacy infrastructure — it's just the context I work in.</p>
+                        <p>The move into product was gradual. As the web evolved I taught myself to build for it,
+which meant I could see the gap between what designers hand over and what developers
+actually need. That ended up being useful. I moved into product design for regulated
+financial services and have spent the last several years leading design across adviser
+workflows, compliance tooling, and management information reporting. When the work
+needed it I got into the codebase. I know enough VB.NET and C# to have a real
+conversation with engineers rather than guessing at constraints.</p>
 
-<p>I'm a sole designer by background, so I've learned to operate across the whole 
-problem: stakeholder conversations, systems thinking, and the detail of the thing 
-itself. I don't need a lot of hand-holding, and I don't leave a lot of loose ends.</p>
+                        <p>Where I want to get to is lead or head of design, somewhere I can shape how a
+team approaches design problems rather than just solving them individually.</p>
                     </div>
                     
                        <a href="mailto:markchamberlain5@gmail.com" class="relative inline-block px-6 py-3 border-2 border-gray-900 text-gray-900 font-semibold overflow-hidden group transition-all duration-300 ease-out hover:scale-105 hover:text-white cursor-pointer">
