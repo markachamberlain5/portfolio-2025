@@ -28,7 +28,7 @@
 
         if (loader) {
             loader.style.opacity = '0';
-            setTimeout(function () { loader.style.display = 'none'; }, 700);
+            setTimeout(function () { loader.style.display = 'none'; }, 200);
         }
 
         if (content) {
@@ -80,8 +80,8 @@
 
     try {
         var FOOTER_LINKS = {
-            email:     'mailto:markachamberlain5@gmail.com',
-            linkedin:  'https://www.linkedin.com/in/mark-chamberlain-ux/',
+            email:     'mailto:markchamberlain5@gmail.com',
+            linkedin:  'https://www.linkedin.com/in/mark-chamberlain-design',
             behance:   'https://www.behance.net/justmakingamark5',
             instagram: 'https://www.instagram.com/justmakingamark/',
             cv:        base + 'Images/Mark Chamberlain CV.pdf'
@@ -126,7 +126,7 @@
         window.addEventListener('DOMContentLoaded', revealSite);
         window.addEventListener('load', revealSite);
         // Safety fallback: Force reveal after 2s
-        setTimeout(revealSite, 2000);
+        setTimeout(revealSite, 300);
     }
 
 })();
