@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Chamberlain | Designer</title>
+    <meta name="description" content="Portfolio of Mark Chamberlain, a Designer specializing in AI, FinTech, and Commercial Strategy.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-white text-gray-900 antialiased">
+
+    <div id="loader" class="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center transition-opacity duration-500">
+        <p class="text-sm font-bold text-gray-900 tracking-[0.2em] animate-pulse">SYSTEMS LOADING</p>
+    </div>
+
+    <div id="nav-placeholder"></div>
+
+    <div id="site-content" class="opacity-0 translate-y-8 blur-md transition-all duration-700 ease-out">
+
+        <section class="relative h-screen flex items-center justify-center overflow-hidden">
+            <img src="Images/Mark-Hero.jpg" alt="Mark Chamberlain" class="absolute inset-0 w-full h-full object-cover">
+
+            <div class="relative z-10 text-center max-w-4xl px-6 pt-20">
+                <h1 class="text-5xl md:text-7xl font-bold text-gray-900 tracking-tight mb-6">Mark Chamberlain.</h1>
+                <p class="text-xl md:text-2xl mb-8 text-gray-800 font-medium">
+                    I've been in design since 2012. Came up through agencies covering everything from
+                    NHS campaigns to car advertising, taught myself to build for the web as it evolved,
+                    and ended up in product design for regulated financial services. I care about
+                    lateral thinking and fixing what's actually broken, not making things look polished.
+                </p>
+
+                <button onclick="document.getElementById('selected-work').scrollIntoView({behavior: 'smooth'})" class="relative inline-block px-8 py-3 border-2 border-gray-900 text-gray-900 font-bold overflow-hidden group transition-all duration-300 ease-out hover:scale-105 hover:text-white hover:border-orange-600 bg-white/50 backdrop-blur-sm">
+                    <span class="relative z-10">View Case Studies</span>
+                    <div class="absolute inset-0 bg-orange-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></div>
+                </button>
+            </div>
+        </section>
+
+        <section id="selected-work" class="px-6 py-20 bg-white">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold mb-12 text-center text-gray-900">Selected Work</h2>
+
+                <!-- Cards are rendered from the PROJECTS array in js/components.js -->
+                <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+            </div>
+        </section>
+
+        <section class="px-6 py-20 bg-gray-50">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="flex justify-center">
+                    <div class="relative w-80 h-96 rounded-lg overflow-hidden shadow-xl">
+                        <img src="Images/Professional Photo.jpg" alt="Mark Chamberlain" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-4xl font-bold mb-8 text-gray-900">About Me</h2>
+                    <div class="space-y-6 mb-8 text-gray-700">
+                        <p>I grew up in a small village and got into art early, the way a lot of people do.
+                        What shifted things was foundation year, when I found David Carson's work and
+                        realised design was about thinking, not decorating. I went to De Montfort University,
+                        came out into agencies, and spent years working across very different problems:
+                        charity campaigns, NHS communications, automotive advertising. I learned the craft
+                        and I learned how to think about things I hadn't encountered before.</p>
+
+                        <p>The move into product was gradual. As the web evolved I taught myself to build for it,
+                        which meant I could see the gap between what designers hand over and what developers
+                        actually need. That ended up being useful. I moved into product design for regulated
+                        financial services and have spent the last several years leading design across adviser
+                        workflows, compliance tooling, and management information reporting. When the work
+                        needed it I got into the codebase. I know enough VB.NET and C# to have a real
+                        conversation with engineers rather than guessing at constraints.</p>
+
+                        <p>Where I want to get to is lead or head of design, somewhere I can shape how a
+                        team approaches design problems rather than just solving them individually.</p>
+                    </div>
+
+                    <a href="mailto:markchamberlain5@gmail.com" class="relative inline-block px-6 py-3 border-2 border-gray-900 text-gray-900 font-semibold overflow-hidden group transition-all duration-300 ease-out hover:scale-105 hover:text-white cursor-pointer">
+                        <span class="relative z-10">Get In Touch</span>
+                        <div class="absolute inset-0 bg-orange-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div id="footer-placeholder"></div>
+
+    </div>
+
+    <script src="js/components.js"></script>
+</body>
+</html>

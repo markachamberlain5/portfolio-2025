@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MI Reporting System | Mark Chamberlain</title>
+    <meta name="description" content="Decoupling a legacy reporting stack into a self-serve analytics platform for 1,300+ advisers — a guided wizard, runtime filters, and strict server protection.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="bg-white text-gray-900 antialiased">
+
+    <div id="loader" class="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center transition-opacity duration-500">
+        <p class="text-sm font-bold text-gray-900 tracking-[0.2em] animate-pulse">SYSTEMS LOADING</p>
+    </div>
+
+    <div id="site-content" class="opacity-0 translate-y-8 blur-md transition-all duration-700 ease-out">
+
+        <div id="nav-placeholder"></div>
+
+        <section class="pt-32 pb-12 px-6 bg-white">
+            <div class="max-w-4xl mx-auto">
+
+                <div class="mb-8 space-y-4">
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-gray-100 text-gray-700 border border-gray-200 px-3 py-1 rounded-full">Data Visualization</span>
+                        <span class="text-xs bg-gray-100 text-gray-700 border border-gray-200 px-3 py-1 rounded-full">Enterprise SaaS</span>
+                        <span class="text-xs bg-gray-100 text-gray-700 border border-gray-200 px-3 py-1 rounded-full">Systems Architecture</span>
+                    </div>
+                </div>
+
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 text-gray-900 leading-tight">MI Reporting: <br><span class="text-orange-600">Scaling Data Intelligence</span></h1>
+                <p class="text-xl text-gray-600 mb-16 max-w-2xl">Decoupling a legacy database to build a self-serve analytics platform for Business Development Directors, eliminating developer bottlenecks.</p>
+
+                <div class="max-w-5xl mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">1. The Legacy Bottleneck</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        As Stonebridge Mortgage Solutions scaled from 300 to over 1,300 advisors across 400+ companies, the legacy reporting system buckled. Reports were entirely reliant on Full-Stack Developers, taking up to a week to manually build, verify, and distribute. Worse, these legacy Microsoft queries were running on the live application database, frequently spiking CPU usage to 100% and causing critical load-balancing issues. We needed a decoupled, self-serve platform.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden shadow-sm mb-20 relative group">
+                    <div class="absolute top-4 right-4 bg-black/70 text-white text-xs px-2 py-1 rounded pointer-events-none z-10">Hover to Zoom</div>
+                    <div class="image-zoom-wrapper h-64 flex items-center justify-center bg-gray-100">
+                        <img src="../Images/Reporting/Oldreport.jpg" alt="Legacy Report Interface" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+
+                <div class="max-w-5xl mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">2. The Intelligence Dashboard</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        The first step was giving Directors a central command center. I designed a new homepage featuring a clean sidebar navigation and folder structure. This allowed users to instantly view, organize, and share custom reports across their specific business units without ever submitting an IT ticket.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden shadow-sm mb-20 relative group">
+                    <div class="absolute top-4 right-4 bg-black/70 text-white text-xs px-2 py-1 rounded pointer-events-none z-10">Hover to Zoom</div>
+                    <div class="image-zoom-wrapper h-96 flex items-center justify-center bg-gray-100">
+                        <img src="../Images/Reporting/Homepage.jpg" alt="New MI Reporting Homepage" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+
+                <div class="max-w-5xl mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">3. The UX Challenge: The "Complexity Trap"</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Our initial concept aimed to give users maximum flexibility by allowing complex conditional logic (e.g., "If Object A AND If Object B, THEN..."). However, user testing revealed it was too complicated for our demographic. If it was too simple, it was useless; if it was too flexible, the cognitive load was too high.
+                        <br><br>
+                        <strong>The Pivot:</strong> We scrapped the abstract conditional logic and analyzed years of legacy reports to find out what directors actually needed. I designed a <strong>Guided Wizard</strong>, prioritizing clear column selection and standardized filters that mapped directly to their daily business language.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden shadow-sm mb-20 relative group">
+                    <div class="absolute top-4 right-4 bg-black/70 text-white text-xs px-2 py-1 rounded pointer-events-none z-10">Hover to Zoom</div>
+                    <div class="image-zoom-wrapper h-80 flex items-center justify-center bg-gray-100">
+                        <img src="../Images/Reporting/CreatingReport.jpg" alt="Guided Wizard Column Selection" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+
+                <div class="bg-gray-900 rounded-2xl p-8 md:p-12 border border-gray-800 mb-20 text-white">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                        <div>
+                            <p class="text-orange-500 font-bold uppercase tracking-wider text-xs mb-2">Technical UX</p>
+                            <h3 class="text-2xl font-bold mb-4">Runtime Filters &<br> Server Protection</h3>
+                            <p class="text-gray-300 leading-relaxed mb-6 text-sm">
+                                Giving users the power to run massive custom reports introduced a new risk: database overload. I designed a 2-Stage Reporting Protocol.
+                            </p>
+                            <ul class="space-y-4 text-sm text-gray-300">
+                                <li class="flex gap-3">
+                                    <span class="text-orange-500 font-bold">1.</span>
+                                    <span><strong>Runtime Configuration:</strong> Users apply final date filtering just before execution to narrow the query scope.</span>
+                                </li>
+                                <li class="flex gap-3">
+                                    <span class="text-orange-500 font-bold">2.</span>
+                                    <span><strong>Preview vs. Export:</strong> The UI restricts visual rendering to a strict preview limit. If a report is massive, the UI forces a CSV/Excel download, shifting processing load to the user's local machine. <em>(Note: Example output below is limited to a single redacted row to comply with strict FinTech data privacy laws).</em></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col gap-4">
+                            <div class="image-zoom-wrapper bg-gray-800 rounded-xl border border-gray-700 shadow-lg h-32">
+                                <img src="../Images/Reporting/RunningReport.jpg" alt="Runtime Date Filtering" class="w-full h-full object-cover" />
+                            </div>
+                            <div class="image-zoom-wrapper bg-gray-800 rounded-xl border border-gray-700 shadow-lg h-32">
+                                <img src="../Images/Reporting/exampleOfreport.jpg" alt="Privacy Safe Output Preview" class="w-full h-full object-cover" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="max-w-5xl mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">5. Governance & Access Control</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        With sensitive financial data now easily accessible, governance was critical. I designed a robust Admin Settings matrix for the Support Desk. This interface allows them to define companies, assign users, and strictly control "View," "Edit," and "Share" permissions across the platform.
+                        <br><br>
+                        This permissions architecture also laid the groundwork for our future integration with embedded <strong>Power BI dashboards</strong> for macro-level analytics.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden shadow-sm mb-20 relative group">
+                    <div class="absolute top-4 right-4 bg-black/70 text-white text-xs px-2 py-1 rounded pointer-events-none z-10">Hover to Zoom</div>
+                    <div class="image-zoom-wrapper h-80 flex items-center justify-center bg-gray-100">
+                        <img src="../Images/Reporting/settings.jpg" alt="Settings and Permissions Matrix" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20 border-y border-gray-100 py-10">
+                    <div>
+                        <p class="text-gray-500 text-[10px] font-black mb-1 uppercase tracking-[0.2em]">Efficiency</p>
+                        <p class="text-3xl font-bold text-gray-900">100% <span class="text-sm font-normal text-gray-500 tracking-normal">Self-Serve</span></p>
+                    </div>
+                    <div>
+                        <p class="text-gray-500 text-[10px] font-black mb-1 uppercase tracking-[0.2em]">Scale</p>
+                        <p class="text-3xl font-bold text-gray-900">1,300+ <span class="text-sm font-normal text-gray-400 tracking-normal">Advisors Tracked</span></p>
+                    </div>
+                    <div>
+                        <p class="text-gray-500 text-[10px] font-black mb-1 uppercase tracking-[0.2em]">Longevity</p>
+                        <p class="text-3xl font-bold text-orange-600">3+ Years <span class="text-sm font-normal text-gray-400 tracking-normal">In Production</span></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="py-20 bg-white border-t border-gray-100 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Need to untangle a complex data system?</h2>
+            <a href="mailto:markchamberlain5@gmail.com" class="relative inline-block px-10 py-4 bg-gray-900 text-white font-bold rounded-xl overflow-hidden group transition-all duration-300 ease-out hover:scale-105">
+                <span class="relative z-10">Let's Discuss</span>
+                <div class="absolute inset-0 bg-orange-600 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
+            </a>
+        </section>
+
+        <div id="footer-placeholder"></div>
+
+    </div>
+
+    <script src="../js/components.js"></script>
+</body>
+</html>

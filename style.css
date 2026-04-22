@@ -1,0 +1,75 @@
+/* ---------------------------------------------------------------------------
+ * Portfolio — shared styles
+ * Everything here applies to every page via <link rel="stylesheet" href="style.css">.
+ * Page-specific styles should live inside the page itself.
+ * ------------------------------------------------------------------------- */
+
+:root {
+    --color-orange: #DB5D16;
+    --color-dark: #333333;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+button {
+    font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+strong {
+    color: var(--color-orange);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+/* ---------------------------------------------------------------------------
+ * Hover-to-zoom image containers
+ * Any .image-zoom-wrapper gets bound by js/components.js so the inner <img>
+ * pans and scales to follow the cursor. Mark up a container like this:
+ *     <div class="image-zoom-wrapper"><img src="..."></div>
+ * ------------------------------------------------------------------------- */
+
+.image-zoom-wrapper {
+    overflow: hidden;
+    cursor: zoom-in;
+}
+
+.image-zoom-wrapper img {
+    transition: transform 0.3s ease-out;
+    transform-origin: center;
+}
+
+/* ---------------------------------------------------------------------------
+ * Case-study metric card accent
+ * ------------------------------------------------------------------------- */
+
+.metric-card {
+    border-left: 4px solid #ea580c;
+}

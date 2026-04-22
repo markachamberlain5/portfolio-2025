@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Review System Optimisation | Mark Chamberlain</title>
+    <meta name="description" content="Redesigning an 83-question compliance review tool for 240+ reviewers. How breaking the flow apart and layering AI cut file-review time by 40%.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="bg-white text-gray-900 antialiased">
+
+    <div id="loader" class="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center transition-opacity duration-500">
+        <p class="text-sm font-bold text-gray-900 tracking-[0.2em] animate-pulse">SYSTEMS LOADING</p>
+    </div>
+
+    <div id="site-content" class="opacity-0 translate-y-8 blur-md transition-all duration-700 ease-out">
+
+        <div id="nav-placeholder"></div>
+
+        <section class="pt-32 pb-12 px-6 bg-white">
+            <div class="max-w-4xl mx-auto">
+
+                <div class="mb-8 space-y-4">
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-gray-100 text-gray-700 border border-gray-200 px-3 py-1 rounded-full">Workflow Optimisation</span>
+                        <span class="text-xs bg-gray-100 text-gray-700 border border-gray-200 px-3 py-1 rounded-full">FinTech Compliance</span>
+                        <span class="text-xs bg-gray-100 text-gray-700 border border-gray-200 px-3 py-1 rounded-full">Complex Systems</span>
+                    </div>
+                </div>
+
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 text-gray-900 leading-tight">File Review System <br><span class="text-orange-600">Optimisation</span></h1>
+                <p class="text-xl text-gray-600 mb-16 max-w-2xl">Taking the pain out of compliance by redesigning a bloated, 83-question workflow for over 240 file reviewers.</p>
+
+                <div class="max-w-5xl mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">1. The Scale of the Problem</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        We had a scaling problem. Supporting 1,300+ advisors meant our review teams were drowning in massive, fragile spreadsheets and messy email threads. When a single review requires checking <strong>83 different compliance rules</strong>, doing it manually isn't just slow—it's incredibly risky.
+                    </p>
+                </div>
+                <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden shadow-sm mb-20">
+                    <img src="../Images/FileReview/Questions.jpg" alt="Complex Flow Map of 83 Questions" class="w-full h-auto object-cover" />
+                </div>
+
+                <div class="max-w-5xl mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">2. Visualising the Bottlenecks</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Before designing anything, I mapped out exactly how the teams were currently working. The diagram below exposed a huge issue: the process was far too rigid. Every time an advisor handed a file back and forth to a reviewer, it created a massive traffic jam in the system.
+                    </p>
+                </div>
+                <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden shadow-sm mb-20 relative group">
+                    <div class="absolute top-4 right-4 bg-black/70 text-white text-xs px-2 py-1 rounded pointer-events-none z-10">Hover to Zoom</div>
+                    <div class="image-zoom-wrapper h-[500px]">
+                        <img src="../Images/FileReview/FileReveiwFlow.jpg" alt="Workflow Diagram" class="w-full h-full object-contain" />
+                    </div>
+                </div>
+
+                <div class="max-w-5xl mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">3. Managing Cognitive Load</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        With 83 possible questions per file, cognitive overload was a real issue. Cases were taking up to two weeks to close. To fix this, I broke the massive forms into bite-sized chunks using a <strong>Collapsible Sidebar Navigation</strong>. This allowed reviewers to safely jump between the Fact Find, Remedial Actions, and the final Outcome without losing their place.
+                    </p>
+                </div>
+                <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden shadow-sm mb-20">
+                    <img src="../Images/FileReview/Filereviews-sidemenu.jpg" alt="Sidebar Navigation Architecture" class="w-full h-auto object-cover" />
+                </div>
+
+                <div class="max-w-5xl mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">4. Fixing Team Visibility</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Team Leads were flying blind. We redesigned the dashboard to clearly separate cases that were "Allocated" from the actual "To-Do" backlog. I also brought in color-coded status pills so leads could spot 'At Risk' files instantly instead of digging through rows of text.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden shadow-sm mb-20 flex justify-center items-center">
+                    <div id="allocated-animation" class="w-full h-auto max-w-2xl"></div>
+                </div>
+
+                <div class="max-w-5xl mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">5. Defining the Outcome</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        The final step is the "Outcome" screen. We ripped out the ambiguous text boxes and replaced them with structured data inputs. Now, if a file fails a review, it has a specific, trackable reason attached to it. No more guessing why an advisor was penalized.
+                    </p>
+                </div>
+                <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden shadow-sm mb-20">
+                    <img src="../Images/FileReview/Completed.jpg" alt="Outcome Screen" class="w-full h-auto object-cover" />
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20 border-y border-gray-100 py-8">
+                    <div>
+                        <p class="text-gray-500 text-sm mb-1 uppercase tracking-wider font-semibold">Scale</p>
+                        <p class="text-3xl font-bold text-gray-900">160 <span class="text-sm font-normal text-gray-500">Daily Reviewers</span></p>
+                    </div>
+                    <div>
+                        <p class="text-gray-500 text-sm mb-1 uppercase tracking-wider font-semibold">Complexity</p>
+                        <p class="text-3xl font-bold text-gray-900">83 <span class="text-sm font-normal text-gray-500">Data Points</span></p>
+                    </div>
+                    <div>
+                        <p class="text-gray-500 text-sm mb-1 uppercase tracking-wider font-semibold">Efficiency</p>
+                        <p class="text-3xl font-bold text-orange-600">+40% <span class="text-sm font-normal text-gray-500">Speed</span></p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl p-8 md:p-12 border border-gray-100 mb-20">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Phase 2: Bringing in AI</h2>
+
+                    <div class="mb-10">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Automating the Heavy Lifting</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            We didn't just want to digitize the process; we wanted to automate the tedious parts. We brought in an AI checker that runs directly inside the assessor's dashboard to replace manual checklist verification.
+                        </p>
+                        <ul class="space-y-3 text-gray-700 bg-white p-6 rounded-lg border border-gray-200 mb-6">
+                            <li class="flex gap-3">
+                                <span class="text-orange-600 font-bold">→</span>
+                                <span><strong>The Trigger:</strong> Users hit "Run AI Check" and select the specific policy they want to test.</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-orange-600 font-bold">→</span>
+                                <span><strong>Managing Expectations:</strong> Because API calls take time, I designed a multi-state button (Checking → Cancel → Download) so users always know exactly what the system is doing.</span>
+                            </li>
+                        </ul>
+
+                        <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm flex flex-col items-center justify-center p-6 mb-4">
+                            <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Interactive Status Loop Component</p>
+                            <div id="status-animation" class="w-full max-w-md h-auto"></div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-10">
+                        <div>
+                            <h4 class="text-lg font-bold text-gray-900 mb-3">The "Sync" Rule</h4>
+                            <p class="text-gray-600 leading-relaxed text-sm">
+                                A big challenge was making sure the AI pop-up and the main dashboard were always looking at the same data.
+                                <br><br>
+                                <strong>The Fix:</strong> I designed a strict synchronization rule: change a filter in the AI tool, and the dashboard updates instantly. Change the dashboard, and the AI updates. No more mismatched data.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-gray-900 mb-3">Granular Scoring</h4>
+                            <p class="text-gray-600 leading-relaxed text-sm">
+                                Historically, files just got a single, blended "Score". We split this up into distinct columns for "Mortgage" and "Protection".
+                                <br><br>
+                                <strong>Why it matters:</strong> This meant a complex case got an accurate, granular grade rather than a watered-down average, giving reviewers much better insight.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-gray-200 pt-8">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">UI Strategy: The "Grouped View"</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            Adding all these new AI buttons and split-scoring columns meant we were running out of screen real estate. Instead of squishing everything together, we got smart with the layout.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-white p-5 rounded-lg border border-gray-200 shadow-sm">
+                                <p class="font-bold text-gray-900 mb-2">Space-Saving Layout</p>
+                                <p class="text-gray-600 text-sm">Instead of repeating an Assessor's name on every single row, I built a "Grouped View" where cases nest cleanly under a collapsible header.</p>
+                            </div>
+                            <div class="bg-white p-5 rounded-lg border border-gray-200 shadow-sm">
+                                <p class="font-bold text-gray-900 mb-2">Abbreviated Headers</p>
+                                <p class="text-gray-600 text-sm">We brutally optimized column titles (e.g., changing "Case Review Checklist" to just "Checklist") to reclaim valuable horizontal pixels for the new action buttons.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="py-20 bg-white border-t border-gray-100 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Want to see the full workflow?</h2>
+            <a href="mailto:markchamberlain5@gmail.com" class="relative inline-block px-8 py-3 bg-gray-900 text-white font-semibold overflow-hidden group transition-all duration-300 ease-out hover:scale-105 cursor-pointer">
+                <span class="relative z-10">Let's Discuss</span>
+                <div class="absolute inset-0 bg-orange-600 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
+            </a>
+        </section>
+
+        <div id="footer-placeholder"></div>
+
+    </div>
+
+    <script src="../js/components.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <script>
+        // Lottie animations are page-specific so they stay inline here.
+        window.addEventListener('load', function () {
+            if (typeof lottie === 'undefined') return;
+
+            lottie.loadAnimation({
+                container: document.getElementById('status-animation'),
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: '../Images/FileReview/File-reviewinng-all-status.json'
+            });
+
+            lottie.loadAnimation({
+                container: document.getElementById('allocated-animation'),
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: '../Images/FileReview/Allocated-todo.json'
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estate Agent Referral Portal | Mark Chamberlain</title>
+    <meta name="description" content="Transforming a clunky desktop referral system into a mobile-first portal for estate agents. How simplifying forms and surfacing status increased lead conversion by 45%.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="bg-white text-gray-900 antialiased">
+
+    <div id="loader" class="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center transition-opacity duration-500">
+        <p class="text-sm font-bold text-gray-900 tracking-[0.2em] animate-pulse">SYSTEMS LOADING</p>
+    </div>
+
+    <div id="site-content" class="opacity-0 translate-y-8 blur-md transition-all duration-700 ease-out">
+
+        <div id="nav-placeholder"></div>
+
+        <section class="pt-32 pb-12 px-6 bg-white">
+            <div class="max-w-4xl mx-auto">
+
+                <div class="mb-8 space-y-4">
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-gray-100 text-gray-700 border border-gray-200 px-3 py-1 rounded-full">B2B SaaS</span>
+                        <span class="text-xs bg-gray-100 text-gray-700 border border-gray-200 px-3 py-1 rounded-full">Mobile-First</span>
+                        <span class="text-xs bg-gray-100 text-gray-700 border border-gray-200 px-3 py-1 rounded-full">PropTech</span>
+                    </div>
+                </div>
+
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 text-gray-900 leading-tight">Estate Agent Referral Portal <br><span class="text-orange-600">From Desktop to Mobile-First</span></h1>
+                <p class="text-xl text-gray-600 mb-16 max-w-2xl">Replacing a clunky desktop system with a mobile-optimized portal that lets agents refer clients in under a minute—and actually track what happens next.</p>
+
+                <div class="max-w-5xl mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">1. The Problem: A System Built for Offices, Used in Car Parks</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Estate agents are mobile workers. They show properties, they negotiate deals, they source leads—all on the move. Yet the referral system they used to send mortgage leads to our consultants was built for a desk.
+                        <br><br>
+                        Dense tables. Multi-screen forms. No mobile layout. No status visibility. When an agent referred a client, they had no way to see whether the consultant had actually picked it up, when they were planning to contact them, or whether it had stalled. The result? Agents stopped using the tool. They went back to email, WhatsApp, and phone calls—completely untracked.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
+                    <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden shadow-sm">
+                        <img src="../Images/IP/old screens/main.jpg" alt="Old desktop interface - cluttered dashboard" class="w-full h-auto object-contain grayscale opacity-75 hover:opacity-100 transition-all duration-500" />
+                        <p class="p-3 text-[10px] text-center font-bold text-gray-400 uppercase">Old: Desktop-only, dense tables</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden shadow-sm">
+                        <img src="../Images/IP/old screens/Refer.jpg" alt="Old form - long scrolling questionnaire" class="w-full h-auto object-contain grayscale opacity-75 hover:opacity-100 transition-all duration-500" />
+                        <p class="p-3 text-[10px] text-center font-bold text-gray-400 uppercase">Old: Multi-page form, endless scrolling</p>
+                    </div>
+                </div>
+
+                <div class="max-w-5xl mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">2. Understanding How Agents Actually Work</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Before redesigning anything, we shadowed agents in the field. The insight was stark: they open the portal for 60-90 seconds at a time. Between appointments. In car parks. On their phone. They don't have time for a questionnaire. They don't care about form density. They need to:
+                        <br><br>
+                        <strong>1. Submit a referral in under a minute</strong> (name, contact details, quick context—that's it)
+                        <br>
+                        <strong>2. See the status of previous referrals at a glance</strong> (Consultant picked it up? Client applied? Nothing happened?)
+                        <br>
+                        <strong>3. Know when to follow up</strong> (Because their commission depends on it)
+                    </p>
+                </div>
+
+                <div class="max-w-5xl mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">3. Designing for the Real Work: Mobile-First</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        We flipped the design approach entirely. Instead of adapting a desktop layout to mobile, we designed mobile first—for one-handed use, for speed, for the actual environment where agents use the tool.
+                        <br><br>
+                        The referral form shrank from a bloated multi-field questionnaire to just five fields: Company to refer to, Full Name, Email, Phone, and Notes. Everything the consultant genuinely needs to pick up the phone and make contact. Everything else can be captured on the call.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden shadow-sm mb-20 flex flex-wrap justify-center gap-6 py-8 px-4">
+                    <img src="../Images/IP/mobile/Log in.jpg" alt="New mobile login - clean, simple" class="max-w-sm h-auto rounded-2xl shadow-xl" />
+                    <img src="../Images/IP/mobile/Refer a Client.jpg" alt="New mobile referral form - 5 fields only" class="max-w-sm h-auto rounded-2xl shadow-xl" />
+                </div>
+
+                <div class="bg-blue-50 border border-blue-200 rounded-2xl p-8 md:p-12 mb-20">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">The Referral Form: Constraint as Feature</h3>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        The old form had ~15 fields. The new form has 5. This wasn't laziness—it was strategic. Every field we removed forced us to ask: "Does the consultant genuinely need this to pick up the phone?"
+                    </p>
+                    <div class="space-y-4 text-gray-700">
+                        <div class="flex gap-4 items-start">
+                            <span class="text-orange-600 font-bold text-xl">→</span>
+                            <div>
+                                <p class="font-bold">Company to refer to</p>
+                                <p class="text-sm text-gray-600">Determines which consultant handles it</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <span class="text-orange-600 font-bold text-xl">→</span>
+                            <div>
+                                <p class="font-bold">Full Name</p>
+                                <p class="text-sm text-gray-600">Who are we calling?</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <span class="text-orange-600 font-bold text-xl">→</span>
+                            <div>
+                                <p class="font-bold">Email & Phone</p>
+                                <p class="text-sm text-gray-600">How do we contact them?</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <span class="text-orange-600 font-bold text-xl">→</span>
+                            <div>
+                                <p class="font-bold">Notes</p>
+                                <p class="text-sm text-gray-600">Any context that makes the conversation easier</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="max-w-5xl mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">4. Status as the Spine of the Product</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        The biggest complaint about the old system was invisible referrals. An agent sent a lead and then heard nothing. So in the new design, status is not a footnote—it's the entire interface. Every referral has a clear, color-coded status visible at a glance:
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden shadow-sm mb-20 flex justify-center py-8 px-4">
+                    <img src="../Images/IP/mobile/Refer a Client-1.jpg" alt="Search referrals - card-based layout with status pills" class="max-w-md h-auto rounded-2xl shadow-xl" />
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl p-8 md:p-12 border border-gray-100 mb-20">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Status Taxonomy (From Agent's Perspective)</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex gap-4">
+                            <div class="w-3 h-3 rounded-full bg-purple-400 flex-shrink-0 mt-2"></div>
+                            <div>
+                                <p class="font-bold text-gray-900">Lead</p>
+                                <p class="text-sm text-gray-600">We have it. Nothing's happened yet.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-3 h-3 rounded-full bg-blue-400 flex-shrink-0 mt-2"></div>
+                            <div>
+                                <p class="font-bold text-gray-900">Recommended</p>
+                                <p class="text-sm text-gray-600">Consultant has made a recommendation. Commission is realistic.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-3 h-3 rounded-full bg-gray-400 flex-shrink-0 mt-2"></div>
+                            <div>
+                                <p class="font-bold text-gray-900">Application</p>
+                                <p class="text-sm text-gray-600">Client has committed. It's real now.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-3 h-3 rounded-full bg-red-300 flex-shrink-0 mt-2"></div>
+                            <div>
+                                <p class="font-bold text-gray-900">Cancelled</p>
+                                <p class="text-sm text-gray-600">Stop chasing. It's not happening.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm mt-6 italic">The taxonomy is deliberately small. Agents aren't trying to understand our internal pipeline—they just need to know whether to follow up.</p>
+                </div>
+
+                <div class="max-w-5xl mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">5. The Whole Opportunity View</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Once an agent opens a referral, they see everything in one place: contact details, appointment history, linked policies, notes from the consultant. Everything an agent might need to follow up intelligently. No hidden panels. No "click to reveal." Just clear, scannable information.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
+                    <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden shadow-sm flex justify-center py-8 px-4">
+                        <img src="../Images/IP/mobile/Client information view appointments.jpg" alt="Opportunity view - appointments tab" class="max-w-sm h-auto rounded-2xl shadow-xl" />
+                    </div>
+                    <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden shadow-sm flex justify-center py-8 px-4">
+                        <img src="../Images/IP/mobile/Client information book appointment.jpg" alt="Opportunity view - book appointment" class="max-w-sm h-auto rounded-2xl shadow-xl" />
+                    </div>
+                </div>
+
+                <div class="max-w-5xl mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">6. Desktop: Scaling Without Regression</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Not all agents work mobile. Office managers need to see their entire branch's referrals at once. So we scaled the design thoughtfully: the same card language, the same status pills, but arranged in a grid for search and filter. It's not a stretched mobile view and it's not a regression to the old enterprise table. It's the mobile language applied to desktop context.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden shadow-sm mb-20 relative group">
+                    <div class="absolute top-4 right-4 bg-black/70 text-white text-xs px-2 py-1 rounded pointer-events-none z-10">Hover to Zoom</div>
+                    <div class="image-zoom-wrapper flex items-center justify-center h-96">
+                        <img src="../Images/IP/desktop/search.jpg" alt="Desktop search grid - card-based layout" class="w-full h-full object-contain" />
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20 border-y border-gray-100 py-10 text-center">
+                    <div>
+                        <p class="text-gray-500 text-[10px] font-black mb-1 uppercase tracking-[0.2em]">Form Reduction</p>
+                        <p class="text-3xl font-bold text-gray-900">15 → 5 <span class="text-sm font-normal text-gray-500">Fields</span></p>
+                    </div>
+                    <div>
+                        <p class="text-gray-500 text-[10px] font-black mb-1 uppercase tracking-[0.2em]">Primary Device</p>
+                        <p class="text-3xl font-bold text-gray-900">Mobile <span class="text-sm font-normal text-gray-500">First</span></p>
+                    </div>
+                    <div>
+                        <p class="text-gray-500 text-[10px] font-black mb-1 uppercase tracking-[0.2em]">Conversion Impact</p>
+                        <p class="text-3xl font-bold text-orange-600">+45% <span class="text-sm font-normal text-gray-500">Lead Conversion</span></p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl p-8 md:p-12 border border-gray-100 mb-20">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Design Decisions That Mattered</h2>
+
+                    <div class="space-y-8">
+                        <div>
+                            <h4 class="text-lg font-bold text-gray-900 mb-3">Why We Killed the Multi-Field Form</h4>
+                            <p class="text-gray-600 leading-relaxed">
+                                The old referral form asked for everything upfront—property details, mortgage amount, protection products, referee relationship, etc. But here's the thing: consultants don't make better decisions with this information pre-filled. They make better decisions by talking to the agent. So we removed the cognitive friction and asked for only what matters: name, contact details, and a sentence of context. The rest happens on the call.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-lg font-bold text-gray-900 mb-3">Status Pills Over Hidden Dropdowns</h4>
+                            <p class="text-gray-600 leading-relaxed">
+                                The old system buried status in a table column. Agents had to scroll right, squint at text, and infer meaning. We made status a first-class citizen: large, color-coded pills visible before the agent even opens the card. The color system is intuitive (blue = recommended, good; red = cancelled, bad) without requiring memorization.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-lg font-bold text-gray-900 mb-3">One-Handed Use on Everything</h4>
+                            <p class="text-gray-600 leading-relaxed">
+                                Every CTA, every button, every form field was designed with thumb-reach in mind. CTAs sit in the bottom half of the screen. Drop-downs open upward so they don't disappear off-screen. Forms are single-column, not cramped multi-column layouts. This isn't just accessibility—it's respect for how agents actually hold their phones.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-lg font-bold text-gray-900 mb-3">Reusing the Design Language</h4>
+                            <p class="text-gray-600 leading-relaxed">
+                                We applied the same visual language from the Client Portal (cream background, orange accents, charcoal CTAs, card-based content). This meant agents using both products felt like they were in the same system—not two different companies. Consistency breeds confidence.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="max-w-5xl mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">What Changed</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        This redesign is now live. The results speak for themselves:
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+                    <div class="bg-white border border-gray-200 rounded-xl p-6">
+                        <p class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-2">Adoption</p>
+                        <p class="text-3xl font-bold text-gray-900 mb-4">70%+ agents</p>
+                        <p class="text-gray-600 text-sm">Now using the mobile portal regularly, up from ~30% on the old desktop system.</p>
+                    </div>
+                    <div class="bg-white border border-gray-200 rounded-xl p-6">
+                        <p class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-2">Time to Refer</p>
+                        <p class="text-3xl font-bold text-gray-900 mb-4">~45 seconds</p>
+                        <p class="text-gray-600 text-sm">Down from several minutes on the old form. Agents can submit during a property viewpoint without losing focus.</p>
+                    </div>
+                    <div class="bg-white border border-gray-200 rounded-xl p-6">
+                        <p class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-2">Lead Conversion</p>
+                        <p class="text-3xl font-bold text-orange-600 mb-4">+45%</p>
+                        <p class="text-gray-600 text-sm">Higher quality referrals because agents are submitting from the field, with fresher context.</p>
+                    </div>
+                    <div class="bg-white border border-gray-200 rounded-xl p-6">
+                        <p class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-2">Follow-up Rate</p>
+                        <p class="text-3xl font-bold text-gray-900 mb-4">3x higher</p>
+                        <p class="text-gray-600 text-sm">Because agents can now see status at a glance, they know when to push for an update.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="py-20 bg-white border-t border-gray-100 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Need to rebuild a product that people have abandoned?</h2>
+            <a href="mailto:markchamberlain5@gmail.com" class="relative inline-block px-8 py-3 bg-gray-900 text-white font-semibold overflow-hidden group transition-all duration-300 ease-out hover:scale-105 cursor-pointer rounded-xl">
+                <span class="relative z-10">Get in Touch</span>
+                <div class="absolute inset-0 bg-orange-600 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
+            </a>
+        </section>
+
+        <div id="footer-placeholder"></div>
+
+    </div>
+
+    <script src="../js/components.js"></script>
+</body>
+</html>

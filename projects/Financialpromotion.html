@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Promotions Audit Engine | Mark Chamberlain</title>
+    <meta name="description" content="Redesigning a compliance review system to absorb a 196% surge in monthly uploads — with a 36% drop in duplicate submissions and a smart AI-disclosure flow.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="bg-white text-gray-900 antialiased">
+
+    <div id="loader" class="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center transition-opacity duration-500">
+        <p class="text-sm font-bold text-gray-900 tracking-[0.2em] animate-pulse">SYSTEMS LOADING</p>
+    </div>
+
+    <div id="site-content" class="opacity-0 translate-y-8 blur-md transition-all duration-700 ease-out">
+
+        <div id="nav-placeholder"></div>
+
+        <section class="pt-32 pb-12 px-6 bg-white">
+            <div class="max-w-4xl mx-auto">
+                <div class="mb-8 space-y-4">
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-gray-100 text-gray-700 border border-gray-200 px-3 py-1 rounded-full">Regulatory Compliance</span>
+                        <span class="text-xs bg-gray-100 text-gray-700 border border-gray-200 px-3 py-1 rounded-full">UX Optimization</span>
+                        <span class="text-xs bg-gray-100 text-gray-700 border border-gray-200 px-3 py-1 rounded-full">AI Disclosure</span>
+                    </div>
+                </div>
+
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 text-gray-900 leading-tight">Financial Promotions <br><span class="text-orange-600">Audit Engine</span></h1>
+                <p class="text-xl text-gray-600 mb-16 max-w-2xl">Making compliance actually usable. How we redesigned a bottlenecked system to handle a 196% surge in volume without breaking a sweat.</p>
+
+                <div class="max-w-5xl mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">1. The Duplicate Crisis</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        In early 2026, our system was slammed with nearly 1,400 promotion uploads in a single month. When I dug into the data, I found a huge issue: over 36% of those were just redundant duplicates.
+                        <br><br>
+                        Because the old system didn't clearly show a file's history, reviewers were essentially starting from scratch every single time a consultant re-submitted a tweak. We had to fix this broken feedback loop immediately.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden shadow-sm mb-20 relative group">
+                    <div class="absolute top-4 right-4 bg-black/70 text-white text-xs px-2 py-1 rounded pointer-events-none z-10">Hover to Zoom</div>
+                    <div class="image-zoom-wrapper flex items-center justify-center">
+                        <img src="../Images/FP/Reviewer.jpg" alt="Reviewer Interface with History Log" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+
+                <div class="max-w-5xl mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">2. Fixing a "Bonkers" Interface</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Users literally described the old table layout as "too complicated" and "bonkers." To fix it, I split the view. We separated the active, urgent work from the historical records. By ripping out useless columns that no one actually looked at, we reclaimed enough screen space to fix annoying zoom bugs and let reviewers focus purely on triage.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden shadow-sm mb-20 relative group">
+                    <div class="absolute top-4 right-4 bg-black/70 text-white text-xs px-2 py-1 rounded pointer-events-none z-10">Hover to Zoom</div>
+                    <div class="image-zoom-wrapper flex items-center justify-center">
+                        <img src="../Images/FP/Consultan.jpg" alt="Consultant Grid with Resubmit Logic" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20 border-y border-gray-100 py-10 text-center">
+                    <div>
+                        <p class="text-gray-500 text-[10px] font-black mb-1 uppercase tracking-[0.2em]">Volume</p>
+                        <p class="text-3xl font-bold text-gray-900">1,374 <span class="text-sm font-normal text-gray-500">Items/Mo</span></p>
+                    </div>
+                    <div>
+                        <p class="text-gray-500 text-[10px] font-black mb-1 uppercase tracking-[0.2em]">Redundancy Fix</p>
+                        <p class="text-3xl font-bold text-gray-900">36% <span class="text-sm font-normal text-gray-500">Duplicate Drop</span></p>
+                    </div>
+                    <div>
+                        <p class="text-gray-500 text-[10px] font-black mb-1 uppercase tracking-[0.2em]">Efficiency</p>
+                        <p class="text-3xl font-bold text-orange-600">+196% <span class="text-sm font-normal text-gray-500">Load Capacity</span></p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl p-8 md:p-12 border border-gray-100 mb-20">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Designing for AI Transparency</h2>
+
+                    <div class="mb-10">
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            When new regulatory rules dropped requiring companies to explicitly track AI-generated content, we had to act fast. Instead of making everyone fill out a massive new form, I built a smart, conditional upload flow.
+                        </p>
+                        <ul class="space-y-3 text-gray-700 bg-white p-6 rounded-lg border border-gray-200">
+                            <li class="flex gap-3">
+                                <span class="text-orange-600 font-bold">→</span>
+                                <span><strong>Smart Triggers:</strong> If a user uploads an image file, the system dynamically triggers the mandatory AI usage questions so they can't be skipped.</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span class="text-orange-600 font-bold">→</span>
+                                <span><strong>High-Risk Automation:</strong> We added a quick toggle for social media and high-risk products that automatically sets a hard 3-month expiration date for the promotion.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm relative group">
+                        <div class="absolute top-4 right-4 bg-black/70 text-white text-xs px-2 py-1 rounded pointer-events-none z-10">Hover to Zoom</div>
+                        <div class="image-zoom-wrapper flex items-center justify-center">
+                            <img src="../Images/FP/Consultant upload pop up.jpg" alt="AI Disclosure Upload Interface" class="w-full h-full object-cover" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="max-w-5xl mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Creating the Paper Trail</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Compliance teams love a paper trail. I made sure that once a promotion successfully hits the Approved Library, a permanent, downloadable checklist is automatically generated. This gives both the advisor and the internal auditors exactly what they need, instantly, without ever having to ask IT for a report.
+                    </p>
+                </div>
+
+                <div class="mb-20 relative group">
+                    <div class="rounded-xl overflow-hidden border border-gray-200 shadow-sm">
+                        <div class="absolute top-4 right-4 bg-black/70 text-white text-xs px-2 py-1 rounded pointer-events-none z-10">Hover to Zoom</div>
+                        <div class="image-zoom-wrapper flex items-center justify-center">
+                            <img src="../Images/FP/Consultant approved.jpg" alt="Approved Financial Promotions Library" class="w-full h-auto" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="py-20 bg-white border-t border-gray-100 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Let's solve your workflow bottlenecks.</h2>
+            <a href="mailto:markchamberlain5@gmail.com" class="relative inline-block px-8 py-3 bg-gray-900 text-white font-semibold overflow-hidden group transition-all duration-300 ease-out hover:scale-105 cursor-pointer rounded-xl">
+                <span class="relative z-10">Get in Touch</span>
+                <div class="absolute inset-0 bg-orange-600 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
+            </a>
+        </section>
+
+        <div id="footer-placeholder"></div>
+
+    </div>
+
+    <script src="../js/components.js"></script>
+</body>
+</html>
