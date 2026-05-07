@@ -3,6 +3,8 @@
 :root {
     --color-orange: #DB5D16;
     --color-dark: #333333;
+    /* Alias for case-study pages that reference var(--orange) */
+    --orange: var(--color-orange);
 }
 
 html {

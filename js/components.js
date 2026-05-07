@@ -21,7 +21,6 @@
     // has a #site-content reveal wrapper or a #navbar fade-in.
 
     function revealSite() {
-        console.log('Revealing site...');
         var loader  = document.getElementById('loader');
         var content = document.getElementById('site-content');
         var navbar  = document.getElementById('navbar');
@@ -101,7 +100,7 @@
                 '<footer class="bg-gray-900 text-white py-16 border-t border-gray-800">' +
                 '  <div class="max-w-4xl mx-auto px-6 text-center">' +
                 '    <p class="text-2xl font-bold mb-2">Mark Chamberlain.</p>' +
-                '    <p class="text-gray-500 text-sm mb-8">Lead Product Designer</p>' +
+                '    <p class="text-gray-500 text-sm mb-8">Design Engineer</p>' +
                 '    <div class="flex flex-wrap justify-center gap-x-8 gap-y-3 mb-10">' +
                          footerLink(FOOTER_LINKS.email,     'Email') +
                          footerLink(FOOTER_LINKS.linkedin,  'LinkedIn') +
@@ -109,7 +108,7 @@
                          footerLink(FOOTER_LINKS.instagram, 'Instagram') +
                          footerLink(FOOTER_LINKS.cv,        'Download CV', ' download="MarkChamberlain_CV"') +
                 '    </div>' +
-                '    <p class="text-gray-600 text-xs">&copy; 2025 Mark Chamberlain. All rights reserved.</p>' +
+                '    <p class="text-gray-600 text-xs">&copy; 2026 Mark Chamberlain. All rights reserved.</p>' +
                 '  </div>' +
                 '</footer>';
         }

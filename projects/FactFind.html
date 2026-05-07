@@ -3,22 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fact Find UX Recovery | Mark Chamberlain</title>
-    
+    <title>Revolution Fact Find — Design Engineering Case Study | Mark Chamberlain</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../style.css">
     <style>
         body { font-family: 'Montserrat', sans-serif; }
         .image-zoom-wrapper { overflow: hidden; cursor: crosshair; }
         .image-zoom-wrapper img { transition: transform 0.3s ease-out; transform-origin: center; }
-        .metric-card { border-left: 4px solid #ea580c; }
-        
-        /* Loading Animation CSS */
-        .perspective-1000 { perspective: 1000px; }
-        .rotate-y-60 { transform: rotateY(60deg); }
-        .rotate-y-120 { transform: rotateY(120deg); }
-        @keyframes spin { 100% { transform: rotateX(360deg) rotateY(360deg); } }
-        .globe-spinner { animation: spin 4s linear infinite; }
+        .metric-card { border-left: 4px solid var(--color-orange); }
     </style>
 </head>
 
@@ -33,37 +27,35 @@
         <p class="mt-6 text-sm font-bold text-gray-900 tracking-[0.2em] animate-pulse">SYSTEMS LOADING</p>
     </div>
 
-    <div id="site-content" class="opacity-0 translate-y-8 blur-md transition-all duration-700 ease-out">
+    <div id="nav-placeholder"></div>
 
-        <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-xs sm:max-w-md">
-            <div class="flex items-center justify-center px-6 py-3 mx-4 rounded-full bg-white/70 backdrop-blur-md border border-gray-200 shadow-xl">
-                <a href="../index.html" class="text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white/50 px-3 py-1.5 rounded-full transition-all duration-200">Home</a>
-                <a href="../index.html#selected-work" class="text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white/50 px-3 py-1.5 rounded-full transition-all duration-200">Work</a>
-                <a href="../about.html" class="text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white/50 px-3 py-1.5 rounded-full transition-all duration-200">About</a>
-                <a href="mailto:markchamberlain5@gmail.com" class="text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white/50 px-3 py-1.5 rounded-full transition-all duration-200">Contact</a>
-            </div>
-        </nav>
+    <div id="site-content" class="opacity-0 translate-y-8 blur-md transition-all duration-700 ease-out">
 
         <section class="pt-32 pb-12 px-6 bg-white">
             <div class="max-w-4xl mx-auto">
-                
+
                 <div class="mb-8 space-y-4">
                     <div class="flex flex-wrap gap-2">
-                        <span class="text-xs bg-gray-100 text-gray-700 border border-gray-200 px-3 py-1 rounded-full">Legacy Migration</span>
-                        <span class="text-xs bg-gray-100 text-gray-700 border border-gray-200 px-3 py-1 rounded-full">Middleware Design</span>
-                        <span class="text-xs bg-gray-100 text-gray-700 border border-gray-200 px-3 py-1 rounded-full">Data Transformation</span>
+                        <span class="text-xs bg-gray-100 text-gray-700 border border-gray-200 px-3 py-1 rounded-full">Legacy migration</span>
+                        <span class="text-xs bg-gray-100 text-gray-700 border border-gray-200 px-3 py-1 rounded-full">Modular information architecture</span>
+                        <span class="text-xs bg-gray-100 text-gray-700 border border-gray-200 px-3 py-1 rounded-full">Instrumented iteration</span>
                     </div>
                 </div>
-                
-                <h1 class="text-4xl md:text-6xl font-bold mb-6 text-gray-900 leading-tight">Fact Find UX: <br><span class="text-orange-600">From Guesswork to Data</span></h1>
-                <p class="text-xl text-gray-600 mb-16 max-w-2xl">Turning a clunky, multi-page legacy system into a fast, high-density workspace—all while migrating the underlying tech stack.</p>
+
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 text-gray-900 leading-tight">Revolution Fact Find: <br><span class="text-orange-600">From Guesswork to Production-Ready Data</span></h1>
+                <p class="text-xl text-gray-600 mb-6 max-w-2xl leading-relaxed">
+                    I partnered with engineering and compliance to replace a fragmented legacy flow with a migration-aware, high-density workspace—not static mocks, but UI patterns that could ship and scale with a moving API and regulatory bar.
+                </p>
+                <p class="text-lg text-gray-600 mb-16 max-w-2xl leading-relaxed">
+                    The product story: turning a clunky, multi-page stack into a fast cockpit for advisors—grounded in behavioral data once we instrumented the rollout.
+                </p>
 
                 <div class="max-w-5xl mb-6">
                     <h3 class="text-2xl font-bold text-gray-900 mb-3">1. Designing in the Dark</h3>
                     <p class="text-gray-600 leading-relaxed mb-6">
-                        The original Fact Find tool was built on an aging VB stack. When the company decided to migrate to C#, we had to rebuild the UI to support a new API integration. 
+                        The original Fact Find tool was built on an aging VB stack. When the company decided to migrate to C#, we had to rebuild the UI to support a new API integration.
                         <br><br>
-                        But at first, we didn't have any user tracking. We were relying purely on "word of mouth" feedback from managers to figure out what users wanted—which turned out to be a deeply flawed way to design a product.
+                        At first we had no meaningful product analytics—only informal feedback from managers. That gap between the field and the roadmap made it easy to ship plausible layouts that did not match advisor behavior.
                     </p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
@@ -78,18 +70,18 @@
                 </div>
 
                 <div class="max-w-5xl mb-6">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">2. Iteration 1: The "Modern" Bloat</h3>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">2. Iteration 1: The &ldquo;Modern&rdquo; Bloat</h3>
                     <p class="text-gray-600 leading-relaxed mb-6">
-                        Our first redesign actually made things worse. We expanded the pages to give users more room for notes, but this was entirely based on educated guesses. I pushed to integrate <strong>Microsoft Clarity</strong> into the staged launch. Suddenly, we had the heatmaps and metrics to see exactly how, when, and where advisors were getting stuck. We finally stopped guessing and started observing.
+                        Our first redesign increased cognitive load: more pages and notes fields, driven by hypotheses rather than telemetry. I advocated for <strong>Microsoft Clarity</strong> on the staged environment so we could replay frustration and heat—not opinions. That shift moved the team from debating layouts to agreeing on what advisors actually did.
                     </p>
                 </div>
                 <div class="bg-gray-900 rounded-2xl p-4 mb-20 relative group overflow-hidden border border-gray-800 shadow-2xl">
                     <div class="absolute top-8 right-8 bg-orange-600 text-white text-[10px] font-black px-3 py-1 rounded-full z-20 shadow-lg animate-pulse uppercase tracking-widest">Audit v2 (Clarity Phase)</div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div class="image-zoom-wrapper rounded-xl border border-white/10 h-[500px] overflow-hidden"> 
+                        <div class="image-zoom-wrapper rounded-xl border border-white/10 h-[500px] overflow-hidden">
                             <img id="zoom-img-1" src="../Images/Factfind/PersonalNewv1.jpg" alt="V1 Redesign" class="w-full h-full object-contain transition-transform duration-300 origin-center" />
                         </div>
-                        <div class="image-zoom-wrapper rounded-xl border border-white/10 h-[500px] overflow-hidden"> 
+                        <div class="image-zoom-wrapper rounded-xl border border-white/10 h-[500px] overflow-hidden">
                             <img id="zoom-img-2" src="../Images/Factfind/addressNewv1.jpg" alt="V1 Address Page" class="w-full h-full object-contain transition-transform duration-300 origin-center" />
                         </div>
                     </div>
@@ -98,7 +90,7 @@
                 <div class="max-w-5xl mb-6">
                     <h3 class="text-2xl font-bold text-gray-900 mb-3">3. Letting the Data Win</h3>
                     <p class="text-gray-600 leading-relaxed mb-6">
-                        When we rolled out the pilot to 200 consultants, they were frustrated. The new fragmented pages were slowing them down. Using the heatmap data, I showed leadership that we needed to stop reacting to individual complaints and look at the actual user behavior. The data proved that separating the pages was a mistake—we needed to consolidate.
+                        When we rolled out the pilot to 200 consultants, fragmentation showed up in the telemetry before it showed up in anecdotes. Using Clarity, I made the case to leadership that we should optimize for task completion, not page count. The data supported consolidating flows instead of spreading them thin.
                     </p>
                 </div>
                 <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden shadow-sm mb-20">
@@ -106,12 +98,12 @@
                 </div>
 
                 <div class="max-w-5xl mb-6">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">4. The "Cockpit" Workspace (v3)</h3>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">4. The Cockpit Workspace (v3)</h3>
                     <p class="text-gray-600 leading-relaxed mb-6">
-                        We ditched the "too many pages" approach and built a high-density hub. We put dual applicants side-by-side so advisors didn't have to keep clicking back and forth. We cleaned up the property section so tracking multiple mortgages didn't look like a mess. It worked so well that this "Cockpit" layout is now the standard model for our other internal tools.
+                        We retired the &ldquo;many shallow pages&rdquo; model for a single high-density hub: dual applicants side-by-side, property and charges readable at a glance, and interaction patterns that matched how advisors copy data into lender portals. That layout became the reference model for other internal tooling—evidence that production-ready structure beats one-off screen polish.
                     </p>
                 </div>
-                
+
                 <div class="flex flex-col gap-10 mb-20">
                     <div class="bg-white rounded-xl border border-orange-200 overflow-hidden shadow-md">
                         <img src="../Images/Factfind/Personalnewv2.jpg" alt="Final v3 Personal Workspace" class="w-full h-auto object-cover" />
@@ -139,21 +131,49 @@
                 </div>
 
                 <div class="bg-gray-50 rounded-2xl p-8 md:p-12 border border-gray-100 mb-20">
-                    <h2 class="text-2xl font-bold text-gray-900 mb-8">Solving the Annoying Details</h2>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-8">Constraint-solving in the product UI</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div>
-                            <h4 class="font-bold text-gray-800 mb-2 italic">Forcing Compliance Without Pop-ups</h4>
+                            <h4 class="font-bold text-gray-800 mb-2">Compliance without modal fatigue</h4>
                             <p class="text-sm text-gray-600 leading-relaxed">
-                                We strategically placed the <strong>Vulnerability Status</strong> right before the final notes section. This forced advisors to pause and consider a client's health or financial resilience, keeping us completely compliant with strict FCA standards without resorting to annoying alert boxes.
+                                We placed <strong>Vulnerability Status</strong> immediately before final notes so advisors could not complete the journey without a deliberate check—meeting FCA expectations without interrupting flow with stacked dialogs.
                             </p>
                         </div>
                         <div>
-                            <h4 class="font-bold text-gray-800 mb-2 italic">The "Portal Paste" Fix</h4>
+                            <h4 class="font-bold text-gray-800 mb-2">Lender-portal copy paths</h4>
                             <p class="text-sm text-gray-600 leading-relaxed">
-                                Advisors were constantly frustrated by clicking phone numbers or emails and accidentally opening their mail apps when all they wanted to do was copy the text. I swapped the hyperlinks for simple <strong>one-click copy buttons</strong>, saving them endless headaches when pasting client data into lender portals.
+                                Clickable <code class="text-xs bg-gray-200 px-1 rounded">tel:</code> and <code class="text-xs bg-gray-200 px-1 rounded">mailto:</code> links were triggering the wrong apps during fast paste workflows. One-click copy controls kept the UI calm and predictable when moving data into external portals—small interaction engineering with outsized throughput impact.
                             </p>
                         </div>
                     </div>
+                </div>
+
+                <div class="mb-20 border border-gray-200 rounded-2xl p-8 md:p-10 bg-white shadow-sm">
+                    <p class="text-xs font-semibold uppercase tracking-widest text-orange-600 mb-2">markchamberlain.design</p>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6">Technical implementation</h2>
+                    <p class="text-gray-600 leading-relaxed mb-8">
+                        This write-up ships as static HTML with a deliberately small front-end footprint. Below is how I structured layout, tokens, and shared chrome so the case study stays maintainable across many project pages—a practical analogue to design-system thinking in larger codebases.
+                    </p>
+
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Layout and responsive scaffolding</h3>
+                    <ul class="list-disc list-inside text-gray-600 text-sm space-y-2 mb-8 leading-relaxed">
+                        <li>Long-form narrative uses a capped measure (<code class="text-xs bg-gray-100 px-1 rounded">max-w-4xl</code> / <code class="text-xs bg-gray-100 px-1 rounded">max-w-5xl</code>) with grids that collapse from multi-column desktop to single-column mobile—balancing scanability on phones with comparative imagery on wider screens.</li>
+                        <li>Fixed pill navigation (<code class="text-xs bg-gray-100 px-1 rounded">backdrop-blur</code>, bordered glass) preserves context without stealing vertical canvas; z-index is coordinated with the page loader so the shell feels intentional, not stacked by accident.</li>
+                        <li>Audit imagery uses fixed-height tiles and <code class="text-xs bg-gray-100 px-1 rounded">object-contain</code> plus cursor-driven zoom so screenshots remain legible inside cards—useful when stakeholders review dense enterprise UI on laptops.</li>
+                    </ul>
+
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Design tokens and modular shell</h3>
+                    <ul class="list-disc list-inside text-gray-600 text-sm space-y-2 mb-8 leading-relaxed">
+                        <li>Brand accents are centralized in a global stylesheet (<code class="text-xs bg-gray-100 px-1 rounded">:root</code> tokens such as <code class="text-xs bg-gray-100 px-1 rounded">--color-orange</code>) so typography emphasis and borders stay aligned with the rest of the site.</li>
+                        <li>Navigation and footer are injected from a single module (<code class="text-xs bg-gray-100 px-1 rounded">components.js</code>) with path-aware link bases for <code class="text-xs bg-gray-100 px-1 rounded">/projects/</code> vs root—one edit updates contact links, social URLs, and CV paths everywhere. That is the same collaboration contract I aim for on product teams: designers own the contract; engineers implement once.</li>
+                    </ul>
+
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Performance trade-offs</h3>
+                    <ul class="list-disc list-inside text-gray-600 text-sm space-y-2 leading-relaxed">
+                        <li><strong>Tailwind via CDN</strong> trades a minimal build pipeline for velocity on a portfolio. The cost is a larger runtime style surface than a purged build would produce—acceptable here where shipping and iteration matter more than bundle bytes.</li>
+                        <li><strong>Loader and reveal logic</strong> prefer perceived performance: the shared script reveals content on <code class="text-xs bg-gray-100 px-1 rounded">DOMContentLoaded</code> / <code class="text-xs bg-gray-100 px-1 rounded">load</code> with a short fallback timer so slow assets do not trap users on a blank screen.</li>
+                        <li>Page-specific CSS (for example interactive zoom) stays local while repeated motion primitives live in the global sheet—duplication only where it carries a unique interaction, shared otherwise.</li>
+                    </ul>
                 </div>
 
                 <div class="mb-20">
@@ -180,46 +200,26 @@
             </a>
         </section>
 
-        <footer class="bg-gray-900 text-white py-12 border-t border-gray-800">
-            <div class="max-w-6xl mx-auto px-6 text-center">
-                <p class="text-2xl font-bold mb-4">Mark Chamberlain.</p>
-                <div class="flex justify-center gap-6 mb-8">
-                    <a href="mailto:markchamberlain5@gmail.com" class="text-gray-400 hover:text-white transition-colors">Email</a>
-                    <a href="https://linkedin.com" target="_blank" class="text-gray-400 hover:text-white transition-colors">LinkedIn</a>
-                </div>
-                <p class="text-gray-500 text-sm">&copy; 2026 Mark Chamberlain. All rights reserved.</p>
-            </div>
-        </footer>
+        <div id="footer-placeholder"></div>
 
     </div>
 
+    <script src="../js/components.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         lucide.createIcons();
 
-        // Site content reveal
-        window.onload = () => {
-            const loader = document.getElementById('loader');
-            const content = document.getElementById('site-content');
-            loader.style.opacity = '0';
-            setTimeout(() => {
-                loader.style.display = 'none';
-                content.style.opacity = '1';
-                content.style.transform = 'translateY(0)';
-                content.style.filter = 'blur(0)';
-            }, 500);
-        };
-
         // Multi-image Zoom Script
         const setupZoom = (imgId) => {
             const img = document.getElementById(imgId);
+            if (!img) return;
             const container = img.parentElement;
 
             container.addEventListener('mousemove', (e) => {
                 const rect = container.getBoundingClientRect();
                 const x = e.clientX - rect.left;
                 const y = e.clientY - rect.top;
-                
+
                 const xPercent = (x / rect.width) * 100;
                 const yPercent = (y / rect.height) * 100;
 

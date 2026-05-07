@@ -8,10 +8,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../style.css">
     <style>
-        :root {
-            --orange: #E05C2A;
-            --gray-dark: #1a1a1a;
-        }
         .placeholder-img {
             background: linear-gradient(135deg, #f0ede8 0%, #e8e4de 100%);
             display: flex;
@@ -54,31 +50,31 @@
                 <div class="mb-8 flex flex-wrap gap-2">
                     <span class="text-xs bg-gray-100 text-gray-700 border border-gray-200 px-3 py-1 rounded-full">B2B SaaS</span>
                     <span class="text-xs bg-gray-100 text-gray-700 border border-gray-200 px-3 py-1 rounded-full">FinTech</span>
-                    <span class="text-xs bg-gray-100 text-gray-700 border border-gray-200 px-3 py-1 rounded-full">Workflow Automation</span>
+                    <span class="text-xs bg-gray-100 text-gray-700 border border-gray-200 px-3 py-1 rounded-full">Workflow automation</span>
                 </div>
                 <h1 class="text-4xl md:text-6xl font-bold mb-6 text-gray-900 leading-tight">
-                    Introducer Portal<br><span style="color: var(--orange);">Redesign</span>
+                    Introducer Portal<br><span style="color: var(--color-orange);">Redesign</span>
                 </h1>
                 <p class="text-xl text-gray-600 mb-6 max-w-2xl leading-relaxed">
-                    Rebuilding the estate agent referral portal mobile-first, using the design language and branding designed for clients.
+                    A mobile-first rebuild of the estate-agent referral experience—aligned to client-facing brand while staying production-ready for fast lead handoff and ongoing status visibility.
                 </p>
                 <p class="text-gray-500 leading-relaxed max-w-2xl mb-12">
-                    The introducer portal allows estate agents to you make mortgage referrals with Knowledge and Trust. The app allows them to submit new client details, track progress of referrals, and update client records — all in real-time. The site also has everything a client needs: a referral form, a notification box that pushes them for what the next interaction is, and a progress bar. This site will drive and knowledge hub.
+                    Introducers submit mortgage referrals with clear next steps: capture client details, track each case, and update records without relying on ad hoc email. The product combines a structured referral form, proactive notifications, and progress affordances so agents always know what to do next—functioning as both workflow tool and lightweight knowledge surface.
                 </p>
 
                 <!-- Stats -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20 border-y border-gray-100 py-8">
                     <div>
-                        <p class="text-gray-500 text-sm mb-1 uppercase tracking-wider font-semibold">Speed to Contact</p>
-                        <p class="text-3xl font-bold text-gray-900">4hrs <span style="color: var(--orange);">→ 15mins</span></p>
+                        <p class="text-gray-500 text-sm mb-1 uppercase tracking-wider font-semibold">Speed to contact</p>
+                        <p class="text-3xl font-bold text-gray-900">4hrs <span style="color: var(--color-orange);">→ 15mins</span></p>
                     </div>
                     <div>
-                        <p class="text-gray-500 text-sm mb-1 uppercase tracking-wider font-semibold">Lead Conversion</p>
+                        <p class="text-gray-500 text-sm mb-1 uppercase tracking-wider font-semibold">Lead conversion</p>
                         <p class="text-3xl font-bold text-gray-900">+45%</p>
                     </div>
                     <div>
-                        <p class="text-gray-500 text-sm mb-1 uppercase tracking-wider font-semibold">Data Security</p>
-                        <p class="text-3xl font-bold text-gray-900">100% GDPR</p>
+                        <p class="text-gray-500 text-sm mb-1 uppercase tracking-wider font-semibold">Data handling</p>
+                        <p class="text-3xl font-bold text-gray-900">GDPR-aligned</p>
                     </div>
                 </div>
             </div>
@@ -89,128 +85,118 @@
             <div class="max-w-4xl mx-auto">
                 <div class="flex items-start gap-4 mb-6">
                     <div class="pt-1">
-                        <p class="text-xs font-semibold uppercase tracking-widest mb-2" style="color: var(--orange);">Before</p>
-                        <h2 class="text-2xl font-bold text-gray-900">The Original Design</h2>
+                        <p class="text-xs font-semibold uppercase tracking-widest mb-2" style="color: var(--color-orange);">Before</p>
+                        <h2 class="text-2xl font-bold text-gray-900">The original experience</h2>
                     </div>
                 </div>
                 <p class="text-gray-600 leading-relaxed mb-10 max-w-3xl">
-                    The previous version of the portal before the redesign. Agents had no clear view of their pipeline, the referral process was manual and insecure, and there was no feedback loop between agents and advisors.
+                    Agents lacked a credible pipeline view: referrals lived in inbox threads, data was incomplete, and there was no shared feedback loop with advisors. Trust eroded whenever a lead went quiet with no observable state change.
                 </p>
 
-                <!-- Wide desktop screenshot -->
-                <div class="rounded-xl border border-gray-200 shadow-sm placeholder-img mb-4">
-                    <img src="../Images/IP/old screens/main.jpg"
+                <div class="rounded-xl border border-gray-200 shadow-sm placeholder-img mb-4 overflow-hidden">
+                    <img src="../Images/IP/old screens/main.jpg" alt="Legacy introducer portal — main view" class="w-full h-auto object-cover">
                 </div>
 
-                <!-- Two smaller screens side by side -->
                 <div class="grid grid-cols-2 gap-4">
-                    <div class="rounded-xl border border-gray-200  hadow-sm placeholder-img" >
-                        <img src="../Images/IP/old screens/screen2.jpg" alt="Old Design — Screen 2">
+                    <div class="rounded-xl border border-gray-200 shadow-sm placeholder-img overflow-hidden">
+                        <img src="../Images/IP/old screens/screen2.jpg" alt="Legacy introducer portal — screen 2" class="w-full h-auto object-cover">
                     </div>
-                    <div class="rounded-xl border border-gray-200 shadow-sm placeholder-img" >
-                        <img src="../Images/IP/old screens/screen3.jpg" alt="Old Design — Screen 3">
+                    <div class="rounded-xl border border-gray-200 shadow-sm placeholder-img overflow-hidden">
+                        <img src="../Images/IP/old screens/screen3.jpg" alt="Legacy introducer portal — screen 3" class="w-full h-auto object-cover">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 1: What this is & what it's for -->
+        <!-- SECTION 1: Context -->
         <section class="py-16 px-6 bg-white">
             <div class="max-w-4xl mx-auto">
                 <div class="flex items-start gap-4 mb-6">
                     <div class="pt-3">
-                        <h2 class="text-2xl font-bold text-gray-900 mb-1">What this is & what it's for</h2>
+                        <h2 class="text-2xl font-bold text-gray-900 mb-1">Audience and jobs to be done</h2>
                     </div>
                 </div>
                 <p class="text-gray-600 leading-relaxed mb-4 max-w-3xl">
-                    Estate agents sell offline financial advisory users every year. They don't have the products. They sign to the mortgage advisor as partner where we pay them, and they'll submit leads but referring clients.
+                    Estate agents regularly introduce clients to mortgage advice but typically do not sell regulated products themselves. Under partnership agreements they refer prospects; our job was to make that handoff disciplined, timely, and legible end to end.
                 </p>
                 <p class="text-gray-600 leading-relaxed mb-10 max-w-3xl">
-                    The site also has a tool every estate agent needs: a referral form, a notification box that pushes them for what the next interaction is, and a progress bar. This site will also aid and knowledge hub.
+                    The redesigned experience concentrates on repeatable tasks: submit a referral with the right fields, see where each case sits, and surface the next interaction—reducing ambiguity for non-technical users who live on their phones between viewings.
                 </p>
 
-                <!-- Wide desktop screenshot placeholder -->
-                <div class="rounded-xl border border-gray-200 shadow-sm mb-4 placeholder-img" >
-                                            <img src="../Images/IP/desktop/refer new.jpg" alt="New Design — Screen 3">
-
+                <div class="rounded-xl border border-gray-200 shadow-sm mb-4 placeholder-img overflow-hidden">
+                    <img src="../Images/IP/desktop/refer new.jpg" alt="New desktop — referral entry" class="w-full h-auto object-cover">
                 </div>
                 <div class="grid grid-cols-2 gap-4 mb-4">
-                    <div class="rounded-xl border border-gray-200  shadow-sm placeholder-img" >
-                       <img src="../Images/IP/desktop/Login.jpg" alt="New Design — Screen 2">
+                    <div class="rounded-xl border border-gray-200 shadow-sm placeholder-img overflow-hidden">
+                        <img src="../Images/IP/desktop/Login.jpg" alt="New desktop — sign in" class="w-full h-auto object-cover">
                     </div>
-                    <div class="rounded-xl border border-gray-200  shadow-sm placeholder-img" >
-                                            <img src="../Images/IP/desktop/dashboard new.jpg" alt="New Design — Main Screen">
-
+                    <div class="rounded-xl border border-gray-200 shadow-sm placeholder-img overflow-hidden">
+                        <img src="../Images/IP/desktop/dashboard new.jpg" alt="New desktop — dashboard" class="w-full h-auto object-cover">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 2: What this is a result for -->
+        <!-- SECTION 2: Brand and trust -->
         <section class="py-16 px-6 bg-gray-50">
             <div class="max-w-4xl mx-auto">
                 <div class="flex items-start gap-4 mb-6">
                     <div class="pt-3">
-                        <h2 class="text-2xl font-bold text-gray-900 mb-1">What this is a result for</h2>
+                        <h2 class="text-2xl font-bold text-gray-900 mb-1">Mobile-first visuals and confidence</h2>
                     </div>
                 </div>
                 <p class="text-gray-600 leading-relaxed mb-4 max-w-3xl">
-                    Estate agents will office financial advisory users every year. They sign to the mortgage advisor as partner referrers, submitting leads referring clients. They sign up, get access to the platform and will be bringing a change about.
+                    We prioritised breakpoints agents actually use: large tap targets, predictable scrolling regions, and status language that mirrors consumer apps so the portal feels familiar rather than &ldquo;internal IT.&rdquo;
                 </p>
                 <p class="text-gray-600 leading-relaxed mb-4 max-w-3xl">
-                    Mobile-first but not as perfectly robust. It is the stage of the actual work.
+                    Visually we stayed inside the broader client design language—enough continuity that introducers sense the same institution they already trust, with layout and component hierarchy tuned for referrers rather than end borrowers.
                 </p>
                 <p class="text-gray-600 leading-relaxed mb-10 max-w-3xl">
-                    1. Keeping the Client from being insecure. A familiar background was used to manage the confidence. 2. Keeping a strong brand but getting a different visual identity would have them building, and a well-informed context made from scratch, it something compelling and persistent under their own written. It is this structure and story like the content, the same design, the design system. When changed it, inevitably it is very giving the feeling it sends itself.
+                    That balance—shared tokens and typography with introducer-specific patterns—is the same contract I use when pairing with engineering: a thin, documented component set so implementation stays maintainable as marketing and compliance evolve.
                 </p>
 
-                <!-- Mobile screens side by side -->
                 <div class="grid grid-cols-2 gap-6 mb-4 max-w-xl mx-auto">
-                    <div class="rounded-2xl border border-gray-200  shadow-sm placeholder-mobile placeholder-img" >
-                        <img src="../Images/IP/mobile/Log in new app.jpg" alt="Mobile Login Screen">
+                    <div class="rounded-2xl border border-gray-200 shadow-sm placeholder-mobile placeholder-img overflow-hidden">
+                        <img src="../Images/IP/mobile/Log in new app.jpg" alt="New mobile — sign in" class="w-full h-auto object-cover">
                     </div>
-                    <div class="rounded-2xl border border-gray-200  shadow-sm placeholder-mobile placeholder-img">
-                        <img src="../Images/IP/mobile/Reset your password app new.jpg" alt="Mobile Reset Password Screen">
+                    <div class="rounded-2xl border border-gray-200 shadow-sm placeholder-mobile placeholder-img overflow-hidden">
+                        <img src="../Images/IP/mobile/Reset your password app new.jpg" alt="New mobile — reset password" class="w-full h-auto object-cover">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 3: The referral flows -->
+        <!-- SECTION 3: Flows -->
         <section class="py-16 px-6 bg-white">
             <div class="max-w-4xl mx-auto">
                 <div class="flex items-start gap-4 mb-6">
                     <div class="pt-3">
-                        <h2 class="text-2xl font-bold text-gray-900 mb-1">The referral flows</h2>
+                        <h2 class="text-2xl font-bold text-gray-900 mb-1">Referral flows and navigation model</h2>
                     </div>
                 </div>
                 <p class="text-gray-600 leading-relaxed mb-4 max-w-3xl">
-                    The design has a clear layout/structure: I have a fixed component "nav" for the bottom menu but in a design, it's a convenient back in. I want to a varied component app. The agent was also different. The page that the user sees after sign in, a page that works, a perfect score.
+                    Core journeys share a consistent scaffold: authentication, dashboard context, then task-specific screens. Where the product needs a persistent shortcut back to high-level actions, a fixed bottom navigation pattern keeps orientation—without duplicating every affordance on every view.
                 </p>
                 <p class="text-gray-600 leading-relaxed mb-10 max-w-3xl">
-                    The tracking layout is the same as step 4 step 5, it like a re-ordered position. Note that there is no "Refer a Client" in this section of the app while referring.
+                    Tracking steps reuse the same structural grid across states so engineering could ship modular templates; only content and emphasis change between &ldquo;awaiting advisor&rdquo; and &ldquo;ready for client.&rdquo; Edge cases (for example hiding &ldquo;Refer a client&rdquo; when it would conflict with in-flight work) are treated as conditional layout rules rather than one-off screens.
                 </p>
 
-                <!-- Two mobile screens -->
                 <div class="grid grid-cols-2 gap-6 max-w-xl mx-auto mb-4">
                     <div>
-                        <div class="rounded-2xl border border-gray-200 shadow-sm placeholder-mobile placeholder-img" >
-                                                    <img src="../Images/IP/mobile/Log in new app.jpg" alt="Referral Detail View">
-
+                        <div class="rounded-2xl border border-gray-200 shadow-sm placeholder-mobile placeholder-img overflow-hidden">
+                            <img src="../Images/IP/mobile/Log in new app.jpg" alt="Mobile — signed-in context" class="w-full h-auto object-cover">
                         </div>
                     </div>
                     <div>
-                        <div class="rounded-2xl border border-gray-200 shadow-sm placeholder-mobile placeholder-img" >
-                            <img src="../Images/IP/mobile/Refer a Client app new.jpg" alt="Recent Referrals">
+                        <div class="rounded-2xl border border-gray-200 shadow-sm placeholder-mobile placeholder-img overflow-hidden">
+                            <img src="../Images/IP/mobile/Refer a Client app new.jpg" alt="Mobile — refer a client" class="w-full h-auto object-cover">
                         </div>
                     </div>
                 </div>
 
-                <!-- Single wide mobile -->
                 <div class="max-w-xs mx-auto mt-6">
-                    <div class="rounded-2xl border border-gray-200 shadow-sm placeholder-mobile placeholder-img" >
-                                                    <img src="../Images/IP/mobile/Client information view appointments new app.jpg" alt="Refer a Client Form">
-
+                    <div class="rounded-2xl border border-gray-200 shadow-sm placeholder-mobile placeholder-img overflow-hidden">
+                        <img src="../Images/IP/mobile/Client information view appointments new app.jpg" alt="Mobile — client appointments" class="w-full h-auto object-cover">
                     </div>
                 </div>
             </div>
@@ -220,18 +206,18 @@
         <section class="py-16 px-6 bg-gray-50">
             <div class="max-w-4xl mx-auto">
                 <div class="bg-white rounded-2xl p-8 md:p-12 border border-gray-100 shadow-sm">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-8">The "Why" Behind the Design</h2>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-8">Outcome</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                         <div>
-                            <h4 class="text-lg font-bold text-gray-900 mb-3">The Problem</h4>
+                            <h4 class="text-lg font-bold text-gray-900 mb-3">Problem</h4>
                             <p class="text-gray-600 leading-relaxed">
-                                Estate Agents were losing commission because leads were being lost in email inboxes. Financial Advisors were frustrated by receiving incomplete data. The relationship was breaking down due to poor process.
+                                Commission was at risk when referrals disappeared into email. Advisors received partial information, and both sides blamed process instead of fixing the system.
                             </p>
                         </div>
                         <div>
-                            <h4 class="text-lg font-bold text-gray-900 mb-3">The Solution</h4>
+                            <h4 class="text-lg font-bold text-gray-900 mb-3">Direction</h4>
                             <p class="text-gray-600 leading-relaxed">
-                                By building a shared "Truth Source," we aligned the incentives. Agents got visibility on their pipeline, and Advisors got high-quality pre-qualified data. The UI was deliberately stripped back to resemble consumer apps to ensure adoption by non-technical users.
+                                A single source of truth for referral state gave agents pipeline visibility and gave advisors cleaner intake. The UI stayed deliberately calm—closer to consumer patterns—to maximise adoption among time-pressed introducers.
                             </p>
                         </div>
                     </div>
@@ -244,7 +230,7 @@
             <h2 class="text-3xl font-bold text-gray-900 mb-6">Need to solve a complex workflow?</h2>
             <a href="mailto:markchamberlain5@gmail.com" class="relative inline-block px-8 py-3 bg-gray-900 text-white font-semibold overflow-hidden group transition-all duration-300 ease-out hover:scale-105 cursor-pointer">
                 <span class="relative z-10">Let's Discuss</span>
-                <div class="absolute inset-0 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" style="background: var(--orange);"></div>
+                <div class="absolute inset-0 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" style="background: var(--color-orange);"></div>
             </a>
         </section>
 
@@ -252,17 +238,5 @@
     </div>
 
     <script src="../js/components.js"></script>
-    <script>
-        window.addEventListener('load', function() {
-            const loader = document.getElementById('loader');
-            const content = document.getElementById('site-content');
-            loader.style.opacity = '0';
-            setTimeout(() => {
-                content.classList.remove('opacity-0', 'translate-y-8', 'blur-md');
-                content.classList.add('opacity-100', 'translate-y-0', 'blur-0');
-            }, 100);
-            setTimeout(() => { loader.style.display = 'none'; }, 300);
-        });
-    </script>
 </body>
 </html>
