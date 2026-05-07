@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Revolution Fact Find — Design Engineering Case Study | Mark Chamberlain</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../style.css">
@@ -18,8 +19,10 @@
 
 <body class="bg-white text-gray-900 antialiased">
 
-    <div id="loader" class="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center transition-opacity duration-700">
-        <div class="relative w-24 h-24 perspective-1000">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <div id="loader" class="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center transition-opacity duration-700" role="status" aria-live="polite" aria-busy="true">
+        <div class="relative w-24 h-24 perspective-1000" aria-hidden="true">
             <div class="globe-spinner absolute inset-0 border-2 border-gray-200 rounded-full"></div>
             <div class="globe-spinner absolute inset-0 border-2 border-orange-600 rounded-full rotate-y-60"></div>
             <div class="globe-spinner absolute inset-0 border-2 border-gray-900 rounded-full rotate-y-120"></div>
@@ -30,6 +33,8 @@
     <div id="nav-placeholder"></div>
 
     <div id="site-content" class="opacity-0 translate-y-8 blur-md transition-all duration-700 ease-out">
+
+        <main id="main-content">
 
         <section class="pt-32 pb-12 px-6 bg-white">
             <div class="max-w-4xl mx-auto">
@@ -51,7 +56,7 @@
                 </p>
 
                 <div class="max-w-5xl mb-6">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">1. Designing in the Dark</h3>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-3">1. Designing in the Dark</h2>
                     <p class="text-gray-600 leading-relaxed mb-6">
                         The original Fact Find tool was built on an aging VB stack. When the company decided to migrate to C#, we had to rebuild the UI to support a new API integration.
                         <br><br>
@@ -60,45 +65,61 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
                     <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-                        <img src="../Images/Factfind/OldPersonal.jpg" alt="Legacy Personal Layout" class="w-full h-auto object-cover grayscale opacity-80 hover:opacity-100 transition-all duration-500" />
+                        <picture>
+                            <source type="image/webp" srcset="../Images/Factfind/OldPersonal.webp">
+                            <img src="../Images/Factfind/OldPersonal.jpg" alt="Legacy personal-details layout before migration" width="1200" height="800" loading="lazy" decoding="async" class="w-full h-auto object-cover grayscale opacity-80 hover:opacity-100 portfolio-motion-target duration-500" />
+                        </picture>
                         <p class="p-3 text-[10px] text-center font-bold text-gray-400 uppercase">Legacy VB Interface</p>
                     </div>
                     <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-                        <img src="../Images/Factfind/OldAddress.jpg" alt="Legacy Address Layout" class="w-full h-auto object-cover grayscale opacity-80 hover:opacity-100 transition-all duration-500" />
+                        <picture>
+                            <source type="image/webp" srcset="../Images/Factfind/OldAddress.webp">
+                            <img src="../Images/Factfind/OldAddress.jpg" alt="Legacy address capture layout listing sparse data fields" width="1200" height="800" loading="lazy" decoding="async" class="w-full h-auto object-cover grayscale opacity-80 hover:opacity-100 portfolio-motion-target duration-500" />
+                        </picture>
                         <p class="p-3 text-[10px] text-center font-bold text-gray-400 uppercase">Legacy Data Points</p>
                     </div>
                 </div>
 
                 <div class="max-w-5xl mb-6">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">2. Iteration 1: The &ldquo;Modern&rdquo; Bloat</h3>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-3">2. Iteration 1: The &ldquo;Modern&rdquo; Bloat</h2>
                     <p class="text-gray-600 leading-relaxed mb-6">
                         Our first redesign increased cognitive load: more pages and notes fields, driven by hypotheses rather than telemetry. I advocated for <strong>Microsoft Clarity</strong> on the staged environment so we could replay frustration and heat—not opinions. That shift moved the team from debating layouts to agreeing on what advisors actually did.
                     </p>
                 </div>
-                <div class="bg-gray-900 rounded-2xl p-4 mb-20 relative group overflow-hidden border border-gray-800 shadow-2xl">
-                    <div class="absolute top-8 right-8 bg-orange-600 text-white text-[10px] font-black px-3 py-1 rounded-full z-20 shadow-lg animate-pulse uppercase tracking-widest">Audit v2 (Clarity Phase)</div>
+                <p class="text-sm text-gray-600 mb-3 max-w-5xl"><strong class="text-gray-800">Assistive-tech note:</strong> hover zoom tracks the cursor. For pixel-level review without a pointer, open each asset directly: <a class="text-orange-600 underline font-semibold focus-visible:ring-2 focus-visible:ring-orange-600 rounded" href="../Images/Factfind/PersonalNewv1.jpg" target="_blank" rel="noopener">Personal v1 (full&nbsp;resolution)</a> · <a class="text-orange-600 underline font-semibold focus-visible:ring-2 focus-visible:ring-orange-600 rounded" href="../Images/Factfind/addressNewv1.jpg" target="_blank" rel="noopener">Address v1 (full&nbsp;resolution)</a></p>
+                <div class="bg-gray-900 rounded-2xl p-4 mb-20 relative group overflow-hidden border border-gray-800 shadow-2xl" aria-label="Iteration one audit screenshots">
+                    <div class="absolute top-8 right-8 bg-orange-600 text-white text-[10px] font-black px-3 py-1 rounded-full z-20 shadow-lg animate-pulse uppercase tracking-widest" aria-hidden="true">Audit v2 (Clarity Phase)</div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div class="image-zoom-wrapper rounded-xl border border-white/10 h-[500px] overflow-hidden">
-                            <img id="zoom-img-1" src="../Images/Factfind/PersonalNewv1.jpg" alt="V1 Redesign" class="w-full h-full object-contain transition-transform duration-300 origin-center" />
+                            <picture>
+                                <source type="image/webp" srcset="../Images/Factfind/PersonalNewv1.webp">
+                                <img id="zoom-img-1" src="../Images/Factfind/PersonalNewv1.jpg" alt="Iteration one redesigned personal workspace" width="1400" height="1200" loading="lazy" decoding="async" class="w-full h-full object-contain transition-transform duration-300 origin-center" />
+                            </picture>
                         </div>
                         <div class="image-zoom-wrapper rounded-xl border border-white/10 h-[500px] overflow-hidden">
-                            <img id="zoom-img-2" src="../Images/Factfind/addressNewv1.jpg" alt="V1 Address Page" class="w-full h-full object-contain transition-transform duration-300 origin-center" />
+                            <picture>
+                                <source type="image/webp" srcset="../Images/Factfind/addressNewv1.webp">
+                                <img id="zoom-img-2" src="../Images/Factfind/addressNewv1.jpg" alt="Iteration one address workspace" width="1400" height="1200" loading="lazy" decoding="async" class="w-full h-full object-contain transition-transform duration-300 origin-center" />
+                            </picture>
                         </div>
                     </div>
                 </div>
 
                 <div class="max-w-5xl mb-6">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">3. Letting the Data Win</h3>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-3">3. Letting the Data Win</h2>
                     <p class="text-gray-600 leading-relaxed mb-6">
                         When we rolled out the pilot to 200 consultants, fragmentation showed up in the telemetry before it showed up in anecdotes. Using Clarity, I made the case to leadership that we should optimize for task completion, not page count. The data supported consolidating flows instead of spreading them thin.
                     </p>
                 </div>
                 <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden shadow-sm mb-20">
-                    <img src="../Images/Factfind/heatmaps.png" alt="Heatmap behavior tracking" class="w-full h-auto object-cover" />
+                    <picture>
+                        <source type="image/webp" srcset="../Images/Factfind/heatmaps.webp">
+                        <img src="../Images/Factfind/heatmaps.png" alt="Heatmaps showing clustered clicks and hesitation on fragmented steps" width="1600" height="900" loading="lazy" decoding="async" class="w-full h-auto object-cover" />
+                    </picture>
                 </div>
 
                 <div class="max-w-5xl mb-6">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">4. The Cockpit Workspace (v3)</h3>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-3">4. The Cockpit Workspace (v3)</h2>
                     <p class="text-gray-600 leading-relaxed mb-6">
                         We retired the &ldquo;many shallow pages&rdquo; model for a single high-density hub: dual applicants side-by-side, property and charges readable at a glance, and interaction patterns that matched how advisors copy data into lender portals. That layout became the reference model for other internal tooling—evidence that production-ready structure beats one-off screen polish.
                     </p>
@@ -106,11 +127,17 @@
 
                 <div class="flex flex-col gap-10 mb-20">
                     <div class="bg-white rounded-xl border border-orange-200 overflow-hidden shadow-md">
-                        <img src="../Images/Factfind/Personalnewv2.jpg" alt="Final v3 Personal Workspace" class="w-full h-auto object-cover" />
+                        <picture>
+                            <source type="image/webp" srcset="../Images/Factfind/Personalnewv2.webp">
+                            <img src="../Images/Factfind/Personalnewv2.jpg" alt="Final v3 personal cockpit with paired applicants visible" width="1600" height="1200" loading="lazy" decoding="async" class="w-full h-auto object-cover" />
+                        </picture>
                         <p class="p-4 text-[10px] text-center font-bold text-orange-600 uppercase tracking-widest bg-orange-50">v3: High-Density Side-by-Side Personal Hub</p>
                     </div>
                     <div class="bg-white rounded-xl border border-orange-200 overflow-hidden shadow-md">
-                        <img src="../Images/Factfind/Adderssnewv2.jpg" alt="Final v3 Address Hub" class="w-full h-auto object-cover" />
+                        <picture>
+                            <source type="image/webp" srcset="../Images/Factfind/Adderssnewv2.webp">
+                            <img src="../Images/Factfind/Adderssnewv2.jpg" alt="Final v3 address hub consolidating property and charges" width="1600" height="1200" loading="lazy" decoding="async" class="w-full h-auto object-cover" />
+                        </picture>
                         <p class="p-4 text-[10px] text-center font-bold text-orange-600 uppercase tracking-widest bg-orange-50">v3: Unified Multi-Charge Property Hub</p>
                     </div>
                 </div>
@@ -134,13 +161,13 @@
                     <h2 class="text-2xl font-bold text-gray-900 mb-8">Constraint-solving in the product UI</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div>
-                            <h4 class="font-bold text-gray-800 mb-2">Compliance without modal fatigue</h4>
+                            <h3 class="font-bold text-gray-800 mb-2">Compliance without modal fatigue</h3>
                             <p class="text-sm text-gray-600 leading-relaxed">
                                 We placed <strong>Vulnerability Status</strong> immediately before final notes so advisors could not complete the journey without a deliberate check—meeting FCA expectations without interrupting flow with stacked dialogs.
                             </p>
                         </div>
                         <div>
-                            <h4 class="font-bold text-gray-800 mb-2">Lender-portal copy paths</h4>
+                            <h3 class="font-bold text-gray-800 mb-2">Lender-portal copy paths</h3>
                             <p class="text-sm text-gray-600 leading-relaxed">
                                 Clickable <code class="text-xs bg-gray-200 px-1 rounded">tel:</code> and <code class="text-xs bg-gray-200 px-1 rounded">mailto:</code> links were triggering the wrong apps during fast paste workflows. One-click copy controls kept the UI calm and predictable when moving data into external portals—small interaction engineering with outsized throughput impact.
                             </p>
@@ -148,31 +175,55 @@
                     </div>
                 </div>
 
-                <div class="mb-20 border border-gray-200 rounded-2xl p-8 md:p-10 bg-white shadow-sm">
+                <div id="implementation-notes" class="mb-20 border border-gray-200 rounded-2xl p-8 md:p-10 bg-white shadow-sm scroll-mt-24">
                     <p class="text-xs font-semibold uppercase tracking-widest text-orange-600 mb-2">markchamberlain.design</p>
                     <h2 class="text-2xl font-bold text-gray-900 mb-6">Technical implementation</h2>
                     <p class="text-gray-600 leading-relaxed mb-8">
                         This write-up ships as static HTML with a deliberately small front-end footprint. Below is how I structured layout, tokens, and shared chrome so the case study stays maintainable across many project pages—a practical analogue to design-system thinking in larger codebases.
                     </p>
 
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">CSS tokens (<code class="font-mono text-sm">:root</code>)</h3>
+                    <p class="text-gray-600 text-sm mb-4">Accent color is centralized so emphasis in prose, borders, and focus treatments stay wired to the same value—mirroring how I'd document tokens for a DS consumer.</p>
+                    <pre class="case-study-pre bg-gray-950 text-orange-50 rounded-xl p-4 mb-8 border border-gray-800 whitespace-pre-wrap" tabindex="0"><code>:root {
+    --color-orange: #c75100;
+    --color-dark: #333333;
+    --orange: var(--color-orange);
+}</code></pre>
+
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Responsive grid scaffold</h3>
+                    <p class="text-gray-600 text-sm mb-4">Comparisons collapse to single column without changing copy order—the same pattern you'd ship in JSX or Razor partials.</p>
+                    <pre class="case-study-pre bg-gray-950 text-gray-100 rounded-xl p-4 mb-8 border border-gray-800 overflow-x-auto" tabindex="0"><code>&lt;div class=&quot;grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl&quot;&gt;
+  &lt;article&gt;&lt!-- legacy --&gt;&lt;/article&gt;
+  &lt;article&gt;&lt!-- new --&gt;&lt;/article&gt;
+&lt;/div&gt;</code></pre>
+
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Cursor-aligned zoom (<code class="font-mono text-sm">mousemove</code>)</h3>
+                    <p class="text-gray-600 text-sm mb-4">The helper recenters scaling under the stakeholder's cursor inside fixed-height screenshots. Budget throttling (<code class="bg-gray-100 px-1 rounded text-xs">requestAnimationFrame</code>) optional if telemetry shows jank.</p>
+                    <pre class="case-study-pre bg-gray-950 text-gray-100 rounded-xl p-4 mb-8 border border-gray-800 overflow-x-auto whitespace-pre-wrap" tabindex="0"><code>container.addEventListener('mousemove', (e) => {
+    const rect = container.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    img.style.transformOrigin = `${x}% ${y}%`;
+    img.style.transform = 'scale(2.5)';
+});</code></pre>
+
                     <h3 class="text-lg font-bold text-gray-900 mb-3">Layout and responsive scaffolding</h3>
                     <ul class="list-disc list-inside text-gray-600 text-sm space-y-2 mb-8 leading-relaxed">
-                        <li>Long-form narrative uses a capped measure (<code class="text-xs bg-gray-100 px-1 rounded">max-w-4xl</code> / <code class="text-xs bg-gray-100 px-1 rounded">max-w-5xl</code>) with grids that collapse from multi-column desktop to single-column mobile—balancing scanability on phones with comparative imagery on wider screens.</li>
-                        <li>Fixed pill navigation (<code class="text-xs bg-gray-100 px-1 rounded">backdrop-blur</code>, bordered glass) preserves context without stealing vertical canvas; z-index is coordinated with the page loader so the shell feels intentional, not stacked by accident.</li>
-                        <li>Audit imagery uses fixed-height tiles and <code class="text-xs bg-gray-100 px-1 rounded">object-contain</code> plus cursor-driven zoom so screenshots remain legible inside cards—useful when stakeholders review dense enterprise UI on laptops.</li>
+                        <li>Long-form narrative uses a capped measure (<code class="text-xs bg-gray-100 px-1 rounded">max-w-4xl</code> / <code class="text-xs bg-gray-100 px-1 rounded">max-w-5xl</code>) with grids that collapse from multi-column desktop to single-column mobile.</li>
+                        <li>Fixed pill navigation (<code class="text-xs bg-gray-100 px-1 rounded">backdrop-blur</code>, bordered glass) preserves context without stealing vertical canvas; z-index is coordinated with the page loader.</li>
+                        <li>Audit imagery plus <code class="text-xs bg-gray-100 px-1 rounded">object-contain</code> keeps dense enterprise UI readable on stakeholder laptops.</li>
                     </ul>
 
-                    <h3 class="text-lg font-bold text-gray-900 mb-3">Design tokens and modular shell</h3>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Modular shell</h3>
                     <ul class="list-disc list-inside text-gray-600 text-sm space-y-2 mb-8 leading-relaxed">
-                        <li>Brand accents are centralized in a global stylesheet (<code class="text-xs bg-gray-100 px-1 rounded">:root</code> tokens such as <code class="text-xs bg-gray-100 px-1 rounded">--color-orange</code>) so typography emphasis and borders stay aligned with the rest of the site.</li>
-                        <li>Navigation and footer are injected from a single module (<code class="text-xs bg-gray-100 px-1 rounded">components.js</code>) with path-aware link bases for <code class="text-xs bg-gray-100 px-1 rounded">/projects/</code> vs root—one edit updates contact links, social URLs, and CV paths everywhere. That is the same collaboration contract I aim for on product teams: designers own the contract; engineers implement once.</li>
+                        <li>Navigation and footer are injected from <code class="text-xs bg-gray-100 px-1 rounded">components.js</code> with path-aware link bases—one edit updates chrome everywhere.</li>
                     </ul>
 
                     <h3 class="text-lg font-bold text-gray-900 mb-3">Performance trade-offs</h3>
                     <ul class="list-disc list-inside text-gray-600 text-sm space-y-2 leading-relaxed">
-                        <li><strong>Tailwind via CDN</strong> trades a minimal build pipeline for velocity on a portfolio. The cost is a larger runtime style surface than a purged build would produce—acceptable here where shipping and iteration matter more than bundle bytes.</li>
-                        <li><strong>Loader and reveal logic</strong> prefer perceived performance: the shared script reveals content on <code class="text-xs bg-gray-100 px-1 rounded">DOMContentLoaded</code> / <code class="text-xs bg-gray-100 px-1 rounded">load</code> with a short fallback timer so slow assets do not trap users on a blank screen.</li>
-                        <li>Page-specific CSS (for example interactive zoom) stays local while repeated motion primitives live in the global sheet—duplication only where it carries a unique interaction, shared otherwise.</li>
+                        <li>Tailwind via CDN favors velocity over bundle minimalism acceptable for portfolio shipping.</li>
+                        <li>Loader clears on DOM ready with a watchdog timer so sluggish assets cannot trap reviewers.</li>
+                        <li>Above: WebP-first <code class="text-xs bg-gray-100 px-1 rounded">&lt;picture&gt;</code> keeps bytes down while JPG remains the compatibility fallback.</li>
                     </ul>
                 </div>
 
@@ -180,12 +231,12 @@
                     <h2 class="text-2xl font-bold text-gray-900 mb-3">Process</h2>
                     <p class="text-gray-600 mb-8">Early wireframes, Figma explorations, and the thinking behind the decisions.</p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                        <div class="bg-gray-100 rounded-lg aspect-video"></div>
-                        <div class="bg-gray-100 rounded-lg aspect-video"></div>
+                        <div class="bg-gray-100 rounded-lg aspect-video" aria-hidden="true"></div>
+                        <div class="bg-gray-100 rounded-lg aspect-video" aria-hidden="true"></div>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="bg-gray-100 rounded-lg aspect-video"></div>
-                        <div class="bg-gray-100 rounded-lg aspect-video"></div>
+                        <div class="bg-gray-100 rounded-lg aspect-video" aria-hidden="true"></div>
+                        <div class="bg-gray-100 rounded-lg aspect-video" aria-hidden="true"></div>
                     </div>
                 </div>
 
@@ -194,40 +245,40 @@
 
         <section class="py-20 bg-white border-t border-gray-100 text-center">
             <h2 class="text-3xl font-bold text-gray-900 mb-6">Salvaging complex systems requires data.</h2>
-            <a href="mailto:markchamberlain5@gmail.com" class="relative inline-block px-10 py-4 bg-gray-900 text-white font-bold rounded-xl overflow-hidden group transition-all duration-300 ease-out hover:scale-105">
+            <a href="mailto:markchamberlain5@gmail.com" class="portfolio-cta relative inline-block px-10 py-4 bg-gray-900 text-white font-bold rounded-xl overflow-hidden group transition-all duration-300 ease-out hover:scale-105 focus-visible:ring-2 focus-visible:ring-orange-600 focus-visible:ring-offset-2">
                 <span class="relative z-10">Let's Discuss</span>
-                <div class="absolute inset-0 bg-orange-600 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
+                <span class="absolute inset-0 bg-orange-600 translate-y-full group-hover:translate-y-0 portfolio-motion-target duration-300 ease-out" aria-hidden="true"></span>
             </a>
         </section>
 
         <div id="footer-placeholder"></div>
 
+        </main>
+
     </div>
 
     <script src="../js/components.js"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
     <script>
-        lucide.createIcons();
+        var setupZoom = function (imgId) {
+            var img = document.getElementById(imgId);
+            if (!img) {
+                return;
+            }
+            var container = img.parentElement;
 
-        // Multi-image Zoom Script
-        const setupZoom = (imgId) => {
-            const img = document.getElementById(imgId);
-            if (!img) return;
-            const container = img.parentElement;
+            container.addEventListener('mousemove', function (e) {
+                var rect = container.getBoundingClientRect();
+                var x = e.clientX - rect.left;
+                var y = e.clientY - rect.top;
 
-            container.addEventListener('mousemove', (e) => {
-                const rect = container.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
+                var xPercent = (x / rect.width) * 100;
+                var yPercent = (y / rect.height) * 100;
 
-                const xPercent = (x / rect.width) * 100;
-                const yPercent = (y / rect.height) * 100;
-
-                img.style.transformOrigin = `${xPercent}% ${yPercent}%`;
+                img.style.transformOrigin = xPercent + '% ' + yPercent + '%';
                 img.style.transform = 'scale(2.5)';
             });
 
-            container.addEventListener('mouseleave', () => {
+            container.addEventListener('mouseleave', function () {
                 img.style.transform = 'scale(1)';
                 img.style.transformOrigin = 'center center';
             });

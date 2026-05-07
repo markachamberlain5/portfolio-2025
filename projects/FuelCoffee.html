@@ -12,13 +12,17 @@
 
 <body class="bg-white text-gray-900 antialiased" style="font-family: 'Montserrat', sans-serif;">
 
-    <div id="loader" class="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center transition-opacity duration-500">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <div id="loader" class="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center transition-opacity duration-500" role="status" aria-live="polite" aria-busy="true">
         <p class="text-sm font-bold text-gray-900 tracking-[0.2em] animate-pulse">SYSTEMS LOADING</p>
     </div>
 
+    <div id="nav-placeholder"></div>
+
     <div id="site-content" class="opacity-0 translate-y-8 blur-md transition-all duration-700 ease-out">
 
-        <div id="nav-placeholder"></div>
+        <main id="main-content">
 
         <section class="pt-32 pb-12 px-6 bg-white">
             <div class="max-w-4xl mx-auto">
@@ -34,33 +38,42 @@
                 <p class="text-xl text-gray-600 mb-16 max-w-2xl">A conceptual exploration of industrial aesthetics in the artisan coffee market. Creating a high-energy Direct-to-Consumer (DTC) brand from scratch.</p>
 
                 <div class="max-w-5xl mb-6">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">1. The "High Octane" Aesthetic</h3>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-3">1. The "High Octane" Aesthetic</h2>
                     <p class="text-gray-600 leading-relaxed mb-6">
                         Most coffee brands lean into "rustic" or "cozy" visuals. I wanted to disrupt this by leaning into the concept of coffee as <strong>Fuel</strong>. I used a stark, high-contrast colour palette (Asphalt Grey & Safety Orange) paired with bold, industrial typography to create a brand that feels urgent and energetic.
                     </p>
                 </div>
                 <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden shadow-sm mb-20">
-                    <img src="../Images/Fuel/FuelWebSiteHome.jpg" alt="Fuel Coffee Homepage" class="w-full h-auto object-cover" />
+                    <picture>
+                        <source type="image/webp" srcset="../Images/Fuel/FuelWebSiteHome.webp">
+                        <img src="../Images/Fuel/FuelWebSiteHome.jpg" alt="Fuel Coffee DTC homepage hero" width="1600" height="1000" loading="lazy" decoding="async" class="w-full h-auto object-cover" />
+                    </picture>
                 </div>
 
                 <div class="max-w-5xl mb-6">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">2. Atomic Component Design</h3>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-3">2. Atomic Component Design</h2>
                     <p class="text-gray-600 leading-relaxed mb-6">
                         I built a modular card system to handle variable product data (Roast Level, Origin, Tasting Notes). The challenge was to pack density into a small space without clutter. I used iconography and a rigorous grid system to ensure scannability.
                     </p>
                 </div>
                 <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden shadow-sm mb-20">
-                    <img src="../Images/Fuel/FuelWebSiteShop.jpg" alt="Product Card Grid" class="w-full h-auto object-cover" />
+                    <picture>
+                        <source type="image/webp" srcset="../Images/Fuel/FuelWebSiteShop.webp">
+                        <img src="../Images/Fuel/FuelWebSiteShop.jpg" alt="Fuel modular product card grid" width="1600" height="1000" loading="lazy" decoding="async" class="w-full h-auto object-cover" />
+                    </picture>
                 </div>
 
                 <div class="max-w-5xl mb-6">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">3. Editorial Layouts</h3>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-3">3. Editorial Layouts</h2>
                     <p class="text-gray-600 leading-relaxed mb-6">
                         To elevate the brand beyond a simple shop, I designed editorial-style content pages. Large imagery breaks the grid, and "sticky" side navigation allows users to read about the sourcing process while keeping the "Add to Basket" action always visible.
                     </p>
                 </div>
                 <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden shadow-sm mb-20">
-                    <img src="../Images/Fuel/FuelWebSiteInformation.jpg" alt="Editorial Layout" class="w-full h-auto object-cover" />
+                    <picture>
+                        <source type="image/webp" srcset="../Images/Fuel/FuelWebSiteInformation.webp">
+                        <img src="../Images/Fuel/FuelWebSiteInformation.jpg" alt="Fuel editorial long-form brewing story layout" width="1600" height="1000" loading="lazy" decoding="async" class="w-full h-auto object-cover" />
+                    </picture>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20 border-y border-gray-100 py-8">
@@ -79,6 +92,16 @@
                         <p class="text-lg font-bold text-orange-600">Figma + MidJourney</p>
                         <p class="text-gray-500 text-sm">Layout & Asset Generation.</p>
                     </div>
+                </div>
+
+                <div id="implementation-notes" class="mb-20 border border-gray-200 rounded-2xl p-8 md:p-10 bg-white shadow-sm scroll-mt-24">
+                    <p class="text-xs font-semibold uppercase tracking-widest text-orange-600 mb-2">Component grid</p>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">Implementation notes</h2>
+                    <p class="text-gray-600 text-sm mb-6">Product cards recycle the same anatomical slices (media, roast meta, tasting notes). On the web that becomes a repeatable grid—not bespoke artboards per SKU.</p>
+                    <pre class="case-study-pre bg-gray-950 text-gray-100 rounded-xl p-4 border border-gray-800 overflow-x-auto whitespace-pre-wrap" tabindex="0"><code>&lt;ul class=&quot;product-grid&quot; role=&quot;list&quot;&gt;
+  &lt;!-- each item: lazy image + meta row + tasting notes --&gt;
+  &lt;li class=&quot;card&quot;&gt; ... &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
                 </div>
 
                 <div class="bg-gray-50 rounded-2xl p-8 md:p-12 border border-gray-100 mb-20">
@@ -112,34 +135,18 @@
 
         <section class="py-20 bg-white border-t border-gray-100 text-center">
             <h2 class="text-3xl font-bold text-gray-900 mb-6">Need a fresh perspective on your brand?</h2>
-            <a href="mailto:markchamberlain5@gmail.com" class="relative inline-block px-8 py-3 bg-gray-900 text-white font-semibold overflow-hidden group transition-all duration-300 ease-out hover:scale-105 cursor-pointer">
+            <a href="mailto:markchamberlain5@gmail.com" class="portfolio-cta relative inline-block px-8 py-3 bg-gray-900 text-white font-semibold overflow-hidden group transition-all duration-300 ease-out hover:scale-105 cursor-pointer focus-visible:ring-2 focus-visible:ring-orange-600 focus-visible:ring-offset-2 rounded-sm">
                 <span class="relative z-10">Let's Discuss</span>
-                <div class="absolute inset-0 bg-orange-600 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
+                <span class="absolute inset-0 bg-orange-600 translate-y-full group-hover:translate-y-0 portfolio-motion-target duration-300 ease-out" aria-hidden="true"></span>
             </a>
         </section>
 
         <div id="footer-placeholder"></div>
 
+        </main>
+
     </div>
 
     <script src="../js/components.js"></script>
-    <script>
-        // Page Loader Script
-        window.addEventListener('load', function() {
-            const loader = document.getElementById('loader');
-            const content = document.getElementById('site-content');
-            
-            loader.style.opacity = '0';
-            
-            setTimeout(() => {
-                content.classList.remove('opacity-0', 'translate-y-8', 'blur-md');
-                content.classList.add('opacity-100', 'translate-y-0', 'blur-0');
-            }, 100);
-
-            setTimeout(() => {
-                loader.style.display = 'none';
-            }, 300);
-        });
-    </script>
 </body>
 </html>

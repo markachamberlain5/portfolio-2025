@@ -4,25 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Protection Workflow Optimisation | Mark Chamberlain</title>
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { font-family: 'Montserrat', sans-serif; }
-        
-        /* Loading Animation CSS */
-        .perspective-1000 { perspective: 1000px; }
-        .rotate-y-60 { transform: rotateY(60deg); }
-        .rotate-y-120 { transform: rotateY(120deg); }
-        @keyframes spin { 100% { transform: rotateX(360deg) rotateY(360deg); } }
-        .globe-spinner { animation: spin 4s linear infinite; }
-    </style>
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body class="bg-white text-gray-900 antialiased">
 
-    <div id="loader" class="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center transition-opacity duration-700">
-        <div class="relative w-24 h-24 perspective-1000">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <div id="loader" class="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center transition-opacity duration-700" role="status" aria-live="polite" aria-busy="true">
+        <div class="relative w-24 h-24 perspective-1000" aria-hidden="true">
             <div class="globe-spinner absolute inset-0 border-2 border-gray-200 rounded-full"></div>
             <div class="globe-spinner absolute inset-0 border-2 border-orange-600 rounded-full rotate-y-60"></div>
             <div class="globe-spinner absolute inset-0 border-2 border-gray-900 rounded-full rotate-y-120"></div>
@@ -30,16 +24,11 @@
         <p class="mt-6 text-sm font-bold text-gray-900 tracking-[0.2em] animate-pulse">SYSTEMS LOADING</p>
     </div>
 
+    <div id="nav-placeholder"></div>
+
     <div id="site-content" class="opacity-0 translate-y-8 blur-md transition-all duration-700 ease-out">
 
-        <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-xs sm:max-w-md">
-            <div class="flex items-center justify-center px-6 py-3 mx-4 rounded-full bg-white/70 backdrop-blur-md border border-gray-200 shadow-xl">
-                <a href="../index.html" class="text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white/50 px-3 py-1.5 rounded-full transition-all duration-200">Home</a>
-                <a href="../index.html#selected-work" class="text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white/50 px-3 py-1.5 rounded-full transition-all duration-200">Work</a>
-                <a href="../about.html" class="text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white/50 px-3 py-1.5 rounded-full transition-all duration-200">About</a>
-                <a href="mailto:markchamberlain5@gmail.com" class="text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white/50 px-3 py-1.5 rounded-full transition-all duration-200">Contact</a>
-            </div>
-        </nav>
+        <main id="main-content">
 
         <section class="pt-32 pb-12 px-6 bg-white">
             <div class="max-w-4xl mx-auto">
@@ -72,7 +61,7 @@
                 </div>
 
                 <div class="max-w-5xl mb-6">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">1. The "Double Keying" Problem</h3>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-3">1. The "Double Keying" Problem</h2>
                     <p class="text-gray-600 leading-relaxed mb-6">
                         The biggest reason advisors weren't selling insurance? They hated typing. They had to manually enter client data into the mortgage system, and then type it all out <em>again</em> into the insurance system. This annoying redundancy caused <strong>57% of potential quotes</strong> to be completely abandoned. 
                     </p>
@@ -88,7 +77,7 @@
                 <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 md:p-12 shadow-2xl mb-20 text-white relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-64 h-64 bg-orange-500 rounded-full mix-blend-overlay filter blur-3xl opacity-20 -translate-y-1/2 translate-x-1/2"></div>
                     
-                    <h2 class="text-2xl font-bold mb-6 relative z-10">The Regulatory Shift</h2>
+                    <h3 class="text-2xl font-bold mb-6 relative z-10">The Regulatory Shift</h3>
                     <p class="text-gray-300 leading-relaxed mb-8 relative z-10 max-w-2xl">
                         While we were fixing the tech, the industry rules changed. We had to move the entire system from a rigid "All or Nothing" model to a flexible, budget-friendly approach.
                     </p>
@@ -108,14 +97,14 @@
                 </div>
 
                 <div class="max-w-5xl mb-6">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">2. "Zero Touch" Quotes</h3>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-3">2. "Zero Touch" Quotes</h2>
                     <p class="text-gray-600 leading-relaxed mb-6">
                         Typing data twice is a waste of time. I worked with the dev team to wire up an API integration. Now, the moment a mortgage application is submitted, the system grabs the data, validates it, and fires it over to our sourcing partners automatically. Boom—an instant quote is generated without a single extra keystroke from the advisor.
                     </p>
                 </div>
 
                 <div class="max-w-5xl mb-6 mt-16">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">3. No More Reloads: The Live "Equaliser"</h3>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-3">3. No More Reloads: The Live "Equaliser"</h2>
                     <p class="text-gray-600 leading-relaxed mb-6">
                         If a client said "that's too expensive," advisors used to have to re-submit a whole new form just to see a cheaper option. I designed an interactive "Equaliser." Now, advisors can literally drag a slider to lower the mortgage term or income cover, and watch the premium update live on screen while they have the client on the phone.
                     </p>
@@ -146,7 +135,7 @@
                 </div>
 
                 <div class="max-w-5xl mb-6 mt-16">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">4. Transparency First: The Budget Slider</h3>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-3">4. Transparency First: The Budget Slider</h2>
                     <p class="text-gray-600 leading-relaxed mb-6">
                         Why build a quote the client can't afford? We flipped the script. By introducing a "Budget First" approach, advisors ask for a monthly cap <em>before</em> generating anything. The system then automatically filters out unrealistic options, saving everyone time.
                     </p>
@@ -159,7 +148,7 @@
                 </div>
 
                 <div class="max-w-5xl mb-6 mt-16">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">5. Adaptive Question Sets</h3>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-3">5. Adaptive Question Sets</h2>
                     <p class="text-gray-600 leading-relaxed mb-6">
                         Not every client needs a 50-question interrogation. We built two paths: a Comprehensive version for deep-dive compliance, and a fast-track Short version for standard cases. This lets the advisor match the flow to the actual complexity of the client.
                     </p>
@@ -204,7 +193,7 @@
                 </div>
 
                 <div class="max-w-5xl mb-6">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">6. Taking the Guesswork out of Compliance</h3>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-3">6. Taking the Guesswork out of Compliance</h2>
                     <p class="text-gray-600 leading-relaxed mb-6">
                         Instead of hoping advisors wrote the correct legal disclaimers, we built a logic matrix behind the scenes. This maps a client's natural language concern directly to the correct technical product, ensuring the final legal letter is accurate and compliant automatically.
                     </p>
@@ -241,75 +230,67 @@
                     </div>
                 </div>
 
+                <div id="implementation-notes" class="mb-20 border border-gray-200 rounded-2xl p-8 md:p-10 bg-white shadow-sm scroll-mt-24">
+                    <p class="text-xs font-semibold uppercase tracking-widest text-orange-600 mb-2">Interaction contract</p>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">Implementation notes</h2>
+                    <p class="text-gray-600 text-sm mb-6">Equaliser + budget surfaces are HTML-first contracts: grid holds cards, range inputs own the micro-interactions, quotes reflow without remounting expensive server calls.</p>
+                    <pre class="case-study-pre bg-gray-950 text-gray-100 rounded-xl p-4 border border-gray-800 overflow-x-auto whitespace-pre-wrap" tabindex="0"><code>/* Accessible range track + thumb (conceptual) */
+input[type="range"] {
+  accent-color: var(--color-orange);
+}
+
+.quote-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}</code></pre>
+                </div>
+
             </div>
         </section>
 
         <section class="py-24 bg-gray-50 border-t border-gray-100 text-center">
             <h2 class="text-3xl font-bold text-gray-900 mb-6">Need to solve a complex workflow?</h2>
-            <a href="mailto:markchamberlain5@gmail.com" class="relative inline-block px-10 py-4 bg-gray-900 text-white font-bold tracking-wide overflow-hidden group transition-all duration-300 ease-out hover:shadow-xl hover:-translate-y-1 rounded-xl">
+            <a href="mailto:markchamberlain5@gmail.com" class="portfolio-cta relative inline-block px-10 py-4 bg-gray-900 text-white font-bold tracking-wide overflow-hidden group transition-all duration-300 ease-out hover:shadow-xl hover:-translate-y-1 rounded-xl focus-visible:ring-2 focus-visible:ring-orange-600 focus-visible:ring-offset-2">
                 <span class="relative z-10">Let's Discuss</span>
-                <div class="absolute inset-0 bg-orange-600 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
+                <span class="absolute inset-0 bg-orange-600 translate-y-full group-hover:translate-y-0 portfolio-motion-target duration-300 ease-out" aria-hidden="true"></span>
             </a>
         </section>
 
-        <footer class="bg-gray-900 text-white py-12 border-t border-gray-800">
-            <div class="max-w-6xl mx-auto px-6 text-center">
-                <p class="text-2xl font-bold mb-4">Mark Chamberlain.</p>
-                <div class="flex justify-center gap-6 mb-8">
-                    <a href="mailto:markchamberlain5@gmail.com" class="text-gray-400 hover:text-white transition-colors">Email</a>
-                    <a href="https://linkedin.com" target="_blank" class="text-gray-400 hover:text-white transition-colors">LinkedIn</a>
-                </div>
-                <p class="text-gray-500 text-sm">&copy; 2026 Mark Chamberlain. All rights reserved.</p>
-            </div>
-        </footer>
+        <div id="footer-placeholder"></div>
+
+        </main>
 
     </div>
 
+    <script src="../js/components.js"></script>
     <script>
-        // Site content reveal
-        window.addEventListener('load', function() {
-            const loader = document.getElementById('loader');
-            const content = document.getElementById('site-content');
-            setTimeout(() => {
-                loader.style.opacity = '0';
-                setTimeout(() => {
-                    loader.style.display = 'none';
-                    content.style.opacity = '1';
-                    content.style.transform = 'translateY(0)';
-                    content.style.filter = 'blur(0)';
-                }, 500);
-            }, 500);
-        });
+        var setupZoom = function (imgId) {
+            var img = document.getElementById(imgId);
+            if (!img) return;
+            var container = img.parentElement;
 
-        // Setup Zoom for all images
-        const setupZoom = (imgId) => {
-            const img = document.getElementById(imgId);
-            if (!img) return; // Skip if image not found
-            
-            const container = img.parentElement;
-
-            container.addEventListener('mouseenter', () => {
+            container.addEventListener('mouseenter', function () {
                 img.style.transform = 'scale(2.5)';
             });
 
-            container.addEventListener('mousemove', (e) => {
-                const rect = container.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                
-                const xPercent = (x / rect.width) * 100;
-                const yPercent = (y / rect.height) * 100;
+            container.addEventListener('mousemove', function (e) {
+                var rect = container.getBoundingClientRect();
+                var x = e.clientX - rect.left;
+                var y = e.clientY - rect.top;
 
-                img.style.transformOrigin = `${xPercent}% ${yPercent}%`;
+                var xPercent = (x / rect.width) * 100;
+                var yPercent = (y / rect.height) * 100;
+
+                img.style.transformOrigin = xPercent + '% ' + yPercent + '%';
             });
 
-            container.addEventListener('mouseleave', () => {
+            container.addEventListener('mouseleave', function () {
                 img.style.transform = 'scale(1)';
                 img.style.transformOrigin = 'center center';
             });
         };
 
-        // Initialize zoom on all images
         setupZoom('zoom-1');
         setupZoom('zoom-2');
         setupZoom('zoom-3');

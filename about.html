@@ -4,17 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Mark Chamberlain | Design Engineer</title>
-    
+    <meta name="description" content="Design Engineer — modular IA, production UI, and regulated FinTech experience.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-white text-gray-900 antialiased">
 
-    <div id="loader" class="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center transition-opacity duration-700">
-        <div class="relative w-24 h-24 perspective-1000">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <div id="loader" class="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center transition-opacity duration-700" role="status" aria-live="polite" aria-busy="true">
+        <div class="relative w-24 h-24 perspective-1000" aria-hidden="true">
             <div class="globe-spinner absolute inset-0 border-2 border-gray-200 rounded-full"></div>
             <div class="globe-spinner absolute inset-0 border-2 border-orange-600 rounded-full rotate-y-60"></div>
             <div class="globe-spinner absolute inset-0 border-2 border-gray-900 rounded-full rotate-y-120"></div>
@@ -24,14 +29,19 @@
 
     <div id="nav-placeholder"></div>
 
+    <main id="main-content">
+
     <section class="pt-32 pb-16 px-6">
         <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            
+
             <div class="relative order-last md:order-first">
                 <div class="aspect-[3/4] rounded-lg overflow-hidden border border-gray-200 shadow-lg">
-                    <img src="Images/Professional Photo.jpg" alt="Mark Chamberlain" class="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-500">
+                    <picture>
+                        <source type="image/webp" srcset="Images/Professional Photo.webp">
+                        <img src="Images/Professional Photo.jpg" alt="Portrait of Mark Chamberlain" width="600" height="800" decoding="async" class="object-cover w-full h-full grayscale hover:grayscale-0 portfolio-motion-target duration-500">
+                    </picture>
                 </div>
-                <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-orange-100 rounded-full -z-10 blur-xl"></div>
+                <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-orange-100 rounded-full -z-10 blur-xl" aria-hidden="true"></div>
             </div>
 
             <div class="space-y-6">
@@ -45,41 +55,41 @@
                 <p class="text-gray-600 text-lg leading-relaxed">
                     I care about modular IA, pragmatic component contracts, and production-ready polish: whether we're automating an underwriting workflow or rebuilding reporting, deliverables need to survive handoff and scale—not just photograph well.
                 </p>
-                
+
                 <div class="pt-4">
-                    <a href="Images/Mark Chamberlain CV.pdf" download="MarkChamberlain_CV" class="relative inline-block px-8 py-3 bg-gray-900 text-white font-semibold overflow-hidden group transition-all duration-300 ease-out hover:scale-105 cursor-pointer">
+                    <a href="Images/Mark Chamberlain CV.pdf" download="MarkChamberlain_CV" class="portfolio-cta relative inline-block px-8 py-3 bg-gray-900 text-white font-semibold overflow-hidden group transition-all duration-300 ease-out hover:scale-105 cursor-pointer focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:ring-offset-2 rounded-sm">
                         <span class="relative z-10">Download My CV</span>
-                        <div class="absolute inset-0 bg-orange-600 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
+                        <span class="absolute inset-0 bg-orange-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out portfolio-motion-target" aria-hidden="true"></span>
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="bg-gray-50 py-20 px-6 border-t border-gray-200">
+    <section class="bg-gray-50 py-20 px-6 border-t border-gray-200" aria-labelledby="how-heading">
         <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
-            
+
             <div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-6">How I Work</h3>
+                <h2 id="how-heading" class="text-2xl font-bold text-gray-900 mb-6">How I Work</h2>
                 <div class="space-y-8">
                     <div class="flex gap-4">
                         <div class="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0 text-orange-600 font-bold">1</div>
                         <div>
-                            <h4 class="font-bold text-gray-900">Making Sense of the Chaos</h4>
+                            <h3 class="font-bold text-gray-900">Making Sense of the Chaos</h3>
                             <p class="text-gray-600 text-sm mt-1">I actually enjoy diving into massive, outdated legacy systems and turning them into streamlined tools that people don't hate using.</p>
                         </div>
                     </div>
                     <div class="flex gap-4">
                         <div class="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0 text-orange-600 font-bold">2</div>
                         <div>
-                            <h4 class="font-bold text-gray-900">Data Over Guesses</h4>
+                            <h3 class="font-bold text-gray-900">Data Over Guesses</h3>
                             <p class="text-gray-600 text-sm mt-1">I hate designing in the dark. I rely on heatmaps, user analytics, and hard data to figure out why a design isn't working and how to fix it.</p>
                         </div>
                     </div>
                     <div class="flex gap-4">
                         <div class="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0 text-orange-600 font-bold">3</div>
                         <div>
-                            <h4 class="font-bold text-gray-900">A Team Sport</h4>
+                            <h3 class="font-bold text-gray-900">A Team Sport</h3>
                             <p class="text-gray-600 text-sm mt-1">I stay close to engineering and product leadership so UX decisions encode implementation constraints early—fewer regressions, faster alignment on what &ldquo;done&rdquo; means for users.</p>
                         </div>
                     </div>
@@ -87,8 +97,8 @@
             </div>
 
             <div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-6">The Toolkit</h3>
-                
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">The Toolkit</h2>
+
                 <div class="mb-8">
                     <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">Core Discipline</p>
                     <div class="flex flex-wrap gap-2">
@@ -115,10 +125,10 @@
                 <div>
                     <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">Industries</p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">FinTech</span>
-                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">PropTech</span>
-                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">E-commerce</span>
-                        <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">SaaS</span>
+                        <span class="bg-orange-100 text-orange-900 px-3 py-1 rounded-full text-sm font-medium">FinTech</span>
+                        <span class="bg-orange-100 text-orange-900 px-3 py-1 rounded-full text-sm font-medium">PropTech</span>
+                        <span class="bg-orange-100 text-orange-900 px-3 py-1 rounded-full text-sm font-medium">E-commerce</span>
+                        <span class="bg-orange-100 text-orange-900 px-3 py-1 rounded-full text-sm font-medium">SaaS</span>
                     </div>
                 </div>
 
@@ -130,16 +140,19 @@
         <div class="max-w-2xl mx-auto">
             <h2 class="text-3xl font-bold text-gray-900 mb-4">Let's build something scalable.</h2>
             <p class="text-gray-600 mb-8">Currently open to Design Engineer and senior product-facing roles—or strategic engagements where implementation quality matters.</p>
-            
-            <a href="mailto:markchamberlain5@gmail.com?subject=Portfolio Inquiry" 
-               class="relative inline-block px-8 py-3 bg-gray-900 text-white font-semibold overflow-hidden group transition-all duration-300 ease-out hover:scale-105">
+
+            <a href="mailto:markchamberlain5@gmail.com?subject=Portfolio Inquiry"
+               class="portfolio-cta relative inline-block px-8 py-3 bg-gray-900 text-white font-semibold overflow-hidden group transition-all duration-300 ease-out hover:scale-105 focus-visible:ring-2 focus-visible:ring-orange-600 focus-visible:ring-offset-2 rounded-sm">
                 <span class="relative z-10">Get In Touch</span>
-                <div class="absolute inset-0 bg-orange-600 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
+                <span class="absolute inset-0 bg-orange-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out portfolio-motion-target" aria-hidden="true"></span>
             </a>
         </div>
     </section>
 
     <div id="footer-placeholder"></div>
+
+    </main>
+
     <script src="js/components.js"></script>
 </body>
 </html>

@@ -6,94 +6,124 @@
 (function () {
     var path = window.location.pathname;
 
-    // Are we inside the /projects/ subdirectory?
-    var isProject = path.indexOf('/projects/') !== -1;
+    var isProject = path.indexOf('/projects/') !== -1 || path.indexOf('\\projects\\') !== -1;
 
-    // Base path for links — project pages need to go up one level
     var base = isProject ? '../' : '';
 
-    // Which nav link should be active?
-    var isHome = !isProject && (path === '/' || path.indexOf('index.html') !== -1 || path.endsWith('/'));
+    var isHome = !isProject && (path === '/' || path.indexOf('index.html') !== -1 || path.endsWith('/') || path.endsWith('\\'));
     var isAbout = path.indexOf('about.html') !== -1;
 
-    // ─── PAGE LOADER ────────────────────────────────────────────────────────────
-    // Handles the loading screen on every page. Works whether or not the page
-    // has a #site-content reveal wrapper or a #navbar fade-in.
-
     function revealSite() {
-        var loader  = document.getElementById('loader');
+        var loader = document.getElementById('loader');
         var content = document.getElementById('site-content');
-        var navbar  = document.getElementById('navbar');
+        var navbar = document.getElementById('navbar');
 
         if (loader) {
+            loader.setAttribute('aria-busy', 'false');
+            loader.setAttribute('aria-hidden', 'true');
             loader.style.opacity = '0';
-            setTimeout(function () { loader.style.display = 'none'; }, 200);
+            setTimeout(function () {
+                loader.style.display = 'none';
+            }, 200);
         }
 
         if (content) {
             setTimeout(function () {
                 content.classList.remove('opacity-0', 'translate-y-8', 'blur-md');
                 content.classList.add('opacity-100', 'translate-y-0', 'blur-0');
-                if (navbar) navbar.classList.remove('opacity-0');
+                if (navbar) {
+                    navbar.classList.remove('opacity-0');
+                }
             }, 100);
         }
     }
 
-    // ─── NAV ────────────────────────────────────────────────────────────────
-
     try {
         var navEl = document.getElementById('nav-placeholder');
         if (navEl) {
-            var homeHref = isHome ? '#'               : base + 'index.html';
-            var workHref = isHome ? '#selected-work'  : base + 'index.html#selected-work';
+            var homeHref = isHome ? '#' : base + 'index.html';
+            var workHref = isHome ? '#selected-work' : base + 'index.html#selected-work';
 
             function navLink(href, label, active) {
                 var cls = active
-                    ? 'text-sm font-bold text-gray-900 bg-gray-100 px-3 py-1.5 rounded-full transition-all duration-200'
-                    : 'text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white/50 px-3 py-1.5 rounded-full transition-all duration-200';
-                return '<a href="' + href + '" class="' + cls + '">' + label + '</a>';
+                    ? 'text-sm font-bold text-gray-900 bg-gray-100 px-3 py-1.5 rounded-full transition-all duration-200 focus-visible:ring-2 focus-visible:ring-orange-600 focus-visible:ring-offset-2'
+                    : 'text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-white/50 px-3 py-1.5 rounded-full transition-all duration-200 focus-visible:ring-2 focus-visible:ring-orange-600 focus-visible:ring-offset-2';
+                var cur = active ? ' aria-current="page"' : '';
+                return '<a href="' + href + '" class="' + cls + '"' + cur + '>' + label + '</a>';
             }
 
-            // On the home page the nav fades in via JS, so start it invisible
             var navExtraClass = isHome ? ' opacity-0 transition-opacity duration-700 delay-300' : '';
 
             var navHTML =
-                '<nav id="navbar" class="fixed top-6 left-1/2 -translate-x-1/2 z-[90] w-full max-w-xs sm:max-w-md' + navExtraClass + '">' +
+                '<nav id="navbar" aria-label="Primary" class="fixed top-6 left-1/2 -translate-x-1/2 z-[90] w-full max-w-xs sm:max-w-md' + navExtraClass + '">' +
                 '  <div class="flex items-center justify-center px-6 py-3 mx-4 rounded-full bg-white/70 backdrop-blur-md border border-gray-200 shadow-xl">' +
-                    navLink(homeHref, 'Home', isHome) +
-                    navLink(workHref, 'Work', false) +
-                    navLink(base + 'about.html', 'About', isAbout) +
+                navLink(homeHref, 'Home', isHome) +
+                navLink(workHref, 'Work', isProject) +
+                navLink(base + 'about.html', 'About', isAbout) +
                 '  </div>' +
                 '</nav>';
 
-            var navWrapper = document.createElement('div');
-            navWrapper.innerHTML = navHTML;
-            document.body.appendChild(navWrapper.firstElementChild);
+            var temp = document.createElement('div');
+            temp.innerHTML = navHTML;
+            var navNode = temp.firstElementChild;
+            navEl.parentNode.replaceChild(navNode, navEl);
         }
-    } catch (e) {
+    }
+    catch (e) {
         console.error('Navigation Error:', e);
     }
 
-    // ─── FOOTER ─────────────────────────────────────────────────────────────
-    // To update links, edit the values below — changes apply to every page.
+    if (isProject) {
+        var bar = document.createElement('div');
+        bar.id = 'reading-progress';
+        bar.setAttribute('aria-hidden', 'true');
+
+        var fill = document.createElement('div');
+        fill.className = 'reading-progress__fill';
+        fill.id = 'reading-progress-fill';
+        bar.appendChild(fill);
+        document.body.appendChild(bar);
+
+        var ticking = false;
+        function updateProgress() {
+            var scrollRoot = document.scrollingElement || document.documentElement;
+            var scrollTop = scrollRoot.scrollTop || 0;
+            var scrollH = scrollRoot.scrollHeight - scrollRoot.clientHeight;
+            var pct = scrollH <= 0 ? 0 : (scrollTop / scrollH);
+            fill.style.transform = 'scaleX(' + pct + ')';
+            ticking = false;
+        }
+
+        function onScroll() {
+            if (!ticking) {
+                ticking = true;
+                requestAnimationFrame(updateProgress);
+            }
+        }
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onScroll, { passive: true });
+        updateProgress();
+    }
 
     try {
         var FOOTER_LINKS = {
-            email:     'mailto:markchamberlain5@gmail.com',
-            linkedin:  'https://www.linkedin.com/in/mark-chamberlain-design',
-            behance:   'https://www.behance.net/justmakingamark5',
+            email: 'mailto:markchamberlain5@gmail.com',
+            linkedin: 'https://www.linkedin.com/in/mark-chamberlain-design',
+            behance: 'https://www.behance.net/justmakingamark5',
             instagram: 'https://www.instagram.com/justmakingamark/',
-            cv:        base + 'Images/Mark Chamberlain CV.pdf'
+            cv: base + 'Images/Mark Chamberlain CV.pdf'
         };
 
         var footerEl = document.getElementById('footer-placeholder');
         if (footerEl) {
-            function footerLink(href, label, extra) {
+            function footerLink(href, label, ariaLabel, extra) {
                 var target = href.startsWith('http') ? ' target="_blank" rel="noopener"' : '';
                 var download = extra || '';
-                return '<a href="' + href + '"' + target + download +
-                       ' class="text-gray-400 hover:text-white transition-colors duration-200 text-sm font-medium">' +
-                       label + '</a>';
+                var al = ariaLabel ? ' aria-label="' + ariaLabel.replace(/"/g, '&quot;') + '"' : '';
+                return '<a href="' + href + '"' + target + download + al +
+                    ' class="text-gray-400 hover:text-white transition-colors duration-200 text-sm font-medium focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900 rounded">' +
+                    label + '</a>';
             }
 
             footerEl.innerHTML =
@@ -102,30 +132,27 @@
                 '    <p class="text-2xl font-bold mb-2">Mark Chamberlain.</p>' +
                 '    <p class="text-gray-500 text-sm mb-8">Design Engineer</p>' +
                 '    <div class="flex flex-wrap justify-center gap-x-8 gap-y-3 mb-10">' +
-                         footerLink(FOOTER_LINKS.email,     'Email') +
-                         footerLink(FOOTER_LINKS.linkedin,  'LinkedIn') +
-                         footerLink(FOOTER_LINKS.behance,   'Behance') +
-                         footerLink(FOOTER_LINKS.instagram, 'Instagram') +
-                         footerLink(FOOTER_LINKS.cv,        'Download CV', ' download="MarkChamberlain_CV"') +
+                    footerLink(FOOTER_LINKS.email, 'Email', null) +
+                    footerLink(FOOTER_LINKS.linkedin, 'LinkedIn', 'LinkedIn (opens in new tab)') +
+                    footerLink(FOOTER_LINKS.behance, 'Behance', 'Behance (opens in new tab)') +
+                    footerLink(FOOTER_LINKS.instagram, 'Instagram', 'Instagram (opens in new tab)') +
+                    footerLink(FOOTER_LINKS.cv, 'Download CV', 'Download CV (PDF)', ' download="MarkChamberlain_CV"') +
                 '    </div>' +
                 '    <p class="text-gray-600 text-xs">&copy; 2026 Mark Chamberlain. All rights reserved.</p>' +
                 '  </div>' +
                 '</footer>';
         }
-    } catch (e) {
+    }
+    catch (e) {
         console.error('Footer Error:', e);
     }
 
-    // ─── INIT ───────────────────────────────────────────────────────────────
-
     if (document.readyState === 'complete' || document.readyState === 'interactive') {
         revealSite();
-    } else {
-        // Try to reveal as soon as DOM is ready, don't wait for all images if they are slow
+    }
+    else {
         window.addEventListener('DOMContentLoaded', revealSite);
         window.addEventListener('load', revealSite);
-        // Safety fallback: Force reveal after 2s
         setTimeout(revealSite, 300);
     }
-
 })();

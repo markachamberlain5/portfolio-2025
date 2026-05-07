@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mark Chamberlain | Design Engineer</title>
     <meta name="description" content="Portfolio of Mark Chamberlain — Design Engineer specializing in FinTech, regulated services, and production-ready UX.">
-    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image" href="Images/Mark-Hero.webp" type="image/webp">
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
@@ -13,7 +17,9 @@
 
 <body class="bg-white text-gray-900 antialiased">
 
-    <div id="loader" class="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center transition-opacity duration-500">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <div id="loader" class="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center transition-opacity duration-500" role="status" aria-live="polite" aria-busy="true">
         <p class="text-sm font-bold text-gray-900 tracking-[0.2em] animate-pulse">SYSTEMS LOADING</p>
     </div>
 
@@ -21,40 +27,58 @@
 
     <div id="site-content" class="opacity-0 translate-y-8 blur-md transition-all duration-700 ease-out">
 
-        <section class="relative h-screen flex items-center justify-center overflow-hidden">
-            <img src="Images/Mark-Hero.jpg" alt="Mark Chamberlain" class="absolute inset-0 w-full h-full object-cover">
-            
-            <div class="relative z-10 text-center max-w-4xl px-6 pt-20">
-                <h1 class="text-5xl md:text-7xl font-bold text-gray-900 tracking-tight mb-6">Mark Chamberlain.</h1>
-                <p class="text-xl md:text-2xl mb-8 text-gray-800 font-medium">
-I've been in design since 2012. Came up through agencies covering everything from
-NHS campaigns to car advertising, taught myself to build for the web as it evolved,
-and ended up in product design for regulated financial services. I care about
-lateral thinking and fixing what's actually broken, not making things look polished.
-                </p>
+        <main id="main-content">
 
-                <button onclick="document.getElementById('selected-work').scrollIntoView({behavior: 'smooth'})" class="relative inline-block px-8 py-3 border-2 border-gray-900 text-gray-900 font-bold overflow-hidden group transition-all duration-300 ease-out hover:scale-105 hover:text-white hover:border-orange-600 bg-white/50 backdrop-blur-sm">
-                    <span class="relative z-10">View Case Studies</span>
-                    <div class="absolute inset-0 bg-orange-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></div>
-                </button>
+        <section class="relative h-screen flex items-center justify-center overflow-hidden" aria-label="Introduction">
+            <picture>
+                <source type="image/webp" srcset="Images/Mark-Hero.webp">
+                <img src="Images/Mark-Hero.jpg" alt="" width="2400" height="1600" fetchpriority="high" decoding="async" class="absolute inset-0 w-full h-full object-cover">
+            </picture>
+
+            <div class="relative z-10 text-center max-w-4xl px-6 pt-20">
+                <p class="text-sm font-bold tracking-[0.25em] uppercase text-gray-800 mb-4">Design Engineer · FinTech &amp; regulated systems</p>
+                <h1 class="text-5xl md:text-7xl font-bold text-gray-900 tracking-tight mb-2">Mark Chamberlain</h1>
+                <p class="text-lg md:text-xl font-semibold text-orange-600 mb-6">Product intent, production implementation</p>
+                <p class="text-lg md:text-xl mb-6 text-gray-800 font-medium max-w-2xl mx-auto leading-relaxed">
+                    I partner with engineering to ship stable UI in legacy-rich environments—modular IA, instrumentation-led iteration, and handoff that survives real constraints, not just critique.
+                </p>
+                <div class="flex flex-wrap justify-center gap-2 mb-8" aria-label="Core capabilities">
+                    <span class="text-xs bg-white/80 border border-gray-300 text-gray-800 px-3 py-1.5 rounded-full backdrop-blur-sm">HTML / CSS / Tailwind</span>
+                    <span class="text-xs bg-white/80 border border-gray-300 text-gray-800 px-3 py-1.5 rounded-full backdrop-blur-sm">Design systems</span>
+                    <span class="text-xs bg-white/80 border border-gray-300 text-gray-800 px-3 py-1.5 rounded-full backdrop-blur-sm">Data-informed UX</span>
+                    <span class="text-xs bg-white/80 border border-gray-300 text-gray-800 px-3 py-1.5 rounded-full backdrop-blur-sm">.NET-facing collaboration</span>
+                </div>
+                <p class="mb-6">
+                    <a href="projects/FactFind.html#implementation-notes" class="text-sm font-semibold text-orange-600 hover:text-orange-700 underline underline-offset-2 focus-visible:ring-2 focus-visible:ring-orange-600 rounded">Featured technical write-up: Fact Find</a>
+                </p>
+                <div class="flex flex-wrap items-center justify-center gap-4">
+                    <button type="button" onclick="document.getElementById('selected-work').scrollIntoView({behavior: 'smooth'})" class="portfolio-cta relative inline-block px-8 py-3 border-2 border-gray-900 text-gray-900 font-bold overflow-hidden group transition-all duration-300 ease-out hover:scale-105 hover:text-white hover:border-orange-600 bg-white/50 backdrop-blur-sm focus-visible:ring-2 focus-visible:ring-orange-600 focus-visible:ring-offset-2 rounded-sm">
+                        <span class="relative z-10">View case studies</span>
+                        <span class="absolute inset-0 bg-orange-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out portfolio-motion-target" aria-hidden="true"></span>
+                    </button>
+                    <a href="about.html" class="portfolio-cta relative inline-block px-8 py-3 border-2 border-gray-900 text-gray-900 font-semibold bg-white/50 backdrop-blur-sm hover:bg-gray-900 hover:text-white transition-colors duration-300 focus-visible:ring-2 focus-visible:ring-orange-600 focus-visible:ring-offset-2 rounded-sm">About &amp; stack</a>
+                </div>
             </div>
         </section>
 
-        <section id="selected-work" class="px-6 py-20 bg-white">
+        <section id="selected-work" class="px-6 py-20 bg-white" aria-labelledby="selected-work-heading">
             <div class="max-w-6xl mx-auto">
-                <h2 class="text-4xl font-bold mb-12 text-center text-gray-900">Selected Work</h2>
-                
+                <h2 id="selected-work-heading" class="text-4xl font-bold mb-12 text-center text-gray-900">Selected work</h2>
+
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-                    <!-- 1. Revolution Fact Find -->
-                    <a href="projects/FactFind.html" class="group cursor-pointer">
-                        <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-200">
+                    <a href="projects/FactFind.html" class="group cursor-pointer portfolio-card-link rounded-lg outline-offset-4">
+                        <div class="portfolio-card bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl duration-300 h-full flex flex-col border border-gray-200">
                             <div class="aspect-[4/3] bg-gray-200 overflow-hidden relative">
-                                <img src="Images/Factfind/FFthumbnail.jpg" alt="Revolution Fact Find — design engineering case study" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"></div>
+                                <picture>
+                                    <source type="image/webp" srcset="Images/Factfind/FFthumbnail.webp">
+                                    <img src="Images/Factfind/FFthumbnail.jpg" alt="Adaptive workspace UI for advisers in the Fact Find product" width="800" height="600" decoding="async" fetchpriority="high" class="object-cover w-full h-full group-hover:scale-105 portfolio-motion-target duration-500">
+                                </picture>
+                                <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300 portfolio-motion-target" aria-hidden="true"></div>
                             </div>
                             <div class="p-6 flex-1 flex flex-col">
-                                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">Revolution Fact Find — Design Engineering</h3>
-                                <p class="text-sm text-gray-600 mb-4 line-clamp-2">Rescuing advisor throughput with instrumentation-led iteration, modular IA, and a production-ready cockpit layout after a legacy platform migration.</p>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">Revolution Fact Find — design engineering</h3>
+                                <p class="text-sm text-gray-600 mb-2 line-clamp-2">Rescuing advisor throughput with instrumentation-led iteration, modular IA, and a production-ready cockpit layout after a legacy platform migration.</p>
+                                <p class="text-xs text-gray-500 mb-3">Implementation notes · instrumentation · Tailwind · static modular shell.</p>
                                 <div class="flex flex-wrap gap-2 mb-4">
                                     <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">FinTech</span>
                                     <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Instrumentation</span>
@@ -62,110 +86,125 @@ lateral thinking and fixing what's actually broken, not making things look polis
                                 </div>
                                 <div class="mt-auto pt-4 border-t border-gray-100">
                                     <p class="text-sm font-semibold text-gray-500">Impact</p>
-                                    <p class="text-lg text-orange-600 font-bold">60% Reduction in Click-Depth</p>
+                                    <p class="text-lg text-orange-600 font-bold">60% reduction in click-depth</p>
                                 </div>
                             </div>
                         </div>
                     </a>
 
-                    <!-- 2. MI Reporting System -->
-                    <a href="projects/MiReporting.html" class="group cursor-pointer">
-                        <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-200">
+                    <a href="projects/MiReporting.html" class="group cursor-pointer portfolio-card-link rounded-lg outline-offset-4">
+                        <div class="portfolio-card bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl duration-300 h-full flex flex-col border border-gray-200">
                             <div class="aspect-[4/3] bg-gray-200 overflow-hidden relative">
-                                <img src="Images/Reporting/reportingthumbnail.jpg" alt="MI Reporting System" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"></div>
+                                <picture>
+                                    <source type="image/webp" srcset="Images/Reporting/reportingthumbnail.webp">
+                                    <img src="Images/Reporting/reportingthumbnail.jpg" alt="MI reporting dashboard with folder navigation and report builder" width="800" height="600" decoding="async" fetchpriority="high" class="object-cover w-full h-full group-hover:scale-105 portfolio-motion-target duration-500">
+                                </picture>
+                                <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300 portfolio-motion-target" aria-hidden="true"></div>
                             </div>
                             <div class="p-6 flex-1 flex flex-col">
                                 <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">MI Reporting System</h3>
-                                <p class="text-sm text-gray-600 mb-4 line-clamp-2">Decoupling a legacy database to build a self-serve analytics platform for directors, eliminating developer bottlenecks.</p>
+                                <p class="text-sm text-gray-600 mb-2 line-clamp-2">Decoupling a legacy database to build a self-serve analytics platform for directors, eliminating developer bottlenecks.</p>
+                                <p class="text-xs text-gray-500 mb-3">Implementation notes · wizard IA · screenshot zoom pattern.</p>
                                 <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Data Visualization</span>
+                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Data visualization</span>
                                     <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Enterprise SaaS</span>
-                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Systems Architecture</span>
+                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Systems architecture</span>
                                 </div>
                                 <div class="mt-auto pt-4 border-t border-gray-100">
                                     <p class="text-sm font-semibold text-gray-500">Impact</p>
-                                    <p class="text-lg text-orange-600 font-bold">100% Self-Serve Reporting</p>
+                                    <p class="text-lg text-orange-600 font-bold">100% self-serve reporting</p>
                                 </div>
                             </div>
                         </div>
                     </a>
 
-                    <!-- 3. AI & Compliance Architecture -->
-                    <a href="projects/FileReviews.html" class="group cursor-pointer">
-                        <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-200">
+                    <a href="projects/FileReviews.html" class="group cursor-pointer portfolio-card-link rounded-lg outline-offset-4">
+                        <div class="portfolio-card bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl duration-300 h-full flex flex-col border border-gray-200">
                             <div class="aspect-[4/3] bg-gray-200 overflow-hidden relative">
-                                <img src="Images/FileReview/AI-thumbnail.jpg" alt="File Reviews" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"></div>
+                                <picture>
+                                    <source type="image/webp" srcset="Images/FileReview/AI-thumbnail.webp">
+                                    <img src="Images/FileReview/AI-thumbnail.jpg" alt="AI-assisted file review workflow with question sets and outcomes" width="800" height="600" loading="lazy" decoding="async" class="object-cover w-full h-full group-hover:scale-105 portfolio-motion-target duration-500">
+                                </picture>
+                                <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300 portfolio-motion-target" aria-hidden="true"></div>
                             </div>
                             <div class="p-6 flex-1 flex flex-col">
-                                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">AI & Compliance Architecture</h3>
-                                <p class="text-sm text-gray-600 mb-4 line-clamp-2">Designing an AI-assisted review tool to cut compliance bottlenecks in adviser file checking.</p>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">AI &amp; compliance architecture</h3>
+                                <p class="text-sm text-gray-600 mb-2 line-clamp-2">Designing an AI-assisted review tool to cut compliance bottlenecks in adviser file checking.</p>
+                                <p class="text-xs text-gray-500 mb-3">Implementation notes · flow IA · pseudo-schema for reviewers.</p>
                                 <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">AI Integration</span>
+                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">AI integration</span>
                                     <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Compliance</span>
                                 </div>
                                 <div class="mt-auto pt-4 border-t border-gray-100">
                                     <p class="text-sm font-semibold text-gray-500">Impact</p>
-                                    <p class="text-lg text-orange-600 font-bold">40% Reduction in File Review Time</p>
+                                    <p class="text-lg text-orange-600 font-bold">40% reduction in file review time</p>
                                 </div>
                             </div>
                         </div>
                     </a>
 
-                    <!-- 4. Modernising Protection Workflows -->
-                    <a href="projects/Protection.html" class="group cursor-pointer">
-                        <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-200">
+                    <a href="projects/Protection.html" class="group cursor-pointer portfolio-card-link rounded-lg outline-offset-4">
+                        <div class="portfolio-card bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl duration-300 h-full flex flex-col border border-gray-200">
                             <div class="aspect-[4/3] bg-gray-200 overflow-hidden relative">
-                                <img src="Images/protection/ProtectionThumnail.jpg" alt="Protection Workflows" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"></div>
+                                <picture>
+                                    <source type="image/webp" srcset="Images/protection/ProtectionThumnail.webp">
+                                    <img src="Images/protection/ProtectionThumnail.jpg" alt="Protection sourcing workspace with underwriting pathways" width="800" height="600" loading="lazy" decoding="async" class="object-cover w-full h-full group-hover:scale-105 portfolio-motion-target duration-500">
+                                </picture>
+                                <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300 portfolio-motion-target" aria-hidden="true"></div>
                             </div>
                             <div class="p-6 flex-1 flex flex-col">
-                                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">Modernising Protection Workflows</h3>
-                                <p class="text-sm text-gray-600 mb-4 line-clamp-2">Untangling a legacy insurance sourcing flow to get advisers from application to offer faster.</p>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">Modernising protection workflows</h3>
+                                <p class="text-sm text-gray-600 mb-2 line-clamp-2">Untangling a legacy insurance sourcing flow to get advisers from application to offer faster.</p>
+                                <p class="text-xs text-gray-500 mb-3">Implementation notes · slider UI contracts · dense comparison grids.</p>
                                 <div class="flex flex-wrap gap-2 mb-4">
                                     <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">FinTech</span>
-                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Underwriting Logic</span>
+                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Underwriting logic</span>
                                 </div>
                                 <div class="mt-auto pt-4 border-t border-gray-100">
                                     <p class="text-sm font-semibold text-gray-500">Impact</p>
-                                    <p class="text-lg text-orange-600 font-bold">35% Faster App-to-Offer Time</p>
+                                    <p class="text-lg text-orange-600 font-bold">35% faster app-to-offer time</p>
                                 </div>
                             </div>
                         </div>
                     </a>
 
-                    <!-- 5. Financial Promotion System -->
-                    <a href="projects/Financialpromotion.html" class="group cursor-pointer">
-                        <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-200">
+                    <a href="projects/Financialpromotion.html" class="group cursor-pointer portfolio-card-link rounded-lg outline-offset-4">
+                        <div class="portfolio-card bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl duration-300 h-full flex flex-col border border-gray-200">
                             <div class="aspect-[4/3] bg-gray-200 overflow-hidden relative">
-                                <img src="Images/FP/FP-thumbnail.jpg" alt="Financial Promotion Audit Engine" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"></div>
+                                <picture>
+                                    <source type="image/webp" srcset="Images/FP/FP-thumbnail.webp">
+                                    <img src="Images/FP/FP-thumbnail.jpg" alt="Financial promotion reviewer interface with consultant grid" width="800" height="600" loading="lazy" decoding="async" class="object-cover w-full h-full group-hover:scale-105 portfolio-motion-target duration-500">
+                                </picture>
+                                <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300 portfolio-motion-target" aria-hidden="true"></div>
                             </div>
                             <div class="p-6 flex-1 flex flex-col">
                                 <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">Financial Promotion System</h3>
+                                <p class="text-sm text-gray-600 mb-2 line-clamp-2">Optimising compliance workflows to handle a 196% surge in monthly promotion uploads.</p>
+                                <p class="text-xs text-gray-500 mb-3">Implementation notes · upload-type decision rules.</p>
                                 <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Regulatory Triage</span>
-                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Workflow Scaling</span>
+                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Regulatory triage</span>
+                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Workflow scaling</span>
                                 </div>
-                                <p class="text-sm text-gray-600 mb-4 line-clamp-2">Optimising compliance workflows to handle a 196% surge in monthly promotion uploads.</p>
                                 <div class="mt-auto pt-4 border-t border-gray-100">
                                     <p class="text-sm font-semibold text-gray-500">Impact</p>
-                                    <p class="text-lg text-orange-600 font-bold">36% Reduction in Duplicates</p>
+                                    <p class="text-lg text-orange-600 font-bold">36% reduction in duplicates</p>
                                 </div>
                             </div>
                         </div>
                     </a>
 
-                    <!-- 6. Estate Agent Referral Portal -->
-                   <a href="projects/IntroductorPortal.html" class="group cursor-pointer">
-                        <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-200">
+                    <a href="projects/IntroductorPortal.html" class="group cursor-pointer portfolio-card-link rounded-lg outline-offset-4">
+                        <div class="portfolio-card bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl duration-300 h-full flex flex-col border border-gray-200">
                             <div class="aspect-[4/3] bg-gray-200 overflow-hidden relative">
-                                <img src="Images/IP/IntorductorThumnail.jpg" alt="Estate Agent Referral Dashboard" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"></div>
+                                <picture>
+                                    <source type="image/webp" srcset="Images/IP/IntorductorThumnail.webp">
+                                    <img src="Images/IP/IntorductorThumnail.jpg" alt="Estate agent referral portal dashboard on desktop and mobile" width="800" height="600" loading="lazy" decoding="async" class="object-cover w-full h-full group-hover:scale-105 portfolio-motion-target duration-500">
+                                </picture>
+                                <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300 portfolio-motion-target" aria-hidden="true"></div>
                             </div>
                             <div class="p-6 flex-1 flex flex-col">
-                                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">Estate Agent Referral Portal</h3>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">Estate agent referral portal</h3>
+                                <p class="text-xs text-gray-500 mb-3">Implementation notes · responsive breakpoints · shared tokens.</p>
                                 <div class="flex flex-wrap gap-2 mb-4">
                                     <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">B2B SaaS</span>
                                     <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">PropTech</span>
@@ -173,72 +212,81 @@ lateral thinking and fixing what's actually broken, not making things look polis
                                 </div>
                                 <div class="mt-auto pt-4 border-t border-gray-100">
                                     <p class="text-sm font-semibold text-gray-500">Impact</p>
-                                    <p class="text-lg text-orange-600 font-bold">Lead Conversion Increased by 45%</p>
+                                    <p class="text-lg text-orange-600 font-bold">Lead conversion increased by 45%</p>
                                 </div>
                             </div>
                         </div>
                     </a>
 
-                    <!-- 7. Finzla Personal Finance Aggregator -->
-                    <a href="projects/FinzlaBudgetApp.html" class="group cursor-pointer">
-                        <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-200">
+                    <a href="projects/FinzlaBudgetApp.html" class="group cursor-pointer portfolio-card-link rounded-lg outline-offset-4">
+                        <div class="portfolio-card bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl duration-300 h-full flex flex-col border border-gray-200">
                             <div class="aspect-[4/3] bg-gray-200 overflow-hidden relative">
-                                <img src="Images/Finzla/BudgetThumnail.jpg" alt="Finzla personal finance app" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"></div>
+                                <picture>
+                                    <source type="image/webp" srcset="Images/Finzla/BudgetThumnail.webp">
+                                    <img src="Images/Finzla/BudgetThumnail.jpg" alt="Finzla multi-bank budgeting app screens" width="800" height="600" loading="lazy" decoding="async" class="object-cover w-full h-full group-hover:scale-105 portfolio-motion-target duration-500">
+                                </picture>
+                                <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300 portfolio-motion-target" aria-hidden="true"></div>
                             </div>
                             <div class="p-6 flex-1 flex flex-col">
-                                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">Finzla — Personal Finance Aggregator</h3>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">Finzla — personal finance aggregator</h3>
+                                <p class="text-sm text-gray-600 mb-2 line-clamp-2">Designing a multi-bank aggregator app for people juggling multiple accounts across UK and Nigerian banks.</p>
+                                <p class="text-xs text-gray-500 mb-3">Implementation notes · onboarding state machine.</p>
                                 <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Mobile App</span>
+                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Mobile app</span>
                                     <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">FinTech</span>
                                     <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Freelance</span>
                                 </div>
-                                <p class="text-sm text-gray-600 mb-4 line-clamp-2">Designing a multi-bank aggregator app for people juggling multiple accounts across UK and Nigerian banks.</p>
                                 <div class="mt-auto pt-4 border-t border-gray-100">
                                     <p class="text-sm font-semibold text-gray-500">Status</p>
-                                    <p class="text-lg text-orange-600 font-bold">Live Prototype</p>
+                                    <p class="text-lg text-orange-600 font-bold">Live prototype</p>
                                 </div>
                             </div>
                         </div>
                     </a>
 
-                    <!-- 8. The Red Lion -->
-                    <a href="projects/RedLionPub.html" class="group cursor-pointer">
-                        <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-200">
+                    <a href="projects/RedLionPub.html" class="group cursor-pointer portfolio-card-link rounded-lg outline-offset-4">
+                        <div class="portfolio-card bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl duration-300 h-full flex flex-col border border-gray-200">
                             <div class="aspect-[4/3] bg-gray-200 overflow-hidden relative">
-                                <img src="Images/RedLion/Pub.jpg" alt="Red Lion" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"></div>
+                                <picture>
+                                    <source type="image/webp" srcset="Images/RedLion/Pub.webp">
+                                    <img src="Images/RedLion/Pub.jpg" alt="Red Lion pub brand and website preview" width="800" height="600" loading="lazy" decoding="async" class="object-cover w-full h-full group-hover:scale-105 portfolio-motion-target duration-500">
+                                </picture>
+                                <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300 portfolio-motion-target" aria-hidden="true"></div>
                             </div>
                             <div class="p-6 flex-1 flex flex-col">
-                                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">The Red Lion: Brand & Digital</h3>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">The Red Lion: brand &amp; digital</h3>
+                                <p class="text-xs text-gray-500 mb-3">Implementation notes · type scale &amp; card grid.</p>
                                 <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Brand Strategy</span>
-                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Web Design</span>
+                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Brand strategy</span>
+                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Web design</span>
                                 </div>
                                 <div class="mt-auto pt-4 border-t border-gray-100">
                                     <p class="text-sm font-semibold text-gray-500">Impact</p>
-                                    <p class="text-lg text-orange-600 font-bold">60% Increase in Online Bookings</p>
+                                    <p class="text-lg text-orange-600 font-bold">60% increase in online bookings</p>
                                 </div>
                             </div>
                         </div>
                     </a>
 
-                    <!-- 9. Fuel Retail Transformation -->
-                    <a href="projects/FuelCoffee.html" class="group cursor-pointer">
-                        <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-200">
+                    <a href="projects/FuelCoffee.html" class="group cursor-pointer portfolio-card-link rounded-lg outline-offset-4">
+                        <div class="portfolio-card bg-gray-50 rounded-lg overflow-hidden hover:shadow-2xl duration-300 h-full flex flex-col border border-gray-200">
                             <div class="aspect-[4/3] bg-gray-200 overflow-hidden relative">
-                                <img src="Images/Fuel/Coffee.jpg" alt="Fuel Coffee" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"></div>
+                                <picture>
+                                    <source type="image/webp" srcset="Images/Fuel/Coffee.webp">
+                                    <img src="Images/Fuel/Coffee.jpg" alt="Fuel coffee e-commerce layout with product grid" width="800" height="600" loading="lazy" decoding="async" class="object-cover w-full h-full group-hover:scale-105 portfolio-motion-target duration-500">
+                                </picture>
+                                <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300 portfolio-motion-target" aria-hidden="true"></div>
                             </div>
                             <div class="p-6 flex-1 flex flex-col">
-                                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">Fuel Retail Transformation</h3>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">Fuel retail transformation</h3>
+                                <p class="text-xs text-gray-500 mb-3">Implementation notes · modular product cards.</p>
                                 <div class="flex flex-wrap gap-2 mb-4">
                                     <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">E-commerce</span>
-                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">UX Strategy</span>
+                                    <span class="text-xs bg-gray-200 text-gray-700 px-3 py-1 rounded-full">UX strategy</span>
                                 </div>
                                 <div class="mt-auto pt-4 border-t border-gray-100">
                                     <p class="text-sm font-semibold text-gray-500">Impact</p>
-                                    <p class="text-lg text-orange-600 font-bold">45% Increase in Online Orders</p>
+                                    <p class="text-lg text-orange-600 font-bold">45% increase in online orders</p>
                                 </div>
                             </div>
                         </div>
@@ -247,16 +295,19 @@ lateral thinking and fixing what's actually broken, not making things look polis
             </div>
         </section>
 
-        <section class="px-6 py-20 bg-gray-50">
+        <section class="px-6 py-20 bg-gray-50" aria-labelledby="about-me-heading">
             <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div class="flex justify-center">
                     <div class="relative w-80 h-96 rounded-lg overflow-hidden shadow-xl">
-                        <img src="Images/Professional Photo.jpg" alt="Mark Chamberlain" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                        <picture>
+                            <source type="image/webp" srcset="Images/Professional Photo.webp">
+                            <img src="Images/Professional Photo.jpg" alt="Portrait of Mark Chamberlain" width="320" height="384" loading="lazy" decoding="async" class="w-full h-full object-cover grayscale hover:grayscale-0 portfolio-motion-target duration-500">
+                        </picture>
                     </div>
                 </div>
 
                 <div>
-                    <h2 class="text-4xl font-bold mb-8 text-gray-900">About Me</h2>
+                    <h2 id="about-me-heading" class="text-4xl font-bold mb-8 text-gray-900">About me</h2>
                     <div class="space-y-6 mb-8 text-gray-700">
                         <p>I grew up in a small village and got into art early, the way a lot of people do.
 What shifted things was foundation year, when I found David Carson's work and
@@ -276,17 +327,18 @@ conversation with engineers rather than guessing at constraints.</p>
                         <p>Where I want to get to is lead or head of design, somewhere I can shape how a
 team approaches design problems rather than just solving them individually.</p>
                     </div>
-                    
-                       <a href="mailto:markchamberlain5@gmail.com" class="relative inline-block px-6 py-3 border-2 border-gray-900 text-gray-900 font-semibold overflow-hidden group transition-all duration-300 ease-out hover:scale-105 hover:text-white cursor-pointer">
-    <span class="relative z-10">Get In Touch</span>
-    <div class="absolute inset-0 bg-orange-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></div>
-</a>
-                    
+
+                    <a href="mailto:markchamberlain5@gmail.com" class="portfolio-cta relative inline-block px-6 py-3 border-2 border-gray-900 text-gray-900 font-semibold overflow-hidden group transition-all duration-300 ease-out hover:scale-105 hover:text-white focus-visible:ring-2 focus-visible:ring-orange-600 focus-visible:ring-offset-2 rounded-sm">
+                        <span class="relative z-10">Get in touch</span>
+                        <span class="absolute inset-0 bg-orange-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out portfolio-motion-target" aria-hidden="true"></span>
+                    </a>
                 </div>
             </div>
         </section>
 
         <div id="footer-placeholder"></div>
+
+        </main>
 
     </div>
 

@@ -1,0 +1,10 @@
+{
+  "name": "portfolio-2025",
+  "private": true,
+  "scripts": {
+    "webp": "node scripts/to-webp.cjs"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.5"
+  }
+}

@@ -12,13 +12,17 @@
 
 <body class="bg-white text-gray-900 antialiased" style="font-family: 'Montserrat', sans-serif;">
 
-    <div id="loader" class="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center transition-opacity duration-500">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <div id="loader" class="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center transition-opacity duration-500" role="status" aria-live="polite" aria-busy="true">
         <p class="text-sm font-bold text-gray-900 tracking-[0.2em] animate-pulse">SYSTEMS LOADING</p>
     </div>
 
+    <div id="nav-placeholder"></div>
+
     <div id="site-content" class="opacity-0 translate-y-8 blur-md transition-all duration-700 ease-out">
 
-        <div id="nav-placeholder"></div>
+        <main id="main-content">
 
         <section class="pt-32 pb-12 px-6 bg-white">
             <div class="max-w-4xl mx-auto">
@@ -34,33 +38,42 @@
                 <p class="text-xl text-gray-600 mb-16 max-w-2xl">Revitalising a heritage pub brand to attract a new generation of digital-first customers without alienating the locals.</p>
 
                 <div class="max-w-5xl mb-6">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">1. Visual Identity System</h3>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-3">1. Visual Identity System</h2>
                     <p class="text-gray-600 leading-relaxed mb-6">
                         The Red Lion needed to move beyond the "old man's pub" stereotype. I developed a flexible identity system that works across physical signage and digital social assets. The red lion motif was redrawn to feel heraldic yet modern, creating a "stamp of quality" that could be applied to menus, aprons, and merchandise.
                     </p>
                 </div>
                 <div class="bg-gray-100 rounded-xl border border-gray-200 overflow-hidden shadow-sm mb-20">
-                    <img src="../Images/RedLion/RedLionBranding.jpg" alt="Red Lion Brand Guidelines" class="w-full h-auto object-cover" />
+                    <picture>
+                        <source type="image/webp" srcset="../Images/RedLion/RedLionBranding.webp">
+                        <img src="../Images/RedLion/RedLionBranding.jpg" alt="Red Lion brand guidelines poster" width="1600" height="1000" loading="lazy" decoding="async" class="w-full h-auto object-cover" />
+                    </picture>
                 </div>
 
                 <div class="max-w-5xl mb-6">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">2. Digital-First Experience</h3>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-3">2. Digital-First Experience</h2>
                     <p class="text-gray-600 leading-relaxed mb-6">
                         Most customers decide where to eat before they leave the house. I designed a mobile-responsive website that prioritises "Food Porn" photography and easy table booking. The layout is editorial and clean, using whitespace to elevate the perception of the food quality from "Pub Grub" to "Gastropub."
                     </p>
                 </div>
                 <div class="bg-gray-100 rounded-xl border border-gray-200 overflow-hidden shadow-sm mb-20">
-                    <img src="../Images/RedLion/RedLionHome.jpg" alt="Red Lion Homepage" class="w-full h-auto object-cover" />
+                    <picture>
+                        <source type="image/webp" srcset="../Images/RedLion/RedLionHome.webp">
+                        <img src="../Images/RedLion/RedLionHome.jpg" alt="Red Lion homepage hero and dining photography" width="1600" height="1000" loading="lazy" decoding="async" class="w-full h-auto object-cover" />
+                    </picture>
                 </div>
 
                 <div class="max-w-5xl mb-6">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">3. Converting Traffic to Covers</h3>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-3">3. Converting Traffic to Covers</h2>
                     <p class="text-gray-600 leading-relaxed mb-6">
                         The primary business goal was to fill tables on weeknights. I integrated a clear "Book Now" CTA that follows the user down the page, along with a simplified contact section for large party enquiries. This reduced friction for users trying to make reservations on their phones.
                     </p>
                 </div>
                 <div class="bg-gray-100 rounded-xl border border-gray-200 overflow-hidden shadow-sm mb-20">
-                    <img src="../Images/RedLion/RedLionHomeContact.jpg" alt="Contact Flow" class="w-full h-auto object-cover" />
+                    <picture>
+                        <source type="image/webp" srcset="../Images/RedLion/RedLionHomeContact.webp">
+                        <img src="../Images/RedLion/RedLionHomeContact.jpg" alt="Red Lion contact and booking flow screens" width="1600" height="1000" loading="lazy" decoding="async" class="w-full h-auto object-cover" />
+                    </picture>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20 border-y border-gray-100 py-8">
@@ -79,6 +92,23 @@
                         <p class="text-lg font-bold text-orange-600">15+</p>
                         <p class="text-gray-500 text-sm">Web, Social, Print & Signage.</p>
                     </div>
+                </div>
+
+                <div id="implementation-notes" class="mb-20 border border-gray-200 rounded-2xl p-8 md:p-10 bg-white shadow-sm scroll-mt-24">
+                    <p class="text-xs font-semibold uppercase tracking-widest text-orange-600 mb-2">Typography &amp; layout tokens</p>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">Implementation notes</h2>
+                    <p class="text-gray-600 text-sm mb-6">Heritage hospitality needs fluid type that still snaps to a simple spacing scale on web—what I'd spec as rem-based steps in a DS handoff.</p>
+                    <pre class="case-study-pre bg-gray-950 text-gray-100 rounded-xl p-4 border border-gray-800 overflow-x-auto whitespace-pre-wrap" tabindex="0"><code>:root {
+  --rl-step-1: 0.75rem;
+  --rl-step-2: 1rem;
+  --rl-step-3: 1.5rem;
+  --rl-serif: 'Playfair Display', 'Times New Roman', serif;
+}
+
+.hero-grid {
+  display: grid;
+  gap: var(--rl-step-3);
+}</code></pre>
                 </div>
 
                 <div class="bg-gray-50 rounded-2xl p-8 md:p-12 border border-gray-100 mb-20">
@@ -119,34 +149,18 @@
 
         <section class="py-20 bg-white border-t border-gray-100 text-center">
             <h2 class="text-3xl font-bold text-gray-900 mb-6">Looking for a brand overhaul?</h2>
-            <a href="mailto:markchamberlain5@gmail.com" class="relative inline-block px-8 py-3 bg-gray-900 text-white font-semibold overflow-hidden group transition-all duration-300 ease-out hover:scale-105 cursor-pointer">
+            <a href="mailto:markchamberlain5@gmail.com" class="portfolio-cta relative inline-block px-8 py-3 bg-gray-900 text-white font-semibold overflow-hidden group transition-all duration-300 ease-out hover:scale-105 cursor-pointer focus-visible:ring-2 focus-visible:ring-orange-600 focus-visible:ring-offset-2 rounded-sm">
                 <span class="relative z-10">Let's Discuss</span>
-                <div class="absolute inset-0 bg-orange-600 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
+                <span class="absolute inset-0 bg-orange-600 translate-y-full group-hover:translate-y-0 portfolio-motion-target duration-300 ease-out" aria-hidden="true"></span>
             </a>
         </section>
 
         <div id="footer-placeholder"></div>
 
+        </main>
+
     </div>
 
     <script src="../js/components.js"></script>
-    <script>
-        // Page Loader Script
-        window.addEventListener('load', function() {
-            const loader = document.getElementById('loader');
-            const content = document.getElementById('site-content');
-            
-            loader.style.opacity = '0';
-            
-            setTimeout(() => {
-                content.classList.remove('opacity-0', 'translate-y-8', 'blur-md');
-                content.classList.add('opacity-100', 'translate-y-0', 'blur-0');
-            }, 100);
-
-            setTimeout(() => {
-                loader.style.display = 'none';
-            }, 300);
-        });
-    </script>
 </body>
 </html>

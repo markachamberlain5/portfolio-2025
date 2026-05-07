@@ -36,13 +36,17 @@
 
 <body class="bg-white text-gray-900 antialiased" style="font-family: 'Montserrat', sans-serif;">
 
-    <div id="loader" class="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center transition-opacity duration-500">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <div id="loader" class="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center transition-opacity duration-500" role="status" aria-live="polite" aria-busy="true">
         <p class="text-sm font-bold text-gray-900 tracking-[0.2em] animate-pulse">SYSTEMS LOADING</p>
     </div>
 
+    <div id="nav-placeholder"></div>
+
     <div id="site-content" class="opacity-0 translate-y-8 blur-md transition-all duration-700 ease-out">
 
-        <div id="nav-placeholder"></div>
+        <main id="main-content">
 
         <!-- HERO -->
         <section class="pt-32 pb-16 px-6 bg-white">
@@ -202,6 +206,17 @@
             </div>
         </section>
 
+        <div id="implementation-notes" class="py-16 px-6 bg-white border-t border-gray-100">
+            <div class="max-w-4xl mx-auto border border-gray-200 rounded-2xl p-8 md:p-10 bg-gray-50 shadow-sm scroll-mt-24">
+                <p class="text-xs font-semibold uppercase tracking-widest text-orange-600 mb-2">Responsive shell</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Implementation notes</h2>
+                <p class="text-gray-600 text-sm mb-6">Desktop keeps two-up marketing density; phones collapse to a single column with touch-first chrome. Tailwind breakpoints mirror what I'd document for engineering.</p>
+                <pre class="case-study-pre bg-gray-950 text-gray-100 rounded-xl p-4 border border-gray-800 overflow-x-auto whitespace-pre-wrap" tabindex="0"><code>&lt;div class=&quot;grid grid-cols-1 md:grid-cols-2 gap-6 max-w-xl mx-auto&quot;&gt;
+  &lt;!-- introducer cards stack on &lt; md --&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+
         <!-- The Why -->
         <section class="py-16 px-6 bg-gray-50">
             <div class="max-w-4xl mx-auto">
@@ -228,13 +243,16 @@
         <!-- CTA -->
         <section class="py-20 bg-white border-t border-gray-100 text-center">
             <h2 class="text-3xl font-bold text-gray-900 mb-6">Need to solve a complex workflow?</h2>
-            <a href="mailto:markchamberlain5@gmail.com" class="relative inline-block px-8 py-3 bg-gray-900 text-white font-semibold overflow-hidden group transition-all duration-300 ease-out hover:scale-105 cursor-pointer">
+            <a href="mailto:markchamberlain5@gmail.com" class="portfolio-cta relative inline-block px-8 py-3 bg-gray-900 text-white font-semibold overflow-hidden group transition-all duration-300 ease-out hover:scale-105 cursor-pointer focus-visible:ring-2 focus-visible:ring-orange-600 focus-visible:ring-offset-2 rounded-sm">
                 <span class="relative z-10">Let's Discuss</span>
-                <div class="absolute inset-0 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" style="background: var(--color-orange);"></div>
+                <span class="absolute inset-0 translate-y-full group-hover:translate-y-0 portfolio-motion-target duration-300 ease-out" style="background: var(--color-orange);" aria-hidden="true"></span>
             </a>
         </section>
 
         <div id="footer-placeholder"></div>
+
+        </main>
+
     </div>
 
     <script src="../js/components.js"></script>
